@@ -1,0 +1,4 @@
+highlighter: pygments
+encoding: utf-8
+paginate: 7
+paginate_path: "page:num"
