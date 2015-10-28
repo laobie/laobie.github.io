@@ -9,25 +9,28 @@
     border-bottom: 1px lightgray solid;    
 }
 
+.title-colum {
+  display: flex;
+  display: -webkit-flex;
+  flex-basis: 100%;
+}
 .title {
     flex-grow: 1;
 }
 .date{
-    /*display: flex;
-    display: -webkit-flex;*/
     font-size: 15px;
     color: grey;
     display: flex;
 }
 .excerpt{
-    flex-basis: 100%;
+    /*flex-basis: auto;*/
     color: gray;
-    line-height: 150%; 
+    flex: 0 1 100%;
+    /*line-height: 150%; */
     font-size: 14px;
-    margin: 8px 0px 8px 0;
-    /*margin: 5% 20% 5% 20%;*/
+    margin: 10px 0 10px 0;
 }
-.item:nth-child(2) {
+.title-colum:nth-child(2) {
   align-self: flex-end;
 }
 
@@ -49,7 +52,7 @@
   display: -webkit-flex;
   /*min-height: 100vh;*/
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .header {
@@ -58,7 +61,7 @@
     display: -webkit-flex;
     flex:1 0 1; 
     width: 100%;
-    height:64px; 
+    flex-basis: 64px; 
     text-align: center;
     /*background: gray;*/
     /*margin: 10px -10% 10px  ;*/
@@ -102,8 +105,6 @@
     flex: 1;       
 }
 .header-right-part-item {
-     display: flex;
-     display: -webkit-flex;
      font-size: 15px;
      padding-right: 16px;
      padding-left: 16px;
@@ -127,21 +128,29 @@
   flex-direction: row;
 }
 
-.content {
+.post-list {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   /*border-left: 1px lightgray solid;*/
   /*padding-left: 10px;*/
   /*margin-left: 50px;*/
-  flex: 1;
+  flex-basis: 80%;
 }
 
 .nav, .side {
   /* 两个边栏的宽度设为12em */
   /*width: 20%;*/
   /*height: 300px;*/
+  /*display: flex;
+  display: -webkit-flex;*/
   flex: 0 0 20%;
 }
 
 .nav {
+  display: flex;
+  display: -webkit-flex;
   /* 导航放到最左边 */
   order: -1;  
   flex-direction: column;
@@ -160,20 +169,21 @@
 }
 
 .page {
+    width: 100%;
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
     justify-content:flex-start;
     flex-wrap: wrap;
-    flex: 1;
+    flex: 0 1 100%;
     margin-top: 8px;
     margin-bottom: 8px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
 .page-next, .page-pre {
-    display: flex;
-    display: -webkit-flex;
+  display: flex;
+  display: -webkit-flex;
   /*flex: 0 0 10%;*/
 }
 .page-part {
@@ -182,11 +192,9 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    flex: 1;   
+    flex-grow: 1;   
 }
 .page-num {
-  display: flex;
-  display: -webkit-flex;
   font-size: 15px;
   color: black;
   margin-left: 8px;

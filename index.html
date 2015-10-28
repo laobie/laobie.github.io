@@ -28,21 +28,22 @@ title: 写代码的猴子
         </div>    
     </div>
     <div class="content-body">
-          <main class="content">
+          <div class="post-list">
             {% for post in paginator.posts %}
               <div class="item">
-                  <div class="title">
-                      <a href="{{ post.url }}" target="_blank">{{ post.title }}</a> 
-                  </div>
-                  <div class="date">
+                  <div class="title-colum">
+                    <div class="title">
+                          <a href="{{ post.url }}" target="_blank">{{ post.title }}</a> 
+                    </div>
+                    <div class="date">
                       {{ post.date|date: "%Y-%m-%d" }}        
+                    </div>
                   </div>
                   <div class="excerpt">
                       {{ post.excerpt }}
                   </div>
               </div>     
             {% endfor %}
-            
             <div class="page">
                 <div class="page-pre">
                 {% if paginator.previous_page %}
@@ -79,9 +80,8 @@ title: 写代码的猴子
                        <span></span>
                    {% endif %}
                 </div>
-                
+            </div>
           </div>
-          </main>
           <nav class="nav">
               {% for category in site.categories %}
 {{ category | first }}
