@@ -1,3 +1,7 @@
+---
+title: 写代码的猴子
+---
+
  <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>写代码的猴子</title>
@@ -15,9 +19,12 @@
             <a href="/">写代码的猴子</a>
         </div>
         <div class="header-right-part">
+             <div class="header-right-part-item">
+                <a href="/category.html" target="_blank">分类</a>
+            </div>  
             <div class="header-right-part-item">
                 <a href="/me.html" target="_blank">猴子</a>
-                </div>            
+            </div>            
             <div class="header-right-part-item">
                 <a href="/about.html" target="_blank">关于</a>
             </div>
@@ -25,52 +32,66 @@
     </div>
     <div class="content-body">
           <main class="content">
-            
+            {% for post in paginator.posts %}
               <div class="item">
                   <div class="title">
-                      <a href="/geek/2015/10/24/begin-my-blog-journey.html" target="_blank">开始我的博客之旅</a> 
+                      <a href="{{ post.url }}" target="_blank">{{ post.title }}</a> 
                   </div>
                   <div class="date">
-                      2015-10-24        
+                      {{ post.date|date: "%Y-%m-%d" }}        
                   </div>
                   <div class="excerpt">
-                      当猴子不写代码时，他在写些什么？
+                      {{ post.excerpt }}
                   </div>
               </div>     
-            
+            {% endfor %}
             
             <div class="page">
                 <div class="page-pre">
-                
+                {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path }}">上页</a>
+                {% else %}
                     <span></span>
-                
+                {% endif %}
                 </div>
                 
                 <div class="page-part">
                     <div class="page-num">
-                    
+                    {% if paginator.page == 1 %}
                          <span>1</span>
-                     
+                     {% else %}
+                         <a href="/">1</a>
+                     {% endif %}
                       </div>
                          
-                    
+                    {% for count in (2..paginator.total_pages) %}
+                    <div class="page-num">
+                        {% if count == paginator.page %}
+                            <span>{{ count }}</span>
+                        {% else %}
+                            <a href="/page{{ count }}">{{ count }}</a>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
                 </div>
                 
                 <div class="page-next">
-                  
+                  {% if paginator.next_page %}
+                       <a href="{{ paginator.next_page_path }}">下页</a>
+                   {% else %}
                        <span></span>
-                   
+                   {% endif %}
                 </div>
                 
           </div>
           </main>
           <nav class="nav">
-              <!--
-               <div class="category-item">geek(2)</div>
-                <h2>geek</h2>
-                </span>2</span>
+              <!--{% for category in site.categories %}
+               <div class="category-item">{{ category | first }}({{ category |size }})</div>
+                <h2>{{ category | first }}</h2>
+                </span>{{ category |size }}</span>
               
-              -->
+              {% endfor %}-->
                         
           </nav>
           <aside class="side"></aside>

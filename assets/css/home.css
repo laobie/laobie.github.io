@@ -11,16 +11,15 @@
 
 .title {
     flex-grow: 1;
-    display: flex;
 }
 .date{
+    /*display: flex;
+    display: -webkit-flex;*/
     font-size: 15px;
     color: grey;
     display: flex;
 }
 .excerpt{
-    /*margin-bottom: 8px;*/
-    display: flex;
     flex-basis: 100%;
     color: gray;
     line-height: 150%; 
@@ -56,6 +55,7 @@
 .header {
     font-size: 23px;
     display: flex;
+    display: -webkit-flex;
     flex:1 0 1; 
     width: 100%;
     height:64px; 
@@ -81,32 +81,33 @@
   font-size: 24px;
   font-weight: bold;
   margin: 32px 8px 8px 8px; 
-  display: flex;
   padding-bottom: 8px;
 }
 .header-title a {
   color: black;
-   text-decoration: none;  
+  text-decoration: none;  
 }
 .header-title a:hover {
   color: gray;
 }
 
 .header-right-part {
+    display: flex;
+    display: -webkit-flex;
     margin-top: 48px;   
     margin-right: 20%;
-    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content:flex-end;
     flex: 1;       
 }
 .header-right-part-item {
+     display: flex;
+     display: -webkit-flex;
      font-size: 15px;
      padding-right: 16px;
      padding-left: 16px;
      border-right: 1px solid gray;  
-     
 }
 
 .header-right-part-item a {
@@ -119,8 +120,9 @@
 
 
 .content-body {
-  padding-top: 20px;
   display: flex;
+  display: -webkit-flex;
+  padding-top: 20px;
   flex: 1;
   flex-direction: row;
 }
@@ -141,7 +143,6 @@
 
 .nav {
   /* 导航放到最左边 */
-  display: flex;
   order: -1;  
   flex-direction: column;
   /*background: beige; */
@@ -152,6 +153,8 @@
 }
 
 .category-item {
+  display: flex;
+  display: -webkit-flex;
   margin-left: 16px;
   flex: 1 1 1;
 }
@@ -169,17 +172,21 @@
     padding-bottom: 8px;
 }
 .page-next, .page-pre {
-  display: flex;
+    display: flex;
+    display: -webkit-flex;
   /*flex: 0 0 10%;*/
 }
 .page-part {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     flex: 1;   
 }
 .page-num {
+  display: flex;
+  display: -webkit-flex;
   font-size: 15px;
   color: black;
   margin-left: 8px;

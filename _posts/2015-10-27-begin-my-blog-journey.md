@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 开始我的博客之旅
-category: geek
+category: 随笔
 excerpt: 当猴子不写代码时，他在写些什么？
 
 ---

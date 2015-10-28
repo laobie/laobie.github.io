@@ -21,7 +21,7 @@ title: 写代码的猴子
         <div class="header-right-part">
             <div class="header-right-part-item">
                 <a href="/me.html" target="_blank">猴子</a>
-                </div>            
+            </div>            
             <div class="header-right-part-item">
                 <a href="/about.html" target="_blank">关于</a>
             </div>
@@ -83,12 +83,10 @@ title: 写代码的猴子
           </div>
           </main>
           <nav class="nav">
-              <!--{% for category in site.categories %}
-               <div class="category-item">{{ category | first }}({{ category |size }})</div>
-                <h2>{{ category | first }}</h2>
-                </span>{{ category |size }}</span>
-              
-              {% endfor %}-->
+              {% for category in site.categories %}
+{{ category | first }}
+</span>{{ category | last | size }}</span>
+{% endfor %}
                         
           </nav>
           <aside class="side"></aside>
