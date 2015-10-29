@@ -1,5 +1,6 @@
 ---
 title: 写代码的猴子
+
 ---
 
  <head>
@@ -83,10 +84,21 @@ title: 写代码的猴子
             </div>
           </div>
           <nav class="nav">
+              <div class="category"> <center>分类</center></div>
               {% for category in site.categories %}
-{{ category | first }}
-</span>{{ category | last | size }}</span>
-{% endfor %}
+              <div class="category-item">
+                  <div class="category-title"> {{ category | first }} </div>
+                  <div>{{ category | last | size }}</div>
+              </div>
+               {% for post in category.last %}
+               <div class="category-item-post">
+                   <div class="category-item-post-title">
+                     <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+                   </div>
+                   <div>{{post.date | date:"%m/%d"}}</div>
+               </div>
+               {% endfor %}
+             {% endfor %}
                         
           </nav>
           <aside class="side"></aside>
