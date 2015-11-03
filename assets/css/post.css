@@ -29,8 +29,8 @@ H3 {
     margin-top: 16px;
     margin-bottom: 16px;
     font-size: 20px;
-    /*border-bottom: 1px LightGrey solid;*/
-    /*width: 98%;*/
+    border-bottom: 1px LightGrey solid;
+    width: 98%;
     line-height: 120%;
     color: #666666;
 }
@@ -38,17 +38,25 @@ H3 {
 
 H4 {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    /*border-bottom: 1px LightGrey solid;*/
-    /*width: 98%;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px LightGrey solid;
+    width: 98%;
     line-height: 120%;
     color: #666666;
 }
 
+H5 {
+    margin-top: 0px;
+    margin-bottom: -5px;
+    font-size: 14px;
+    line-height: 100%;
+}
+
 
 li {
-    margin-left: 10px;
+    margin-left: 0px;
+    width: 100%;
 }
 
 
@@ -104,4 +112,11 @@ img {
 
 hr {
     color: LightGrey;
+}
+
+code {
+    color: cornflowerblue;
+}
+ul {
+    margin-left: -5px;
 }

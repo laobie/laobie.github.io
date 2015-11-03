@@ -240,7 +240,7 @@
   padding-right: 16px;
 }
 .category-title {
-  margin-left: 16px;
+  padding-top: 4px;
   flex-grow: 1;
 }
 .category-item-post {
