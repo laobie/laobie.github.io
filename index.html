@@ -55,14 +55,14 @@ title: 写代码的猴子
               {% for category in site.categories %}
               <div class="category-item">
                   <div class="category-title"> {{ category | first }} </div>
-                  <div>{{ category | last | size }}</div>
+                  <div class="category-count">{{ category | last | size }}</div>
               </div>
                {% for post in category.last %}
                <div class="category-item-post">
                    <div class="category-item-post-title">
                      <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
                    </div>
-                   <div>{{post.date | date:"%m/%d"}}</div>
+                   <div class="category-item-post-date">{{post.date | date:"%m/%d"}}</div>
                {% endfor %}
                </div>
              {% endfor %}
