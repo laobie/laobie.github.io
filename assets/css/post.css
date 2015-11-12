@@ -1,11 +1,57 @@
 body {
-    font-family:"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-    font-size: 16px;
+  font-family:"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQ";
+  display: flex;
+  display: -webkit-flex;
+  /*min-height: 100vh;*/
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.site-header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #dcdcdc;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 75px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  
+.home-title {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+  font-size: 23px;
+  display: table-cell;
+  padding-left: 20%;
+  vertical-align: middle; }
+  
+.header-inside {
+  display: table;
+  height: 100%;
+  width: 100%; }
+
+.home-title a{
+    color: black;
+    text-decoration: none;  
+}
+
+.home-title a:hover{
+  color: gray;
+}
+  
+
+content{
+    display: block;
     margin: 5% 20% 5% 20%;
     padding: 2% 5% 5% 5%;
     width: 50%;
     line-height: 150%;
+    margin-top: 80px;
     border: 1px solid LightGrey;
+    
+    
 }
 
 H1 {

@@ -7,9 +7,23 @@
         <title>{{page.title}}</title>
         <link rel="icon"href="http://ac-qygvx1cc.clouddn.com/da83ef5136eb1cd1.png"/>
     </head>
+    
     <body>
+        
+        <header id="masthead" class="site-header" role="banner">
+		<div class="header-inside">
+            <div class="home-title">
+		      <a href='http://laobie.github.io/'>写代码的猴子</a>
+		    </div>
+        </div>
+        </header>
+      
+        <content>
+        
         <h2>{{page.title}}</h2>
     	{{ content }}
+        
+        
         
         <!-- 多说评论框 start -->
 	<div class="ds-thread" data-thread-key={{page.id}} data-title={{page.title}} data-url="laobie.github.io{{page.url}}"></div>
@@ -30,6 +44,7 @@ var duoshuoQuery = {short_name:"jaeger"};
 
      <script type="text/javascript">
      var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256704919'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256704919%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</content>
     </body>
  
 </html>

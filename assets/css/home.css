@@ -47,113 +47,37 @@
     color: gray;
 }
 
-
 .home-body{
   font-family:"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQ";
-  display: flex;
-  display: -webkit-flex;
-  /*min-height: 100vh;*/
-  flex-direction: column;
-  flex-wrap: nowrap;
 }
-
-.header {
-    font-size: 23px;
-    display: flex;
-    display: -webkit-flex;
-    width: 100%;
-    flex-basis: 64px; 
-    flex-direction: row;
-    flex-wrap: nowrap;    
-    /*background: gray;*/
-    /*margin: 10px -10% 10px  ;*/
-    margin-left: -10px;
-    margin-right: -10px;
-    padding-left: 10px;
-    padding-bottom: 16px;
-    align-items: flex-start;
-    border-bottom: 1px lightgray solid;
-}
-.header-img {
-  margin-top: 16px;
-  order: -1;
-  margin-bottom: -16px;
-  margin-left: 20%; 
-  flex: 0 0 auto; 
-}
-.header-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 32px 8px 8px 8px; 
-  padding-bottom: 8px;
-  flex-grow: 1 0 auto;
-}
-.header-title a {
-  color: black;
-  text-decoration: none;  
-}
-.header-title a:hover {
-  color: gray;
-}
-
-.header-right-part {
-    display: flex;
-    display: -webkit-flex;
-    margin-top: 48px;   
-    margin-right: 20%;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content:flex-end;
-    flex: 1;       
-}
-.header-right-part-item {
-     font-size: 15px;
-     padding-right: 16px;
-     padding-left: 16px;
-     border-right: 1px solid gray;  
-}
-
-.header-right-part-item a {
-   color: black;
-   text-decoration: none; 
-}
-.header-right-part-item a:hover {
-  color: gray;
-}
-
 
 .content-body {
-  display: flex;
-  display: -webkit-flex;
-  flex-basis: 100%;
-  flex-direction: row;
+  display: table;
+  padding-top: 60px;
+  width: 100%;
+  height: 100%;
+ 
 }
 
 .post-list {
+  display: table-cell;
   padding-top: 20px;
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  flex-basis: 80%;
+  width: 60%;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 100%;
 }
 
 .side {
-  flex: 0 0 20%;
+  display: table-cell;
   margin-left: 8px;
   border-left: 1px solid lightgray;
   margin-top: 20px;
 }
 
 .nav {
-  display: flex;
-  display: -webkit-flex;
-  /* 导航放到最左边 */
-  order: -1;  
-  flex-direction: column;
-  flex-wrap: nowrap;
-  flex-basis: 20%;
-  flex-shrink: 0;
+  width: 20%;
+  display: table-cell;
   margin-right: 8px;
   margin-left: 8px;
   padding-right: 8px;
@@ -267,6 +191,7 @@
   align-self: flex-end; 
   margin-right: 16px;
 }
+
 
 
 

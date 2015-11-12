@@ -10,9 +10,29 @@ title: 写代码的猴子
 </head>
 
  <link rel="stylesheet" type="text/css" href="/assets/css/home.css">
+ <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
  
 <body class="home-body">
-    <div class="header">
+    	<header id="masthead" class="site-header" role="banner">
+		<div class="header-inside">
+            <div class="logo">
+		      <a href='http://laobie.github.io/'><img src='http://ac-qygvx1cc.clouddn.com/04978412acff33e7.png'></a>
+		    </div>
+            <div class="home-title">
+                <a href='http://laobie.github.io/'>写代码的猴子</a>
+            </div>
+            
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="menu-%e8%8f%9c%e5%8d%951-container">
+                <ul class="menu">
+                    <li><a href="/me.html" target="_blank">猴子</a></li>
+                    <li> <a href="/about.html" target="_blank">关于</a></li>
+                 </ul>
+            </div>		
+            </nav>
+        </div>
+        </header>
+    <!--<div class="header">
         <div class="header-img">
             <img height="80px" width="80px" src="http://ac-qygvx1cc.clouddn.com/04978412acff33e7.png"/>
         </div>
@@ -27,8 +47,27 @@ title: 写代码的猴子
                 <a href="/about.html" target="_blank">关于</a>
             </div>
         </div>    
-    </div>
+    </div>-->
     <div class="content-body">
+        
+         <div class="nav">
+              <div class="category"> <center>分类</center></div>
+              {% for category in site.categories %}
+              <div class="category-item">
+                  <div class="category-title"> {{ category | first }} </div>
+                  <div>{{ category | last | size }}</div>
+              </div>
+               {% for post in category.last %}
+               <div class="category-item-post">
+                   <div class="category-item-post-title">
+                     <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+                   </div>
+                   <div>{{post.date | date:"%m/%d"}}</div>
+               {% endfor %}
+               </div>
+             {% endfor %}
+                        
+         </div>
           <div class="post-list">
             {% for post in paginator.posts %}
               <div class="item">
@@ -83,25 +122,8 @@ title: 写代码的猴子
                 </div>
             </div>
           </div>
-          <nav class="nav">
-              <div class="category"> <center>分类</center></div>
-              {% for category in site.categories %}
-              <div class="category-item">
-                  <div class="category-title"> {{ category | first }} </div>
-                  <div>{{ category | last | size }}</div>
-              </div>
-               {% for post in category.last %}
-               <div class="category-item-post">
-                   <div class="category-item-post-title">
-                     <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
-                   </div>
-                   <div>{{post.date | date:"%m/%d"}}</div>
-               {% endfor %}
-               </div>
-             {% endfor %}
-                        
-          </nav>
-          <aside class="side"></aside>
+         
+          <div class="side"></div>
        </div>
     <script type="text/javascript">
     var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256704919'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256704919%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
