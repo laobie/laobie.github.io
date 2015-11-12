@@ -43,64 +43,66 @@
 }
 
 .content-body {
-  display: table;
-  padding-top: 60px;
-  width: 100%;
-  height: 100%;
- 
+  padding-top: 60px; 
 }
 
 .post-list {
-  display: table-cell;
-  padding-top: 20px;
-  width: 60%;
-  padding-left: 8px;
-  padding-right: 8px;
-  height: 100%;
+   float: left;
+   width: 100%;
+   height: 100%;
+
+  /*float: left;*/
+  /*padding-top: 20px;*/
+  /*width: 60%;*/
+  /*margin-left: 200px;*/
+  /*margin-right: 200px;*/
+  /*padding-left: 8px;*/
+  /*padding-right: 8px;*/
+  /*height: 100%;*/
 }
 
-.side {
-  display: table-cell;
-  margin-left: 8px;
-  border-left: 1px solid lightgray;
+.aside {
+  float: left;
+  position: relative;    
+  width: 20%;
+  margin-left: -20%;
   margin-top: 20px;
+}
+
+.main-wrap {
+  height: 100%;
+  margin: 0 20% 0 20%;
+  padding: 20px 8px 0 8px;
+  border-left:  1px solid lightgray;
+  border-right: 1px solid lightgray;
 }
 
 .nav {
-  width: 20%;
-  display: table-cell;
-  margin-right: 8px;
-  margin-left: 8px;
-  padding-right: 8px;
-  border-right: 1px solid lightgray;
+  float: left;
+  width: 18%;
+  padding-left: 1%;
+  padding-right: 1%;
+  position: relative;    
+  margin-left: -100%;
   margin-top: 20px;
+  height: 100%;
 }
 
 .page {
     width: 100%;
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: row;
-    justify-content:flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+    display: table;
     margin-top: 8px;
     margin-bottom: 8px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
 .page-next, .page-pre {
-  display: flex;
-  display: -webkit-flex;
-  /*flex: 0 0 10%;*/
+  display: table-cell;
+  width: 30px;
 }
 .page-part {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    flex-grow: 1;   
+    display: table-cell;
+    text-align: center;
 }
 .page-num {
   font-size: 15px;
@@ -108,19 +110,13 @@
   margin-left: 8px;
   margin-right: 8px;
 }
-.page:nth-child(1){
-  align-self: flex-start;
-}
-.page:nth-child(3) {
-  align-self: flex-end;
-}
 
-.page-num a {
+.page-part a {
   text-decoration: none;
   font-size: 15px;
   color: green;
 }
-.page-num a:hover{
+.page-part a:hover{
   color: red;
 }
 
@@ -159,14 +155,14 @@
   text-align: right;
 }
 .category-item-post {
-  display: table;
+  display: block;
   width: 100%;
   font-size: 12px;
 }
 .category-item-post-title {
   display: table-cell;
   margin-left: 8px;
-  width: 80%;
+  width: 100%;
 }
 .category-item-post-date {
   display: table-cell;

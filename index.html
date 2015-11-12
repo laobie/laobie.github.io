@@ -23,7 +23,7 @@ title: 写代码的猴子
             </div>
             
             <nav id="site-navigation" class="main-navigation" role="navigation">
-			<div class="menu-%e8%8f%9c%e5%8d%951-container">
+			<div>
                 <ul class="menu">
                     <li><a href="/me.html" target="_blank">猴子</a></li>
                     <li> <a href="/about.html" target="_blank">关于</a></li>
@@ -49,26 +49,8 @@ title: 写代码的猴子
         </div>    
     </div>-->
     <div class="content-body">
-        
-         <div class="nav">
-              <div class="category"> <center>分类</center></div>
-              {% for category in site.categories %}
-              <div class="category-item">
-                  <div class="category-title"> {{ category | first }} </div>
-                  <div class="category-count">{{ category | last | size }}</div>
-              </div>
-               {% for post in category.last %}
-               <div class="category-item-post">
-                   <div class="category-item-post-title">
-                     <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
-                   </div>
-                   <div class="category-item-post-date">{{post.date | date:"%m/%d"}}</div>
-               {% endfor %}
-               </div>
-             {% endfor %}
-                        
-         </div>
           <div class="post-list">
+              <div class="main-wrap">
             {% for post in paginator.posts %}
               <div class="item">
                   <div class="title-colum">
@@ -94,22 +76,22 @@ title: 写代码的猴子
                 </div>
                 
                 <div class="page-part">
-                    <div class="page-num">
+                    <page-num>
                     {% if paginator.page == 1 %}
                          <span>1</span>
                      {% else %}
                          <a href="/">1</a>
                      {% endif %}
-                      </div>
+                    </page-num>
                          
                     {% for count in (2..paginator.total_pages) %}
-                    <div class="page-num">
+                    <page-num>
                         {% if count == paginator.page %}
                             <span>{{ count }}</span>
                         {% else %}
                             <a href="/page{{ count }}">{{ count }}</a>
                         {% endif %}
-                    </div>
+                    </page-num>
                     {% endfor %}
                 </div>
                 
@@ -121,10 +103,36 @@ title: 写代码的猴子
                    {% endif %}
                 </div>
             </div>
+              </div>
+              
+              <script type="text/javascript">
+                  var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256704919'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256704919%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+                  </script>
           </div>
          
-          <div class="side"></div>
+          
+          
+          <div class="nav">
+              <div class="category"> <center>分类</center></div>
+              {% for category in site.categories %}
+              <div class="category-item">
+                  <div class="category-title"> {{ category | first }} </div>
+                  <div class="category-count">{{ category | last | size }}</div>
+              </div>
+               {% for post in category.last %}
+               <div class="category-item-post">
+                   <div class="category-item-post-title">
+                     <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+                   </div>
+                   <div class="category-item-post-date">{{post.date | date:"%m/%d"}}</div>
+               {% endfor %}
+               </div>
+             {% endfor %}
+           </div>
+           
+                   <!--<div class="aside">ssssssssssdjskldjal;skd;laksd';alksd;'asld;'sl'</div>-->
+
        </div>
-    <script type="text/javascript">
-    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256704919'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256704919%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+       
+    
 </body>
