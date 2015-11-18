@@ -1,11 +1,6 @@
-body {
+/*body {
   font-family:"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQ";
-  display: flex;
-  display: -webkit-flex;
-  /*min-height: 100vh;*/
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
+}*/
 
 .site-header {
   width: 100%;
@@ -49,9 +44,8 @@ content{
     width: 50%;
     line-height: 150%;
     margin-top: 80px;
+    font-size: 14px;
     border: 1px solid LightGrey;
-    
-    
 }
 
 H1 {
@@ -77,19 +71,19 @@ H3 {
     font-size: 20px;
     border-bottom: 1px LightGrey solid;
     width: 98%;
-    line-height: 120%;
+    line-height: 100%;
     color: #666666;
 }
 
 
 H4 {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
     margin-top: 5px;
     margin-bottom: 5px;
-    border-bottom: 1px LightGrey solid;
     width: 98%;
+    font: bold;
+    font-size: 16px;
+    color: black;
     line-height: 120%;
-    color: #666666;
 }
 
 H5 {
@@ -115,10 +109,10 @@ blockquote {
 
 pre {
     font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
-    font-size: 75%;
     border: solid 1px lightgrey;
     padding: 8px;
     line-height: 130%;
+    font-size: 90%;
     /*margin-left: 10px;*/
     width: 100%;
 }
