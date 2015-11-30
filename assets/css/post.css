@@ -109,11 +109,12 @@ blockquote {
 
 pre {
     font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
-    border: solid 1px lightgrey;
-    padding: 8px;
+    /*border: solid 1px lightgrey;*/
     line-height: 130%;
     font-size: 90%;
     /*margin-left: 10px;*/
+    /*font: bold;*/
+    /*padding-left: 3px;*/
     width: 100%;
 }
 
