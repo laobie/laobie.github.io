@@ -2,7 +2,8 @@
 .logo {
   display: block;
   width: 50px;
-  padding-left: 20% }
+  padding-left: 16px; 
+  }
 
 .logo h1 {
   clear: none;
@@ -63,7 +64,7 @@
   display: block;
   font-size: 16px;
   text-decoration: none;
-  color: black;
+  color: ghostwhite;
   transition: opacity 0.3s ease;
 }
    
@@ -73,8 +74,8 @@
 
 .site-header {
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #dcdcdc;
+  background: #303841;
+  /*border-bottom: 1px solid #dcdcdc;*/
   z-index: 30;
   position: fixed;
   top: 0;
@@ -94,7 +95,7 @@
   vertical-align: middle; }
   
 .home-title a{
-    color: black;
+    color: ghostwhite;
     text-decoration: none;  
 }
 

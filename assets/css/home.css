@@ -1,6 +1,5 @@
 .item {
-    
-   display: table;
+    display: table;
     width: 100%;
     margin-top: 8px;
     border-bottom: 1px lightgray solid;    
@@ -31,7 +30,7 @@
 .item a {
     font-size: 18px;
     text-decoration: none;
-    color: darkcyan;
+    color: #2185D5;
 }
 
 .item a:hover {
@@ -39,7 +38,8 @@
 }
 
 .home-body{
-  font-family:"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQ";
+  font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+  line-height: 1.7;
 }
 
 .content-body {
@@ -71,21 +71,22 @@
 
 .main-wrap {
   height: 100%;
-  margin: 0 20% 0 20%;
-  padding: 20px 8px 0 8px;
-  border-left:  1px solid lightgray;
-  border-right: 1px solid lightgray;
+  margin: 0 0 0 25%;
+  padding: 16px 36px 0 36px;
+  background: ghostwhite;
+  /*border-left:  1px solid lightgray;*/
+  /*border-right: 1px solid lightgray;*/
 }
 
 .nav {
   float: left;
-  width: 18%;
-  padding-left: 1%;
-  padding-right: 1%;
+  background: #3A4750;
+  width: 22%;
+  padding-left: 24px;
+  padding-right: 24px;
   position: relative;    
-  margin-left: -100%;
-  margin-top: 20px;
-  height: 100%;
+  margin-left: -101%;
+  height: 120%;
 }
 
 .page {
@@ -139,25 +140,29 @@
   display: table;
   width: 100%;
   margin-bottom: 5px;
-  border-bottom: 1px solid lightgray;
+  /*border-bottom: 1px solid lightgray;*/
   font-size: 14px;
   color: grey;
 }
 
 .category-title {
   display: table-cell;
-  padding-top: 4px;
+  padding-top: 16px;
   width: 80%;
+  font-size: 16px;
+  color: #2185D5;
 }
 .category-count {
   display: table-cell;
   width: 20%;
   text-align: right;
+  color: #2185D5;  
 }
 .category-item-post {
   display: block;
   width: 100%;
   font-size: 12px;
+  padding-top: 6px;
 }
 .category-item-post-title {
   display: table-cell;
@@ -167,15 +172,16 @@
 .category-item-post-date {
   display: table-cell;
   width: 20%;
+  color: whitesmoke;    
   text-align: right;
 }
 .category-item-post-title a{
-  color: black;
-  border-bottom: 1px dashed gray;
+  color: whitesmoke;  
+  /*border-bottom: 1px dashed darkslategrey;*/
   text-decoration: none;
 }
 .category-item-post-title a:hover{
-  color: green;
+  color: springgreen;
 }
 
 

@@ -13,10 +13,10 @@ title: 写代码的猴子
  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
  
 <body class="home-body">
-    	<header id="masthead" class="site-header" role="banner">
-		<div class="header-inside">
+    	<header id="masthead" class="site-header" role="banner" >
+		<div class="header-inside" >
             <div class="logo">
-		      <a href='http://laobie.github.io/'><img src='http://ac-qygvx1cc.clouddn.com/04978412acff33e7.png'></a>
+		      <a href='http://laobie.github.io/'><img  width="56px" src='http://ac-qygvx1cc.clouddn.com/6fd3e415ddc9811d.png'></a>
 		    </div>
             <div class="home-title">
                 <a href='http://laobie.github.io/'>写代码的猴子</a>
@@ -113,10 +113,9 @@ title: 写代码的猴子
           
           
           <div class="nav">
-              <div class="category"> <center>分类</center></div>
               {% for category in site.categories %}
               <div class="category-item">
-                  <div class="category-title"> {{ category | first }} </div>
+                  <div class="category-title"> {{ category | first | capitalize }} </div>
                   <div class="category-count">{{ category | last | size }}</div>
               </div>
                {% for post in category.last %}

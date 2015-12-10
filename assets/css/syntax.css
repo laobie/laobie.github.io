@@ -65,4 +65,7 @@
 .lineno { color: #ccc; display:inline-block;padding-right: 5px;
 border-right:1px solid #ccc; 
 }
-.highlight pre code { display: block; white-space: pre; overflow-x: auto; word-wrap: normal; }
+.highlight pre code { 
+	 font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+	display: block; white-space: pre; overflow-x: auto; word-wrap: normal;
+ }
