@@ -63,12 +63,15 @@ category: Android
    - 对应的控件的id的命名`控件缩写_逻辑名称`，单词均小写，用下划线连接，例如：`tv_post_title`、`et_user_name`；
    - 常见的控件缩写如下：
 
-|	控件        |    缩写	   || ----------   |:------------:||  Linearlayout  |  ll         |
-|  RelativeLayout|  rl         ||  TextView      |  tv         |
+|	控件        |    缩写	   |
+|:----------:|:------------:|
+|  Linearlayout  |  ll         |
+|  RelativeLayout|  rl         |
+|  TextView      |  tv         |
 |  EditText      |  et         |
 |  Button        |  btn     	|	
 |  ImageView     |  iv         |
-|  CheckBox      |  cb         |
+|  CheckBox      |  chb         |
 |  ListView      |  lv         |
 |  GridView      |  gv         |
 |  RadioButton   |  rb         |
