@@ -40,6 +40,7 @@
 .home-body{
   font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;
   line-height: 1.7;
+  background: ghostwhite;
 }
 
 .content-body {
@@ -73,7 +74,6 @@
   height: 100%;
   margin: 0 0 0 25%;
   padding: 16px 36px 0 36px;
-  background: ghostwhite;
   /*border-left:  1px solid lightgray;*/
   /*border-right: 1px solid lightgray;*/
 }
