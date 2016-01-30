@@ -10,7 +10,6 @@ redcarpet:
                 "autolink",
                 "tables",
                 "strikethrough",
-                "with_toc_data",
                 "highlight",
                 "footnotes",
                 "quote",
