@@ -5,4 +5,14 @@ paginate: 6
 paginate_path: "page:num"
 markdown: redcarpet
 redcarpet: 
- extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
+ extensions: [ "fenced_code_blocks",
+                "hard_wrap",
+                "autolink",
+                "tables",
+                "strikethrough",
+                "with_toc_data",
+                "highlight",
+                "footnotes",
+                "quote",
+                "prettify",
+                "no_intra_emphasis"]
