@@ -3,15 +3,4 @@ gems: [jekyll-paginate]
 encoding: utf-8
 paginate: 6
 paginate_path: "page:num"
-markdown: redcarpet
-redcarpet: 
- extensions: [ "fenced_code_blocks",
-                "hard_wrap",
-                "autolink",
-                "tables",
-                "strikethrough",
-                "highlight",
-                "footnotes",
-                "quote",
-                "prettify",
-                "no_intra_emphasis"]
+markdown: kramdown

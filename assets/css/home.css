@@ -184,6 +184,11 @@
   color: springgreen;
 }
 
+.excerpt a{
+  color: green;
+  text-decoration: none;
+  font-size: 14px;
+}
 
 
 
