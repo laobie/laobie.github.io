@@ -14,7 +14,7 @@ App启动页(Splash)，最经典的莫过于微信的启动页了。不过启动
 #### 1. 添加`SplashActivity`
 首先假设App打开的第一个界面为`MainActivity`，新建一个`SplashActivity`，在`AndroidManifest`中将`SplashActivity`设置为启动后第一个打开的页面：
 
-{% highlight xml linenos %}	
+~~~xml
 <activity
       	android:name=".activity.SplashActivity"
       	android:label="@string/app_name"
@@ -24,7 +24,7 @@ App启动页(Splash)，最经典的莫过于微信的启动页了。不过启动
             	 	<category android:name="android.intent.category.LAUNCHER" />
       	</intent-filter>
 </activity>
-{% endhighlight %}
+~~~
         
   这里只是将`MainActivity`的`intent-filter`参数剪切给`SplashActivty`，此时你打开App第一个显示的就是`SplashActivity`了。
 
@@ -32,7 +32,7 @@ App启动页(Splash)，最经典的莫过于微信的启动页了。不过启动
 跳转是用Handler的`postDelayed()`方法来设置延时来实现的，在`SplashActivity`的`onCreate()`方法中添加一下的代码，就可以实现在1500毫秒后跳转到`MainActivity`了。
 这里需要注意的是`Handler`是引用自`android.os.Handler`，import 的时候不要搞错了。
 
-{% highlight java linenos %}
+~~~java
 Handler handler = new Handler();
 handler.postDelayed(new Runnable() {
        @Override
@@ -42,7 +42,7 @@ handler.postDelayed(new Runnable() {
             finish();
         }
 }, 1500);
-{% endhighlight %}
+~~~
 
 `postDelayed(Runnable r, long delayMillis)`方法就是设置在设定的时间后执行`Runnable`中的`run()`，`delayMillis`单位是毫秒。
 
@@ -54,7 +54,7 @@ handler.postDelayed(new Runnable() {
 
 其实很简单，只需要重写一下`MainActivity`的`onBackPressed()`方法就行。
 
-{% highlight java linenos %}
+~~~java
 @Override
 public void onBackPressed() {
     // super.onBackPressed(); 	不要调用父类的方法
@@ -63,7 +63,7 @@ public void onBackPressed() {
     intent.addCategory(Intent.CATEGORY_HOME);
     startActivity(intent);
 }
-{% endhighlight %}
+~~~
 
 以上就实现了和微信一样的效果。
 
