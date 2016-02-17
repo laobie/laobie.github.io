@@ -180,7 +180,7 @@ ImageView ivAvatar = (ImageView) headerView.findViewById(R.id.nav_avatar);
 关于这个问题，如果你用的不是23.1.1版本的话，你可以看 stackoverflow 上的讨论[ NavigationView get/find header layout](http://stackoverflow.com/questions/33194594/navigationview-get-find-header-layout)，针对其他版本也有解决方法说明。
 
 #### 2. 菜单列表中的图标不显示原始颜色
-当设计师为每一项的图标都设置了不同的颜色时，你将切好的彩色图标文件放进去，运行后发现全变成灰色了。此时可以通过 'app:itemIconTint="@color/blue"' 为图标统一设置颜色，前后效果如下：
+当设计师为每一项的图标都设置了不同的颜色时，你将切好的彩色图标文件放进去，运行后发现全变成灰色了。此时可以通过 `app:itemIconTint="@color/blue"` 为图标统一设置颜色，前后效果如下：
 ![](http://ac-qygvx1cc.clouddn.com/28339a52ef1959fb.png)
 
 然而这还不是我们需要的效果，我们需要的是彩色的图标，而不是统一的图标颜色。
