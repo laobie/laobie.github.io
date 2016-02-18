@@ -236,7 +236,7 @@ category: Android
 
 以上代码我整理成了一个工具类，放在 github 上：[StatusBarUtils.java 文件](https://github.com/laobie/StatusBarDemo/blob/master/app/src/main/java/com/jaeger/statusbardemo/StatusBarUtils.java)
 
-在项目中推荐这样使用，在 `BaseActivity` 中重写 `setContentView(int layoutResID)` 方法，新建一个 `setStatusBarColor()`方法，全局设置状态栏颜色，因为一般 App 大部分界面状态栏都是主题色。 
+在项目中推荐这样使用，在 `BaseActivity` 中重写 `setContentView(int layoutResID)` 方法，新建一个 `setStatusBar()`方法，全局设置状态栏颜色，因为一般 App 大部分界面状态栏都是主题色。 
 
 ~~~ java
 
@@ -245,7 +245,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
-        setStatusBarColor();
+        setStatusBar();
     }
 
     protected void setStatusBar() {
