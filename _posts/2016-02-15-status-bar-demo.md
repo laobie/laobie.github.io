@@ -255,7 +255,7 @@ public class BaseActivity extends AppCompatActivity {
 }
 ~~~
 
-当子类 Activity 的状态栏需要特殊处理时，比如设置不同的颜色，或者设置图片为背景时，重写父类的 `setStatusBarColor()` 方法即可，例如：
+当子类 Activity 的状态栏需要特殊处理时，比如设置不同的颜色，或者设置图片为背景时，重写父类的 `setStatusBar()` 方法即可，例如：
 
 ~~~ java
 public class ImageStatusBarActivity extends BaseActivity {
