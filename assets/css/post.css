@@ -168,6 +168,14 @@ img {
     /*-webkit-box-shadow: 0 0 10px #555;*/
 }
 
+blockquote {
+	margin-left:0; 
+	color: #777;
+	border-left: 3px solid #ddd;
+}
+blockquote p{
+	text-indent:0;
+}
 
 hr {
     color: LightGrey;
