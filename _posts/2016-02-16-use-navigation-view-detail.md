@@ -10,7 +10,7 @@ NavigationView 的引入让 Android 侧边栏实现起来相当方便，最近�
 
 ### 基本使用
 
-#### 1. `NavigationView` 在 design 库中，添加依赖；
+#### 1. `NavigationView` 在 design 库中，添加依赖（最新的是 23.2.0）；
 
 	compile 'com.android.support:design:23.1.1' 
 		
