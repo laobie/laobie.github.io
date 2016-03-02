@@ -244,6 +244,9 @@ menuItem.setVisible(false);	// true 为显示，false 为隐藏
 
 这个问题也就这么解决了。😊
 
+#### 5. 使用 NavigationView 时透明状态栏的处理
+这个问题可以看我上一篇文章来解决[ Android App 沉浸式状态栏解决方案](http://laobie.github.io/android/2016/02/15/status-bar-demo.html)，里面会讲到如何处理抽屉视图的透明状态栏的实现。
+
 
 ### 写在最后
 
