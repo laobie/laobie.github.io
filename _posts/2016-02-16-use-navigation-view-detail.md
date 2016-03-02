@@ -168,7 +168,7 @@ navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigation
 ### 使用小细节（和坑）
 
 #### 1. 获得头部（header）内控件
-在旧版本中，假如你要获得 NavigationView 中的头像 `ImageView`，你可以在 activity 中直接调用 `findViewById()` 方法来获得。但是在23.1.0版本之后，这个不再适用，在我的使用的23.1.1版本中，可以直接调用 `getHeaderView()`方法先得到 Header,然后在通过header来获得头部内的控件。
+在旧版本中，假如你要获得 NavigationView 中的头像 `ImageView`，你可以在 activity 中直接调用 `findViewById()` 方法来获得。但是在 Support Library 23.1.0 版本之后，这个不再适用，在我使用的 Support Library 23.1.1 版本中，可以直接调用 `getHeaderView()`方法先得到 Header,然后在通过header来获得头部内的控件。
 
 ~~~ java
 View headerView = navigationView.getHeaderView(0); 
