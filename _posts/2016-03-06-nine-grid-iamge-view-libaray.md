@@ -34,7 +34,7 @@ category: Android
 	
 + 当只有一张图的时候，可以设置其显示大小，不让其显示的过小:
 
-	`app:singleImgSize="120dp"` or `nineGridImageView.setSingleImgSize(int singleImgSize)`
+	`app:singleImgSize="120dp"` 或 `nineGridImageView.setSingleImgSize(int singleImgSize)`
 	
 	![](http://ac-qygvx1cc.clouddn.com/cc9ffd32722ead80.png)
 
@@ -42,7 +42,7 @@ category: Android
 
 #### 1. 首先添加依赖
 
-	`compile 'com.jaeger.ninegridimageview:library:1.0.0'`
+	compile 'com.jaeger.ninegridimageview:library:1.0.0'
 	
 #### 2. 在布局文件中添加 NineGridImageView， 如下所示：
 	
@@ -58,9 +58,9 @@ category: Android
 ~~~
         
 #### 3. 为 NineGridImageView 设置 NineGridImageViewAdapter
-
-	nineGridImageView.setAdapter(nineGridViewAdapter);
-	
+~~~ java
+nineGridImageView.setAdapter(nineGridViewAdapter);
+~~~
 下面是 `NineGridImageViewAdapter.class` 的源码:
 	
 ~~~ java
@@ -114,9 +114,9 @@ private NineGridImageViewAdapter<Photo> mAdapter = new NineGridImageViewAdapter<
 ~~~
 
 #### 4. 给 NineGridImageView 设置图片数据：
-
-	nineGridImageView.setImagesData(List<T> imageDataList);
-	
+~~~ java
+nineGridImageView.setImagesData(List<T> imageDataList);
+~~~
 ### 参考资料
 - [自定义九宫格控件NineGridLayout](https://github.com/panyiho/NineGridView)
 - [九宫格图片展示控件]( https://github.com/w4lle/NineGridView)
