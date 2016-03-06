@@ -117,6 +117,7 @@ private NineGridImageViewAdapter<Photo> mAdapter = new NineGridImageViewAdapter<
 ~~~ java
 nineGridImageView.setImagesData(List<T> imageDataList);
 ~~~
+
 ### 参考资料
 - [自定义九宫格控件NineGridLayout](https://github.com/panyiho/NineGridView)
 - [九宫格图片展示控件]( https://github.com/w4lle/NineGridView)
