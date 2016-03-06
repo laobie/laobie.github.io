@@ -11,7 +11,7 @@ category: Android
 ![](http://ac-qygvx1cc.clouddn.com/ee5906c846ad3346.png)
 
 ### Demo App
-[NineGridImageView-Demo.apk]()
+[NineGridImageView-Demo 下载](http://fir.im/bkxn)
 
 ### 特性
 + 设置图片之间的间隔	
