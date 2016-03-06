@@ -39,7 +39,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
     - 上一个/下一个书签：无，可以在设置中设置快捷键。
 - **更多：**当你为某个书签指定了标记，你可以使用快捷键 Ctrl + 标记 来快速跳转到标记处，比如输入Ctrl + 1，跳到标记为1的书签处。
 
-![](http://ac-QYgvX1CC.clouddn.com/e2df362ddca7ecd0.gif)
+![](../../../../assets/img/studio_tips/07-bookmarks.gif)
 
 #### 2. 折叠/展开代码块（Collapse Expand Code Block）
 
@@ -47,21 +47,21 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 - **快捷键：**Cmd + "+"/"-"(OS X)、Ctrl + Shift + "+"/"-"(Windows/Linux);
 - **更多：**可以在Settig → Editor → General → Code Folding 中设置折叠规则。
 
-![](http://ac-QYgvX1CC.clouddn.com/d26686a76047a506.gif)
+![](../../../../assets/img/studio_tips/06-codefolding.gif)
 
 #### 3. 与分支比对（Compare With Branch (Git)）
 
 - **描述：**假如你的项目是使用git来管理的，你可以将当前文件或者文件夹与其他的分支进行比对。比较有用的是可以让你了解到你与主分支有多少差别。
 - **调用：**Menu → VCS → Git → Compare With Branch 
 
-![](http://ac-QYgvX1CC.clouddn.com/499fa018176ba22a.gif)
+![](../../../../assets/img/studio_tips/38-comparewithbranch.gif)
 
 #### 4. 与剪切板比对（Compare With Clipboard）
 
 - **描述：**将当前选中的部分与剪切板上的内容进行比对。
 - **调用：**右键选中的部分，在右键菜单中选择“Compare With Clipboard”。
 
-![](http://ac-QYgvX1CC.clouddn.com/9777c225ff4417fc.gif)
+![](../../../../assets/img/studio_tips/34-comparewithclipboard.gif)
 
 #### 5. 上下文信息（Context Info）
 
@@ -70,7 +70,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 - **快捷键：**Alt + Q (Windows/Linux)
 - **更多：**个人认为，这个功能更好的用法是快速查看当前类继承的父类或者实现的接口。
 
-![](http://ac-QYgvX1CC.clouddn.com/31fdccb311728b87.gif)
+![](../../../../assets/img/studio_tips/47-contextinfo.gif)
 
 #### 6. 查找操作（Find Action）
 
@@ -78,14 +78,14 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 - **快捷键：**Cmd +Shift + A(OS X)、Ctrl + Shift + A(Windows/Linux)；
 - **更多：**当某个操作是有快捷键的，会显示在旁边。
 
-![](http://ac-QYgvX1CC.clouddn.com/8371f24ffedb398b.gif)
+![](../../../../assets/img/studio_tips/08-findaction.gif)
 
 #### 7. 查找补全（Find Complection）
 
 - **描述：**当你在一个文件中进行查找时，使用自动补全快捷键可以给出在当前文件中出现的建议单词；
 - **快捷键：**Cmd + F(OS X),Ctrl + F(Windows/Linux),输入一些字符，然后使用自动补全；
 
-![](http://ac-QYgvX1CC.clouddn.com/5d0a5eba15c25da3.gif)
+![](../../../../assets/img/studio_tips/61-findcompletion.gif)
 
 #### 8. 隐藏所有面板（Hide All Panels）
 
@@ -93,7 +93,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 - **调用：**Menu → Window → Active Tool Window → Hide All Windows；
 - **快捷键：**Cmd +Shift + F12(OS X)、Ctrl + Shift + F12(Windows/Linux)；
 
-![](http://ac-QYgvX1CC.clouddn.com/7f0e65b0682803ab.gif)
+![](../../../../assets/img/studio_tips/42-hideallwindows.gif)
 
 #### 9. 高亮一切（Hightlight All the Things）
 
@@ -107,21 +107,21 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
     - 高亮一个`import`语句也会高亮使用到的地方；
     - 按下Esc可以退出高亮模式；
 
-![](http://ac-QYgvX1CC.clouddn.com/d11dc670c4ab8261.gif)
+![](../../../../assets/img/studio_tips/01-highlight.gif)
 
 #### 10. 回到上一个工具窗口（Jump to Last Tool Window）
 
 - **描述：**有时候你会从某个工具窗口跳到编辑器里面，然后又需要重新回到刚才操作的那个工具窗，比如你查找使用情况的时，使用该操作可以在不使用鼠标的情况下跳转到之前的工具窗口。
 - **快捷键：**F12；
 
-![](http://ac-QYgvX1CC.clouddn.com/5c870aaa04405bb3.gif)
+![](../../../../assets/img/studio_tips/41-lasttoolwindow.gif)
 
 #### 11. 上一个编辑位置（Last Edit Location）
 
 - **描述：**该操作将使得你导航到上一处你改动过的地方，这与点击工具栏上的返回箭头回到上一个定位位置是不一样的，该操作将会返回到上一个编辑的位置。
 - **快捷键：** Cmd + Shift + Delete(OS X)、Ctrl + Shift + Backspace﻿(Windows/Linux);
 
-![](http://ac-QYgvX1CC.clouddn.com/8d48223a2598cabd.gif)
+![](../../../../assets/img/studio_tips/17-navigate-previous-changes.gif)
 
 #### 12. 在方法和内部类之间跳转（Move Between Methods and Inner Classes）
 
@@ -129,14 +129,14 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 - **调用：**Navigate → Next Method/Previous Method;
 - **快捷键：**Ctrl + Up/Down﻿(OS X)、Alt + Up/Down﻿(Windows/Linux);
 
-![](http://ac-QYgvX1CC.clouddn.com/e198f5175d0dd8ef.gif)
+![](../../../../assets/img/studio_tips/02-move_between_methods.gif)
 
 #### 13. 定位到嵌套文件（Navigate to Nested File）
 
 - **描述：**有时你有一堆存放在不同目录下的同名文件，例如不同模块下的`AndroidManifest.xml`文件，当你想定位到其中的一个文件，你会得到一堆搜索结果，你还得辨认哪个才是你需要的。通过在检索框中输入部分路径的前缀，并添加斜杠号，你就可以在第一次尝试的时候就找到正确的那个。
 - **快捷键：**Cmd + O(OS X)、Ctrl + N﻿(Windows/Linux);
 
-![](http://ac-QYgvX1CC.clouddn.com/21d645e781d1ae00.gif)
+![](../../../../assets/img/studio_tips/63-nestednavigation.gif)
 
 #### 14. 定位到父类（Navigate to parent） 
 
@@ -144,49 +144,49 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 - Menu → Navigate → Super Class/Method
 - **快捷键：**Cmd + U(OS X)、Ctrl + U(Windows/Linux);
 
-![](http://ac-QYgvX1CC.clouddn.com/d73a1b7bc2c39a6e.gif)
+![](../../../../assets/img/studio_tips/39-navigatetoparent.gif)
 
 #### 15. 根据编号打开面板（Open a Panel by Its Number）
 
 - **描述：**你可能已经注意到某些面板的名称左边有一个数字，这里有个快捷操作可以打开它们。如果你没看到面板的名称，请点击IDE的左下角的切换按钮。
 - **快捷键：**Cmd + 数字(OS X)、Alt + 数字(Windows/Linux);
 
-![](http://ac-QYgvX1CC.clouddn.com/8441ecddc1f4b328.gif)
+![](../../../../assets/img/studio_tips/42-openpanelbynumber.gif)
 
 #### 16. 在外部打开文件（Open File Externally）
 
 - **描述：**通过这个快捷键，简单地点击Tab，就可以打开当前文件所在的位置或者该文件的任意上层路径。
 - **快捷键：**Cmd + 单击Tab(OS X)、Ctrl + 点击Tab(Windows/Linux);
 
-![](http://ac-QYgvX1CC.clouddn.com/c936ed29e2976730.gif)
+![](../../../../assets/img/studio_tips/62-openfinder.gif)
 
 #### 17. 参数信息（Parameter Info）
 
 - **描述：**这个操作将显示和你在方法声明处写一样的参数列表，当你想看某个存在的方法的参数，这是一个很有用的操作。光标下的参数显示为黄色，如果没有参数显示黄色，意味着你的方法调用是无效的，很可能是某个参数分配不对。（例如一个浮点数赋值给了整型参数）。如果你正在写一个方法调用，突然离开编辑的地方，再返回的时候，输入一个逗号，就可以重新触发参数信息。
 - **快捷键：**Cmd + P(OS X)、Ctrl + U(Windows/Linux);
 
-![](http://ac-QYgvX1CC.clouddn.com/785778bd8a322ed2.gif)
+![](../../../../assets/img/studio_tips/44-parameterinfo.gif)
 
 #### 18. 快速查看定义（Quick Definition Lookup）
 
 - **描述：**你曾经是否想查看一个方法或者类的具体实现，但是不想离开当前界面？   该操作可以帮你搞定。
 - **快捷键：**Alt + Space / Cmd + Y(OS X)、Ctrl + Shift + I(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/921759e3762846df.gif)
+![](../../../../assets/img/studio_tips/05-quickdefinition.gif)
 
 #### 19. 最近修改的文件（Recently Changed Files）
 
 - **描述：**该操作类似于“最近访问（Recents）”弹窗，会显示最近本地修改过的文件列表，根据修改时间排列。可以输入字符来过滤列表结果。
 - **快捷键：**Cmd + Shift + E(OS X)、Ctrl + Shift + E(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/a7b39cb71f8c6e58.gif)
+![](../../../../assets/img/studio_tips/49-recentlyedited.gif)
 
 #### 20. 最近访问（Recents）
 
 - **描述：**该操作可以得到一个最近访问文件的可搜索的列表。
 - **快捷键：**Cmd + E(OS X)、Ctrl + E(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/c9d3ea64504f9f73.gif)
+![](../../../../assets/img/studio_tips/14-recents.gif)
 
 
 #### 21. 相关文件（Related File）
@@ -194,7 +194,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 - **描述：**该操作有助于在布局文件和Activity/Fragment之间轻松跳转。这也是一个快捷操作，在类名/布局顶端的左侧。
 - **快捷键：**Ctrl + Cmd + Up(OS X)、Ctrl + Alt + Home(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/10e6986109469ddc.gif)
+![](../../../../assets/img/studio_tips/50-relatedfile.gif)
 
 #### 22. 返回到编辑器（Return to the Editor）
 
@@ -206,7 +206,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
     - 返回但保留打开的面板：Esc
     - 关闭面板并返回：Shift + Esc
 
-![](http://ac-QYgvX1CC.clouddn.com/6acc5b06c316e415.gif)
+![](../../../../assets/img/studio_tips/40-returntoeditor.gif)
 
 #### 23. Select In
 
@@ -214,21 +214,21 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 
 - **快捷键：**Alt + F1；
 
-![](http://ac-QYgvX1CC.clouddn.com/656a2f8440f347dc.gif)
+![](../../../../assets/img/studio_tips/19-select-in.gif)
 
 #### 24. 扩大选择（Shrink Selection）
 
 - **描述：**该操作会在上下文逐渐扩大当前选择范围。例如，它会先选中当前变量，再选中当前语句，然后选中整个方法，等等。
 - **快捷键：**Cmd + F2(OS X)、Ctrl + F2（Windows、Linux）
 
-![](http://ac-QYgvX1CC.clouddn.com/317c0b9ff11ac966.gif)
+![](../../../../assets/img/studio_tips/12-expand_shrink_selection.gif)
 
 #### 25. Sublime Text式的多处选择（Sublime Text Multi Selection）
 
 - **描述：**这个功能超级赞！该操作会识别当前选中字符串，选择下一个同样的字符串，并且添加一个光标。这意味着你可以在同一个文件里拥有多个光标，你可以同时在所有光标处输入任何东西。
 - **快捷键：**Ctrl + G(OS X)、Alt + Ｊ（Windows、Linux）
 
-![](http://ac-QYgvX1CC.clouddn.com/3f6c610db62b0784.gif)
+![](../../../../assets/img/studio_tips/32-multiselection.gif)
 
 #### 26. 文件结构弹窗（The File Structure Popup）
 
@@ -241,7 +241,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 - **快捷键：**Cmd + F12(OS X)、Ctrl + F12(Windows/Linux)
 - **调用：**Menu → Navigate → File Structure
 
-![](http://ac-QYgvX1CC.clouddn.com/6d1cb3f0fd12f6bb.gif)
+![](../../../../assets/img/studio_tips/03-filestructure.gif)
 
 #### 27. 切换器（The Switcher）
 
@@ -249,14 +249,14 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 
 - **快捷键：**Ctrl + Tab
 
-![](http://ac-QYgvX1CC.clouddn.com/510a7d69b406c44e.gif)
+![](../../../../assets/img/studio_tips/46-switcher.gif)
 
 #### 28. 版本控制操作弹窗（VCS Operations Popup）
 
 - **描述：**该操作会给你显示最常用的版本控制操作。如果你的项目没有用git等版本控制软件进行管理，它至少会给你提供一个由IDE维护的本地历史记录。
 - **快捷键：**Ctrl + V(OS X)、Alt + `(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/1340d7413d1f3ffc.gif)
+![](../../../../assets/img/studio_tips/37-vcspopup.gif)
 
 <br />
 <hr size="3px" color="#4285F4"/>
@@ -271,7 +271,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 - 开启/关闭块选择：Menu → Edit → Column Selection Mode 
 - **快捷键：**切换块选择模式：Cmd + Shift + 8(OS X)、Shift + Alt + Insert﻿(Windows/Linux);
 
-![](http://ac-QYgvX1CC.clouddn.com/b493930382291c7e.gif)
+![](../../../../assets/img/studio_tips/33-columnselection.gif)
 
 #### 30. 语句补全（Complete Statement）
 
@@ -283,21 +283,21 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 - **快捷键：**Cmd + Shift + Enter(OS X)、Ctrl + Shift + Enter(Windows/Linux)；
 - **更多：**如果一个语句已经补全，当你执行该操作时，则会直接跳到下一行，即使光标不在当前行的行末。
 
-![](http://ac-QYgvX1CC.clouddn.com/f35bbc3149b80e62.gif)
+![](../../../../assets/img/studio_tips/16-completestatement.gif)
 
 #### 31. 删除行（Delete Line）
 
 - **描述：**如果没选中，则删除光标所在行，如果选中，则会删除选中所在的所有行。
 - **快捷键：**Cmd + Delete(OS X)、Ctrl + Y(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/306ec5dde81a2f30.gif)
+![](../../../../assets/img/studio_tips/10-deleteline.gif)
 
 #### 32. 行复制（Duplicate Line）
 
 - **描述：**复制当前行，并粘贴到下一行，这个操作不会影响剪贴板的内容。这个命令配合移动行快捷键非常有用。
 - **快捷键：**Cmd + D(OS X)、Ctrl + D(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/e7c0b59fa4153c85.gif)
+![](../../../../assets/img/studio_tips/11-duplicate_lines.gif)
 
 #### 33. 编写正则表达式（Edit Regex）
 
@@ -309,7 +309,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试正则啦~
 - **快捷键：**Alt + Enter → check regexp
 
-![](http://ac-QYgvX1CC.clouddn.com/3ec8b85294bfbd0a.gif)
+![](../../../../assets/img/studio_tips/68-checkregexp.gif)
 
 #### 34. 使用Enter和Tab进行代码补全的差别（Enter vs Tab for Code Completion）
 
@@ -317,7 +317,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - 使用Enter时：从光标处插入补全的代码，对原来的代码不做任何操作。
 - 使用Tab时：从光标处插入补全的代码，并删除后面的代码，直到遇到点号、圆括号、分号或空格为止。
 
-![](http://ac-QYgvX1CC.clouddn.com/b6f4d27f3864326e.gif)
+![](../../../../assets/img/studio_tips/45-codecompletionentertab.gif)
 
 #### 35. 提取方法（Extract Method）
 
@@ -326,7 +326,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **快捷键：**Cmd + Alt + M(OS X)、Ctrl + Alt + M(Windows/Linux)；
 - **更多：**在提取代码的对话框，你可以更改方法的修饰符和参数的变量名。
 
-![](http://ac-QYgvX1CC.clouddn.com/f0a7df2451ab5a85.gif)
+![](../../../../assets/img/studio_tips/53-extractmethod.gif)
 
 #### 36. 提取参数（Extract Parameter）
 
@@ -335,7 +335,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **快捷键：**Cmd + Alt + P(OS X)、Ctrl + Alt + P(Windows/Linux)；
 - **更多：**通过勾选“delegate”，可以保持旧的方法，重载生成一个新方法。
 
-![](http://ac-QYgvX1CC.clouddn.com/7ec99f5fb67a79eb.gif)
+![](../../../../assets/img/studio_tips/52-extractparam.gif)
 
 #### 37. 提取变量（Extract Variable）
 
@@ -344,7 +344,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **快捷键：**Cmd + Alt + V(OS X)、Ctrl + Alt + V(Windows/Linux)；
 - **更多：**当你需要改变变量声明的类型，例如使用 List 替代 ArrayList，可以按下Shift + Tab，就会显示所有可用的变量类型。
 
-![](http://ac-QYgvX1CC.clouddn.com/7c3d38f31d56f413.gif)
+![](../../../../assets/img/studio_tips/51-extractvariable.gif)
 
 #### 38. 内置（Inline）
 
@@ -352,7 +352,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **调用：**Menu → Refactor → Inline
 - **快捷键：**Cmd + Alt + N(OS X)、Ctrl + Alt + N(Windows/Linux)；
 
-![](http://ac-QYgvX1CC.clouddn.com/871a76a4c34ffee6.gif)
+![](../../../../assets/img/studio_tips/54-inline.gif)
 
 #### 39. 合并行和文本（Join Lines and Literals）
 
@@ -363,7 +363,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 - **快捷键：**Ctrl + Shift + J；
 
-![](http://ac-QYgvX1CC.clouddn.com/d33fc507bfa5e3cc.gif)
+![](../../../../assets/img/studio_tips/18-joinlines.gif)
 
 #### 40. 动态模板（Live Templates）
 
@@ -371,14 +371,14 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **更多：**如果你知道模板的缩写，就可以不必使用快捷键，只需要键入缩写并使用Tab键补全即可。
 - **快捷键：**Cmd + J(OS X)、Ctrl + J(Windows/Linux);
 
-![](http://ac-QYgvX1CC.clouddn.com/dad02622e723ca98.gif)
+![](../../../../assets/img/studio_tips/15-live_templates.gif)
 
 #### 41. 上下移动行（Move Lines Up Down）
 
 - **描述：**不需要复制粘贴就可以上下移动行了。
 - **快捷键：**Alt + Shift + Up/Down﻿；
 
-![](http://ac-QYgvX1CC.clouddn.com/0aaa5ea0bb33ed74.gif)
+![](../../../../assets/img/studio_tips/09-movelines.gif)
 
 
 #### 42. 移动方法（Move Methods）
@@ -386,14 +386,14 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **描述：**这个操作和移动行操作很类似，不过该操作是应用于整个方法的，在不需要复制、粘贴的情况下，就可以将整个方法块移动到另一个方法的前面或后面。该操作的实际叫做“移动语句”，这意味着你可以移动任何类型的语句，你可以方便地调整字段或内部类的顺序。
 - **快捷键：**Cmd + Alt + Up/Down(OS X)、Ctrl + Shift + Up/Down(Windows/Linux);
 
-![](http://ac-QYgvX1CC.clouddn.com/e33515fd8dee095a.gif)
+![](../../../../assets/img/studio_tips/15-movemethods.gif)
 
 #### 43. 取反补全（Negation Completion）
 
 - **描述：**有时你自动补全一个布尔值，然后回到该值的前面添加一个感叹号来完成取反操作，现在通过使用输入`!`代替`enter`完成补全操作，就可以跳过这些繁琐的操作了。
 - **快捷键：**代码补全的时候，按下`!`即可（有时需要上下键选中候选项）；
 
-![](http://ac-QYgvX1CC.clouddn.com/c596098f7de45e15.gif)
+![](../../../../assets/img/studio_tips/58-negatecompletion.gif)
 
 #### 44. 后缀补全（Postfix Completion）
 
@@ -409,7 +409,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
     - **.format** (使用`String.format()`包裹一个字符串)
     - **.cast** (使用类型转化包裹一个表达式)
 
-![](http://ac-QYgvX1CC.clouddn.com/054a4b705ba2c01b.gif)
+![](../../../../assets/img/studio_tips/33-postfixcompletion.gif)
 
 
 #### 45. 重构（Refactor This）
@@ -418,7 +418,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 - **快捷键：**Ctrl + T(OS X)、Ctrl + Alt + Shift + T(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/10e6986109469ddc.gif)
+![](../../../../assets/img/studio_tips/50-relatedfile.gif)
 
 #### 46. 重命名（Rename）
 
@@ -426,7 +426,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **快捷键：**Shift + F6
 - **更多：**如果你忘记了这个快捷键，你可以使用快速修复（Quick Fix）的快捷键，它通常包含重命名选项。
 
-![](http://ac-QYgvX1CC.clouddn.com/022edbb791ad2a25.gif)
+![](../../../../assets/img/studio_tips/55-rename.gif)
 
 #### 47. 分号/点 补全（Semicolon Dot Completion）
 
@@ -434,7 +434,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **注意点：**如果你要代码补全的方法需要参数，这些参数会被略过。
 - **快捷键：**Autocomplete + "." 或者 ";"
 
-![](http://ac-QYgvX1CC.clouddn.com/0fbd1699b35363cc.gif)
+![](../../../../assets/img/studio_tips/69-semicolondotcompletion.gif)
 
 #### 48. 包裹代码（Surround With）
 
@@ -443,7 +443,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 - **快捷键：**Cmd + Alt + T(OS X)、Ctrl + Alt + T(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/ca89b17823cc341e.gif)
+![](../../../../assets/img/studio_tips/13-surround_with.gif)
 
 #### 49. 移除包裹代码（Unwrap Remove）
 
@@ -451,7 +451,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 - **快捷键：**Cmd + Shift + Delete(OS X)、Ctrl + Shift + Delete(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/72e2cced2c0dfac6.gif)
+![](../../../../assets/img/studio_tips/20-unwrap.gif)
 
 <br />
 <hr size="3px" color="#4285F4"/>
@@ -467,7 +467,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **快捷键：**无，可以在设置中指定。
 - **相反的操作：**分析传出数据流（Analyze data flow from here），这个将会分析当前选中的变量往下传递的路径，直到结束。
 
-![](http://ac-QYgvX1CC.clouddn.com/6b2d7ac2619b82fa.gif)
+![](../../../../assets/img/studio_tips/31-analyzedataflow.gif)
 
 #### 51. 堆栈追踪分析（Analyze Stacktrace）
 
@@ -476,7 +476,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **快捷键：**无，可以在设置中指定。
 - **更多：**通过使用“ProGuard Unscramble Plugin”插件，也可以分析混淆过的堆栈追踪。
 
-![](http://ac-QYgvX1CC.clouddn.com/0bc9e1a76e624f42.gif)
+![](../../../../assets/img/studio_tips/30-analyzestacktrace.gif)
 
 #### 52.  关联调试程序（Attach Debugger）
 
@@ -484,42 +484,42 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **调用：**点击工具栏图标或者Menu → Build → Attach to Android Process
 - **快捷键：**无，可以在设置中指定，或者点击工具栏对应的图标。
 
-![](http://ac-QYgvX1CC.clouddn.com/a5022b8f823715d6.gif)
+![](../../../../assets/img/studio_tips/26-attachdebugger.gif)
 
 #### 53. 条件断点（Conditional Breakpoints）
 
 - **描述：**简单说，就是当设定的条件满足时，才会触发断点。你可以基于当前范围输入一个java布尔表达式，并且条件输入框内是支持代码补全的。
 - **调用：**右键需要填写表达式的断点，然后输入布尔表达式。
 
-![](http://ac-QYgvX1CC.clouddn.com/a34553bf9d94febf.gif)
+![](../../../../assets/img/studio_tips/22-conditionalbreakpoint.gif)
 
 #### 54. 禁用断点（Disable Breakpoints）
 
 - 这个操作将使得断点。当你有一个设置过复杂条件的断点或者是日志断点，当前不需要，但是下次又不用重新创建，该操作是很方便的。
 - **调用：**按住Alt，然后单击断点即可。
 
-![](http://ac-QYgvX1CC.clouddn.com/2dccece2f8e21177.gif)
+![](../../../../assets/img/studio_tips/25-diablebreakpoint.gif)
 
 #### 55. 计算表达式（Evaluate Expression）
 
 - **描述：**这个操作可以用来查看变量的内容并且计算几乎任何有效的java表达式。需要注意的是，如果你修改了变量的状态，这个状态在你恢复代码执行后依然会保留。
 - **快捷键：**处在断点状态时，光标放在变量处，按Alt + F8，即可显示计算表达式对话框。
 
-![](http://ac-QYgvX1CC.clouddn.com/fbe32902216f6ca8.gif)
+![](../../../../assets/img/studio_tips/27-evaluateexpression.gif)
 
 #### 56. 审查变量（Inspect Variable）
 
 - **描述：**该操作可以在不打开计算表达式对话框就能审查表达式的值。
 - **快捷键：**调试状态下，按住Alt键，然后单击表达式即可。
 
-![](http://ac-QYgvX1CC.clouddn.com/e64833e6f0b9e50f.gif)
+![](../../../../assets/img/studio_tips/28-mouse_evaluate_expression.gif)
 
 #### 57. 日志断点（Logging Breakpoints）
 
 - **描述：**这是一种打印日志而不是暂停的断点，当你想打印一些日志信息但是不想添加`log`代码后重新部署项目，这是一个非常有用的操作。
 - **调用：**在断点上右键，取消`Suspend`的勾选，然后勾选上`Log evaluated Expression`，并在输入框中输入你要打印的日志信息。
 
-![](http://ac-QYgvX1CC.clouddn.com/37a025b0dab69969.gif)
+![](../../../../assets/img/studio_tips/23-loggingbreakpoints.gif)
 
 #### 58. 标记对象（Mark Object）
 
@@ -527,7 +527,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 - **调用：**右键你需要标记的对象，选中`Mark Object`，输入标签；
 - **快捷键：**选中对象时，按F3(OS X)、F11(Windows/Linux)；
 
-![](http://ac-QYgvX1CC.clouddn.com/3688ed92731a3376.gif)﻿
+![](../../../../assets/img/studio_tips/29-markobject.gif)﻿
 
 #### 59. 显示当前运行点（Show Execution Point）
 
@@ -541,14 +541,14 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 - **快捷键：**（Debug时) Alt + F10；
 
-![](http://ac-QYgvX1CC.clouddn.com/dc44992fbef03e22.gif)
+![](../../../../assets/img/studio_tips/36-executionpoint.gif)
 
 #### 60. 终止进程（Stop Process）
 
 - **描述：**该操作会终止当前正在运行的任务。如果任务数量大于一，则显示一个列表供你选择。在终止调试或者中止编译的时候特别有用！
 - **快捷键：**Cmd + F2(OS X)、Ctrl + F2（Windows、Linux）；
 
-![](http://ac-QYgvX1CC.clouddn.com/a31f31e4d631294b.gif)
+![](../../../../assets/img/studio_tips/35-stoprocess.gif)
 
 #### 61. 临时断点（Temporary Breakpoints）
 
@@ -556,7 +556,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 - **快捷键：**Alt + 鼠标左键 点击代码左侧（鼠标）、Cmd + Alt + Shift + F8(OS X)、Ctrl + Alt + Shift + F8(Windows/Linux)
 
-![](http://ac-QYgvX1CC.clouddn.com/3703df35d2b2898a.gif)
+![](../../../../assets/img/studio_tips/24-temporarybreakpoints.gif)
 
 #### 62. 调用层级树弹窗（The Call Hierarchy Popup）
 
@@ -564,5 +564,5 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 - **快捷键：**Ctrl + Alt + H
 
-![](http://ac-QYgvX1CC.clouddn.com/767b98d28945243c.gif)
+![](../../../../assets/img/studio_tips/04-callinghierarchy.gif)
 
