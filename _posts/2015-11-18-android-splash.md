@@ -26,7 +26,7 @@ App启动页(Splash)，最经典的莫过于微信的启动页了。不过启动
 </activity>
 ~~~
         
-  这里只是将`MainActivity`的`intent-filter`参数剪切给`SplashActivty`，此时你打开App第一个显示的就是`SplashActivity`了。
+  这里只是将`MainActivity`的`intent-filter`参数剪切给`SplashActivity`，此时你打开App第一个显示的就是`SplashActivity`了。
 
 #### 2. 添加跳转
 跳转是用Handler的`postDelayed()`方法来设置延时来实现的，在`SplashActivity`的`onCreate()`方法中添加一下的代码，就可以实现在1500毫秒后跳转到`MainActivity`了。
