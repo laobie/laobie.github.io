@@ -29,6 +29,7 @@ category: Android
 	`app:imgGap="4dp"` 或`nineGridImageView.setGap(int gap);`
 	
 + 设置最大图片数：
+
 	`app:maxSize="9"` 或者 `nineGridImageView.setMaxSize(int maxSize)`
 
 	如果最大图片数小于等于0，则没有图片数的限制。
