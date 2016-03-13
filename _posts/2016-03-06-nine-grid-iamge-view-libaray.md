@@ -10,6 +10,16 @@ category: Android
 
 ![](http://ac-qygvx1cc.clouddn.com/ee5906c846ad3346.png)
 
+### 更新日志
++ 1.0.1 
+	
+	- bug修复：没有图片数据或者数据为0时，不显示本view；
+	- 添加设置最大图片数方法；
+
++ 1.0.0
+	
+	第一次发布
+
 ### Demo App
 [NineGridImageView-Demo 下载](http://fir.im/bkxn)
 
@@ -17,6 +27,11 @@ category: Android
 + 设置图片之间的间隔	
 
 	`app:imgGap="4dp"` 或`nineGridImageView.setGap(int gap);`
+	
++ 设置最大图片数：
+	`app:maxSize="9"` 或者 `nineGridImageView.setMaxSize(int maxSize)`
+
+	如果最大图片数小于等于0，则没有图片数的限制。
 	
 + 设置显示样式
 
@@ -42,7 +57,7 @@ category: Android
 
 #### 1. 首先添加依赖
 
-	compile 'com.jaeger.ninegridimageview:library:1.0.0'
+	compile 'com.jaeger.ninegridimageview:library:1.0.1'
 	
 #### 2. 在布局文件中添加 NineGridImageView， 如下所示：
 	
