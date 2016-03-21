@@ -216,7 +216,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 
 ![](../../../../assets/img/studio_tips/19-select-in.gif)
 
-#### 24. 扩大/缩小选择（Exrend/Shrink Selection）
+#### 24. 扩大/缩小选择（Extend/Shrink Selection）
 
 - **描述：**该操作会在上下文逐渐扩大/缩小当前选择范围。例如，它会先选中当前变量，再选中当前语句，然后选中整个方法，缩小选择则相反。
 - **快捷键：**Alt + 上/下 (OS X)、Ctrl+W / Ctrl + Shift + W﻿（Windows、Linux）
