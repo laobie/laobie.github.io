@@ -134,7 +134,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 #### 13. 定位到嵌套文件（Navigate to Nested File）
 
 - **描述：**有时你有一堆存放在不同目录下的同名文件，例如不同模块下的`AndroidManifest.xml`文件，当你想定位到其中的一个文件，你会得到一堆搜索结果，你还得辨认哪个才是你需要的。通过在检索框中输入部分路径的前缀，并添加斜杠号，你就可以在第一次尝试的时候就找到正确的那个。
-- **快捷键：**Cmd + O(OS X)、Ctrl + N﻿(Windows/Linux);
+- **快捷键：**Shift + Cmd + O(OS X)、Shift + Ctrl + N﻿(Windows/Linux);
 
 ![](../../../../assets/img/studio_tips/63-nestednavigation.gif)
 
@@ -219,7 +219,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 #### 24. 扩大/缩小选择（Exrend/Shrink Selection）
 
 - **描述：**该操作会在上下文逐渐扩大/缩小当前选择范围。例如，它会先选中当前变量，再选中当前语句，然后选中整个方法，缩小选择则相反。
-- **快捷键：**Alt + 上/下(OS X)、Ctrl+W / Ctrl + Shift + W﻿（Windows、Linux）
+- **快捷键：**Alt + 上/下 (OS X)、Ctrl+W / Ctrl + Shift + W﻿（Windows、Linux）
 
 ![](../../../../assets/img/studio_tips/12-expand_shrink_selection.gif)
 
