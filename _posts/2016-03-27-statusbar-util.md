@@ -42,7 +42,7 @@ StatusBarUtil.setTransparent(Activity activity)
 ##### 4. 为包含 `DrawerLayout` 的界面设置状态栏颜色（也可以设置半透明和全透明）
 
 ~~~java
-	StatusBarUtil.setColorForDrawerLayout(Activity activity, DrawerLayout drawerLayout, int color)
+StatusBarUtil.setColorForDrawerLayout(Activity activity, DrawerLayout drawerLayout, int color)
 ~~~
 
 ![](https://raw.githubusercontent.com/laobie/StatusBarUtil/master/img/set_color_for_drawer_layout.png)
