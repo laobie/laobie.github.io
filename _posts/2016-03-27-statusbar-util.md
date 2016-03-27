@@ -58,7 +58,7 @@ StatusBarUtil.setColorForDrawerLayout(Activity activity, DrawerLayout drawerLayo
 compile 'com.jaeger.s~~~tatusbaruitl:library:1.0.0'
 ~~~
 
-##### 2. 在 `setContentContentView` 之后调用你需要的方法，例如:
+##### 2. 在 `setContentView()` 之后调用你需要的方法，例如:
 
 ~~~java
 setContentView(R.layout.main_activity);
