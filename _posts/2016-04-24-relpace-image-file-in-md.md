@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 自动化替换 Markdown 中的本地图片引用
-category: Python
+category: android
 excerpt: 本文主要描述在 Markdown 写作中，通过 Python 脚本实现自动化替换引用的本地图片为图床中的外链，且对原图进行压缩(压缩前后图片显示效果差别很小)。并建立本地的图片外链数据库，优先根据文件 hash 值查询数据库中是否已存在外链。
 ---
 
