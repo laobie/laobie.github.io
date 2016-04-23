@@ -163,7 +163,7 @@ excerpt: 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tip
 #### 17. 参数信息（Parameter Info）
 
 - **描述：**这个操作将显示和你在方法声明处写一样的参数列表，当你想看某个存在的方法的参数，这是一个很有用的操作。光标下的参数显示为黄色，如果没有参数显示黄色，意味着你的方法调用是无效的，很可能是某个参数分配不对。（例如一个浮点数赋值给了整型参数）。如果你正在写一个方法调用，突然离开编辑的地方，再返回的时候，输入一个逗号，就可以重新触发参数信息。
-- **快捷键：**Cmd + P(OS X)、Ctrl + U(Windows/Linux);
+- **快捷键：**Cmd + P(OS X)、Ctrl + P(Windows/Linux);
 
 ![](../../../../assets/img/studio_tips/44-parameterinfo.gif)
 
