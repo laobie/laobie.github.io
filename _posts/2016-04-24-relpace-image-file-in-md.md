@@ -77,6 +77,6 @@ LEAN_CLOUD_API_KEY = "your_lean_cloud_api_key"
 ### 最后
 感谢基友 [Brucezz](https://github.com/brucezz) 在开发中提供的帮助。
 
-[项目 GitHubd 地址](https://github.com/laobie/WriteMarkdownLazily)
+[项目 GitHud 地址](https://github.com/laobie/WriteMarkdownLazily)
 
 第一次发 Python 开源项目，本身 Python 就比较菜，如果你有任何建议或意见，请在 GitHub 提 issue 或 pr，或者评论给我留言，谢谢~
