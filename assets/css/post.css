@@ -104,8 +104,9 @@ H4 {
 }
 
 H5 {
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: -5px;
+    color: gray;
     font-size: 14px;
     line-height: 100%;
 }
