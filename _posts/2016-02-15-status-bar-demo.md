@@ -6,7 +6,9 @@ category: Android
 
 伴随着 Android 5.0 发布的 Material Design，让 Android 应用告别了以前的工程师审美，迎来了全新的界面，灵动的交互，也让越来越多的 App 开始遵从 material design 设计原则，不再是以前拿着iOS设计稿，做着Android开发。本文就其中的沉浸式状态栏这一特性，描述其兼容到4.4的实现，以及一些使用中的小细节。
 
-** 建议直接看最新的解决方案 [Android 状态栏工具类（实现沉浸式状态栏/变色状态栏）](http://laobie.github.io/android/2016/03/27/statusbar-util.html)**
+**建议直接看最新的解决方案：**
+ [Android 状态栏工具类（实现沉浸式状态栏/变色状态栏）](http://laobie.github.io/android/2016/03/27/statusbar-util.html)
+
 ### 前言
 在4.4之前状态栏一直是黑色的，在4.4中带来了 `windowTranslucentStatus` 这一特性，因此可以实现给状态栏设置颜色，如下图所示，状态栏颜色不再是黑色，而是可以定制的颜色。
 
