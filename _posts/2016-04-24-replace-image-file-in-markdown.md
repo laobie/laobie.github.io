@@ -9,7 +9,7 @@ excerpt: 本文主要描述在 Markdown 写作中，通过 Python 脚本实现�
 
 我写 Markdown 有个习惯，总是将引用到的图片(截图或保存的)先压缩，然后上传到图床(云存储)上，生成外链，然后在 Markdown 中引用。因为国内的云存储服务访问速度相对 GitHub 较快，同时在使用 Markdown 源文件时，不必连同图片一起传送或移动。
 
-因此就催生了该半自动化工具脚本（[GitHubd 传送门](https://github.com/laobie/WriteMarkdownLazily)）的诞生。
+因此就催生了该半自动化工具脚本（[GitHub 传送门](https://github.com/laobie/WriteMarkdownLazily)）的诞生。
 
 实现的效果如下：
 
@@ -77,6 +77,6 @@ LEAN_CLOUD_API_KEY = "your_lean_cloud_api_key"
 ### 最后
 感谢基友 [Brucezz](https://github.com/brucezz) 在开发中提供的帮助。
 
-[项目 GitHud 地址](https://github.com/laobie/WriteMarkdownLazily)
+[项目 GitHub 地址](https://github.com/laobie/WriteMarkdownLazily)
 
 第一次发 Python 开源项目，本身 Python 就比较菜，如果你有任何建议或意见，请在 GitHub 提 issue 或 pr，或者评论给我留言，谢谢~
