@@ -3,135 +3,136 @@ title: 写代码的猴子
 
 ---
 
- <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>写代码的猴子</title>
-        <link rel="icon"href="http://ac-qygvx1cc.clouddn.com/bddb9a8a5787b086.png"/>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>写代码的猴子</title>
+    <link rel="icon" href="http://ac-qygvx1cc.clouddn.com/bddb9a8a5787b086.png"/>
 </head>
 
- <link rel="stylesheet" type="text/css" href="/assets/css/home.css">
- <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
- 
+<link rel="stylesheet" type="text/css" href="/assets/css/home.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+
 <body class="home-body">
-    	<header id="masthead" class="site-header" role="banner" >
-		<div class="header-inside" >
-            <div class="logo">
-		      <a href='http://laobie.github.io/'><img  width="56px" src='http://ac-qygvx1cc.clouddn.com/6fd3e415ddc9811d.png'></a>
-		    </div>
-            <div class="home-title">
-                <a href='http://laobie.github.io/'>写代码的猴子</a>
-            </div>
-            
-            <nav id="site-navigation" class="main-navigation" role="navigation">
-			<div>
+<header id="masthead" class="site-header" role="banner">
+    <div class="header-inside">
+        <div class="logo">
+            <a href='http://laobie.github.io/'><img width="56px"
+                                                    src='http://ac-qygvx1cc.clouddn.com/6fd3e415ddc9811d.png'></a>
+        </div>
+        <div class="home-title">
+            <a href='http://laobie.github.io/'>写代码的猴子</a>
+        </div>
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div>
                 <ul class="menu">
                     <li><a href="/me.html" target="_blank">猴子</a></li>
-                    <li> <a href="/about.html" target="_blank">关于</a></li>
-                 </ul>
-            </div>		
-            </nav>
-        </div>
-        </header>
-    <!--<div class="header">
-        <div class="header-img">
-            <img height="80px" width="80px" src="http://ac-qygvx1cc.clouddn.com/04978412acff33e7.png"/>
-        </div>
-        <div class="header-title">
-            <a href="/">写代码的猴子</a>
-        </div>
-        <div class="header-right-part">
-            <div class="header-right-part-item">
-                <a href="/me.html" target="_blank">猴子</a>
-            </div>            
-            <div class="header-right-part-item">
-                <a href="/about.html" target="_blank">关于</a>
+                    <li><a href="/about.html" target="_blank">关于</a></li>
+                </ul>
             </div>
-        </div>    
-    </div>-->
-    <div class="content-body">
-          <div class="post-list">
-              <div class="main-wrap">
+        </nav>
+    </div>
+</header>
+<!--<div class="header">
+    <div class="header-img">
+        <img height="80px" width="80px" src="http://ac-qygvx1cc.clouddn.com/04978412acff33e7.png"/>
+    </div>
+    <div class="header-title">
+        <a href="/">写代码的猴子</a>
+    </div>
+    <div class="header-right-part">
+        <div class="header-right-part-item">
+            <a href="/me.html" target="_blank">猴子</a>
+        </div>
+        <div class="header-right-part-item">
+            <a href="/about.html" target="_blank">关于</a>
+        </div>
+    </div>
+</div>-->
+<div class="content-body">
+    <div class="post-list">
+        <div class="main-wrap">
             {% for post in paginator.posts %}
-              <div class="item">
-                  <div class="title-colum">
+            <div class="item">
+                <div class="title-colum">
                     <div class="title">
-                          <a href="{{ post.url }}" target="_blank">{{ post.title }}</a> 
+                        <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
                     </div>
                     <div class="date">
-                      {{ post.date|date: "%Y-%m-%d" }}        
+                        {{ post.date|date: "%Y-%m-%d" }}
                     </div>
-                  </div>
-                  <div class="excerpt">
-                      {{ post.excerpt }}
-                  </div>
-              </div>     
+                </div>
+                <div class="excerpt">
+                    {{ post.excerpt }}
+                </div>
+            </div>
             {% endfor %}
             <div class="page">
                 <div class="page-pre">
-                {% if paginator.previous_page %}
+                    {% if paginator.previous_page %}
                     <a href="{{ paginator.previous_page_path }}">上页</a>
-                {% else %}
+                    {% else %}
                     <span></span>
-                {% endif %}
+                    {% endif %}
                 </div>
-                
+
                 <div class="page-part">
                     <page-num>
-                    {% if paginator.page == 1 %}
-                         <span>1</span>
-                     {% else %}
-                         <a href="/">1</a>
-                     {% endif %}
+                        {% if paginator.page == 1 %}
+                        <span>1</span>
+                        {% else %}
+                        <a href="/">1</a>
+                        {% endif %}
                     </page-num>
-                         
+
                     {% for count in (2..paginator.total_pages) %}
                     <page-num>
                         {% if count == paginator.page %}
-                            <span>{{ count }}</span>
+                        <span>{{ count }}</span>
                         {% else %}
-                            <a href="/page{{ count }}">{{ count }}</a>
+                        <a href="/page{{ count }}">{{ count }}</a>
                         {% endif %}
                     </page-num>
                     {% endfor %}
                 </div>
-                
+
                 <div class="page-next">
-                  {% if paginator.next_page %}
-                       <a href="{{ paginator.next_page_path }}">下页</a>
-                   {% else %}
-                       <span></span>
-                   {% endif %}
+                    {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path }}">下页</a>
+                    {% else %}
+                    <span></span>
+                    {% endif %}
                 </div>
             </div>
-              </div>
-              
-              <script type="text/javascript">
-                  var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256704919'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256704919%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
-                  </script>
-          </div>
-         
-          
-          
-          <div class="nav">
-              {% for category in site.categories %}
-              <div class="category-item">
-                  <div class="category-title"> {{ category | first | capitalize }} </div>
-                  <div class="category-count">{{ category | last | size }}</div>
-              </div>
-               {% for post in category.last %}
-               <div class="category-item-post">
-                   <div class="category-item-post-title">
-                     <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
-                   </div>
-                   <div class="category-item-post-date">{{post.date | date:"%y/%m/%d"}}</div>
-               {% endfor %}
-               </div>
-             {% endfor %}
-           </div>
-           
-                   <!--<div class="aside">ssssssssssdjskldjal;skd;laksd';alksd;'asld;'sl'</div>-->
+        </div>
 
-       </div>
-       
-    
+        <script type="text/javascript">
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cspan id='cnzz_stat_icon_1256704919'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256704919%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+    </div>
+
+
+    <div class="nav">
+        {% for category in site.categories %}
+        <div class="category-item">
+            <div class="category-title"> {{ category | first | capitalize }}</div>
+            <div class="category-count">{{ category | last | size }}</div>
+        </div>
+        {% for post in category.last %}
+        <div class="category-item-post">
+            <div class="category-item-post-title">
+                <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+            </div>
+            <div class="category-item-post-date">{{post.date | date:"%y/%m/%d"}}</div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <!--<div class="aside">ssssssssssdjskldjal;skd;laksd';alksd;'asld;'sl'</div>-->
+
+</div>
+
+
 </body>

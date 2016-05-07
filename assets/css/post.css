@@ -1,4 +1,6 @@
 body {
+    padding: 0;
+    margin: 0;
     width: 100%;
     background: #2F2F2F;
     font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;
@@ -18,14 +20,14 @@ body {
 }
 
 .home-title {
-    font-size: 1em;
+    font-size: 1.5em;
     width: 20%;
     display: table-cell;
     vertical-align: middle;
 }
 
 .post-title {
-    font-size: 1.2em;
+    font-size: 1.3em;
     width: 80%;
     padding-right: 20%;
     color: ghostwhite;
@@ -51,7 +53,7 @@ body {
 }
 
 .post-content {
-    font-size: 0.95em;
+    font-size: 1em;
     line-height: 1.5;
     font-weight: normal;
     background: ghostwhite;
@@ -66,6 +68,7 @@ H2 {
     padding: 5px;
     border-bottom: 2px LightGrey solid;
     width: 100%;
+    font-size: 1.5em;
     line-height: 120%;
     color: #666666;
 }
@@ -73,7 +76,7 @@ H2 {
 H3 {
     margin-top: 16px;
     margin-bottom: 16px;
-    font-size: 20px;
+    font-size: 1.3em;
     border-bottom: 1px LightGrey solid;
     width: 98%;
     line-height: 1.5;
@@ -85,7 +88,7 @@ H4 {
     margin-bottom: 3px;
     width: 98%;
     font: blod;
-    font-size: 16px;
+    font-size: 1em;
     color: black;
     line-height: 120%;
 }
@@ -94,7 +97,7 @@ H5 {
     margin-top: 10px;
     margin-bottom: -5px;
     color: gray;
-    font-size: 14px;
+    font-size: 0.9em;
     line-height: 100%;
 }
 
@@ -111,21 +114,9 @@ blockquote {
 
 pre {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    /*font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;*/
-    /*border: solid 1px lightgrey;*/
     line-height: 130%;
-    font-size: 85%;
-    /*margin-left: 10px;*/
-    /*font: bold;*/
-    /*padding-left: 3px;*/
-    width: 100%;
+    overflow: auto;
 }
-
-/*code {
-    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
-    font-size: 90%;
-    color: #ffffff
-}*/
 
 a {
     text-decoration: none;
@@ -140,13 +131,7 @@ a:hover {
 img {
     max-width: 100%;
     display: block;
-    /*box-shadow: 0 0 10px #555;*/
-    /*border-radius: 6px;*/
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    /*-webkit-box-shadow: 0 0 10px #555;*/
+    margin: 10px auto;
 }
 
 blockquote {
@@ -166,6 +151,7 @@ hr {
 code {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     color: #0278AE;
+    max-width: 100%;
     font-size: 90%;
 }
 
@@ -217,8 +203,14 @@ td {
 @media screen and (max-width: 768px) {
 
     .post-content {
+        font-size: 0.9em;
         margin: 75px 0 5% 0;
         padding: 2% 5% 5% 5%;
         width: 90%;
     }
+
+    .post-title {
+        font-size: 1em;
+    }
+
 }
