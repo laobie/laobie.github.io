@@ -5,6 +5,16 @@ body {
   /*font-family:"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQ";*/
 }
 
+@media screen and (max-width: 768px) {
+    
+    .post-content{
+        margin: 5% 0% 5% 0%;
+        padding: 2% 5% 5% 5%;
+        width: 90%;
+    }
+    
+}
+
 .site-header {
   width: 100%;
   background:#303841;
@@ -54,7 +64,7 @@ body {
 }
   
 
-content{
+.post-content{
     font-size: 15px;
     line-height: 1.5;
     font-weight: normal;
@@ -64,10 +74,7 @@ content{
     padding: 2% 10% 5% 10%;
     width: 60%;
     margin-top: 75px;
-  
-    /*border-left: 1px solid LightGrey;*/
     border: 1px solid LightGrey;
-    
 }
 
 
@@ -187,9 +194,11 @@ code {
     color: #0278AE;
     font-size: 90%;
 }
+
 ul {
     margin-left: -5px;
 }
+
 table {
   margin: 20px 15% 20px 15%;
   width: 70%;
