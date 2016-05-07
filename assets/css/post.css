@@ -29,7 +29,7 @@ body {
 .post-title {
     font-size: 1.3em;
     width: 80%;
-    padding-right: 5%;
+    padding-right: 20%;
     color: ghostwhite;
     display: table-cell;
     text-align: center;
@@ -37,6 +37,7 @@ body {
 }
 
 .header-inside {
+    display: table;
     width: 100%;
 }
 
