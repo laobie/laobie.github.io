@@ -20,8 +20,8 @@ body {
 }
 
 .home-title {
-    font-size: 1.5em;
     width: 20%;
+    height: 100%;
     display: table-cell;
     vertical-align: middle;
 }
@@ -33,13 +33,10 @@ body {
     color: ghostwhite;
     display: table-cell;
     text-align: center;
-    letter-spacing: 0.5mm;
     vertical-align: middle;
 }
 
 .header-inside {
-    display: table;
-    height: 100%;
     width: 100%;
 }
 
