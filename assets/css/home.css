@@ -16,22 +16,21 @@
 }
 
 .date {
-
     display: table-cell;
     text-align: right;
-    font-size: 15px;
+    font-size: 0.9em;
     color: grey;
 }
 
 .excerpt {
     width: 100%;
     color: gray;
-    font-size: 14px;
+    font-size: 0.875em;
     margin: 10px 0 10px 0;
 }
 
 .item a {
-    font-size: 18px;
+    font-size: 1.125em;
     text-decoration: none;
     color: #2185D5;
 }
@@ -54,15 +53,6 @@
     float: left;
     width: 100%;
     height: 100%;
-
-    /*float: left;*/
-    /*padding-top: 20px;*/
-    /*width: 60%;*/
-    /*margin-left: 200px;*/
-    /*margin-right: 200px;*/
-    /*padding-left: 8px;*/
-    /*padding-right: 8px;*/
-    /*height: 100%;*/
 }
 
 .aside {
@@ -120,7 +110,7 @@
 
 .page-part a {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 0.9em;
     color: green;
 }
 
@@ -129,19 +119,19 @@
 }
 
 .page-next a {
-    font-size: 15px;
+    font-size: 0.9em;
     text-decoration: none;
     color: cadetblue;
 }
 
 .page-pre a {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 0.9em;
     color: cadetblue;
 }
 
 .category {
-    font-size: 16px;
+    font-size: 1em;
     width: 100%;
 }
 
@@ -150,7 +140,7 @@
     width: 100%;
     margin-bottom: 5px;
     /*border-bottom: 1px solid lightgray;*/
-    font-size: 14px;
+    font-size: 0.8em;
     color: grey;
 }
 
@@ -158,7 +148,7 @@
     display: table-cell;
     padding-top: 16px;
     width: 80%;
-    font-size: 16px;
+    font-size: 1em;
     color: #2185D5;
 }
 
@@ -172,7 +162,7 @@
 .category-item-post {
     display: block;
     width: 100%;
-    font-size: 12px;
+    font-size: 0.75em;
     padding-top: 6px;
 }
 
@@ -191,7 +181,6 @@
 
 .category-item-post-title a {
     color: whitesmoke;
-    /*border-bottom: 1px dashed darkslategrey;*/
     text-decoration: none;
 }
 
@@ -202,10 +191,23 @@
 .excerpt a {
     color: #2185D5;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875em;
+}
+
+.cnzz {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
+
+    .nav {
+        width: 0;
+        display: none;
+    }
+
+    .main-wrap {
+        margin: 0 0 0 -5%;
+    }
 
 }
 
