@@ -209,6 +209,18 @@
         margin: 0 0 0 -5%;
     }
 
+    .item a {
+        font-size: 0.9em;
+    }
+
+    .excerpt {
+        font-size: 0.8em;
+    }
+
+    .date {
+        font-size: 0.8em;
+    }
+
 }
 
 
