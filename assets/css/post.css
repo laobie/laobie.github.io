@@ -1,93 +1,74 @@
 body {
-   background: #2F2F2F;
-   font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;
-  
-  /*font-family:"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQ";*/
-}
-
-@media screen and (max-width: 768px) {
-    
-    .post-content{
-        margin: 5% 0% 5% 0%;
-        padding: 2% 5% 5% 5%;
-        width: 90%;
-    }
-    
+    width: 100%;
+    background: #2F2F2F;
+    font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;
 }
 
 .site-header {
-  width: 100%;
-  background:#303841;
-  /*border-bottom: 1px solid #dcdcdc;*/
-  z-index: 30;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 75px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-  
+    width: 100%;
+    background: #303841;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    height: 75px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .home-title {
-  /*font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;*/
-  font-size: 16px;
-  width: 15%;
-  display: table-cell;
-  /*padding-left: 24px;*/
-  /*padding-left: 20%;*/
-  /*text-align: center;*/
-  vertical-align: middle; }
-  
- .post-title {
-  /*font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;*/
-  font-size: 21px;
-  /*padding-left: 5%;*/
-  padding-right: 15%;
-  color: ghostwhite;
-  display: table-cell;
-  text-align: center;
-  letter-spacing: 0.5mm;  
-  vertical-align: middle; }
-  
-.header-inside {
-  display: table;
-  height: 100%;
-  width: 100%; }
+    font-size: 1em;
+    width: 20%;
+    display: table-cell;
+    vertical-align: middle;
+}
 
-.home-title a{
+.post-title {
+    font-size: 1.2em;
+    width: 80%;
+    padding-right: 20%;
     color: ghostwhite;
-    text-decoration: none;  
+    display: table-cell;
+    text-align: center;
+    letter-spacing: 0.5mm;
+    vertical-align: middle;
 }
 
-.home-title a:hover{
-  color: gray;
+.header-inside {
+    display: table;
+    height: 100%;
+    width: 100%;
 }
-  
 
-.post-content{
-    font-size: 15px;
+.home-title a {
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+.home-title a:hover {
+    color: gray;
+}
+
+.post-content {
+    font-size: 0.95em;
     line-height: 1.5;
     font-weight: normal;
     background: ghostwhite;
     display: block;
-    margin: 5% 10% 5% 10%;
     padding: 2% 10% 5% 10%;
     width: 60%;
-    margin-top: 75px;
-    border: 1px solid LightGrey;
+    margin: 75px 10% 5%;
 }
-
 
 H2 {
     margin-bottom: 60px;
-    margin-bottom: 40px;
     padding: 5px;
     border-bottom: 2px LightGrey solid;
     width: 100%;
     line-height: 120%;
     color: #666666;
 }
-
 
 H3 {
     margin-top: 16px;
@@ -99,12 +80,11 @@ H3 {
     color: #666666;
 }
 
-
 H4 {
     margin-top: 3px;
     margin-bottom: 3px;
     width: 98%;
-    font: bold;
+    font: blod;
     font-size: 16px;
     color: black;
     line-height: 120%;
@@ -118,12 +98,10 @@ H5 {
     line-height: 100%;
 }
 
-
 li {
     margin-left: 0px;
     width: 100%;
 }
-
 
 blockquote {
     border-left: 4px lightgrey solid;
@@ -131,9 +109,8 @@ blockquote {
     margin-left: 20px;
 }
 
-
 pre {
-  	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     /*font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;*/
     /*border: solid 1px lightgrey;*/
     line-height: 130%;
@@ -144,13 +121,11 @@ pre {
     width: 100%;
 }
 
-
 /*code {
     font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
     font-size: 90%;
     color: #ffffff
 }*/
-
 
 a {
     text-decoration: none;
@@ -158,11 +133,9 @@ a {
     color: cadetblue;
 }
 
-
 a:hover {
     color: gray;
 }
-
 
 img {
     max-width: 100%;
@@ -177,12 +150,13 @@ img {
 }
 
 blockquote {
-	margin-left:0; 
-	color: #777;
-	border-left: 3px solid #ddd;
+    margin-left: 0;
+    color: #777;
+    border-left: 3px solid #ddd;
 }
-blockquote p{
-	text-indent:0;
+
+blockquote p {
+    text-indent: 0;
 }
 
 hr {
@@ -200,36 +174,51 @@ ul {
 }
 
 table {
-  margin: 20px 15% 20px 15%;
-  width: 70%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  border: 1px solid #ddd;
-  font-size: 14px;
+    margin: 20px 15% 20px 15%;
+    width: 70%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    font-size: 14px;
 }
-table>tbody>tr:nth-of-type(odd) {
-  background-color: #f5f5f5;
+
+table > tbody > tr:nth-of-type(odd) {
+    background-color: #f5f5f5;
 }
-table>tbody>tr:hover {
-  background-color: lightblue;
+
+table > tbody > tr:hover {
+    background-color: lightblue;
 }
+
 caption,
 th,
 td {
-  padding: 5px;
-  text-align: left;
-  vertical-align: middle;
-  font-weight: normal;
+    padding: 5px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: normal;
 }
+
 th,
 td {
-  border-bottom: 3px solid #ddd;
-  border-right: 1px solid #eee;
+    border-bottom: 3px solid #ddd;
+    border-right: 1px solid #eee;
 }
+
 th {
-  padding-bottom: 10px;
-  font-weight: 700;
+    padding-bottom: 10px;
+    font-weight: 700;
 }
+
 td {
-  border-bottom-width: 1px;
+    border-bottom-width: 1px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .post-content {
+        margin: 75px 0 5% 0;
+        padding: 2% 5% 5% 5%;
+        width: 90%;
+    }
 }
