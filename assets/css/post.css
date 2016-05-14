@@ -74,7 +74,7 @@ H2 {
 H3 {
     margin-top: 16px;
     margin-bottom: 16px;
-    font-size: 1.3em;
+    font-size: 1.4em;
     border-bottom: 1px LightGrey solid;
     width: 98%;
     line-height: 1.5;
@@ -86,7 +86,7 @@ H4 {
     margin-bottom: 3px;
     width: 98%;
     font: blod;
-    font-size: 1em;
+    font-size: 1.2em;
     color: black;
     line-height: 120%;
 }
@@ -94,8 +94,8 @@ H4 {
 H5 {
     margin-top: 10px;
     margin-bottom: -5px;
-    color: gray;
-    font-size: 0.9em;
+    color: #5d5d60;
+    font-size: 1.08em;
     line-height: 1.4;
 }
 
