@@ -106,7 +106,7 @@ public class App extends MultiDexApplication {
 
 简单来说，上一步中，我们在 App 启动时，读取了用户的设置信息，并应用到 Configuration 的 locale 属性上，然后通过 `resources.updateConfiguration(config, dm)` 改变了应用的配置信息（ Configuration ）并生效，保证我们的应用读取的 string 资源都是用户设置语言对应的资源。在我们改变系统的语言之后，再回到我们的应用中，此时的 Configuration 的 locale 属性就会发生变化了，不再是我们刚才自己的在应用启动时设置的了，而是变成了系统的设置了。 
 
-解决办法很简单粗暴，在切回我们的应用时，在显示的 activity 的生命周期中做一些处理就好了，因为任改 activity 可能是应用中任一个，因此我们在 `BaseActivity` 的 `onCreate` 中处理下就好了：
+解决办法很简单粗暴，在切回我们的应用时，在显示的 activity 的生命周期中做一些处理就好了，因为该 activity 可能是应用中任一个，因此我们在 `BaseActivity` 的 `onCreate` 中处理下就好了：
 
 ~~~ java
     @Override
