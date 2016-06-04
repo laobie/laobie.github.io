@@ -40,9 +40,9 @@ title: 写代码的猴子
         <div class="main-wrap">
             {% for post in paginator.posts %}
             <div class="item">
-                <div class="title-colum">
+                <div class="title-column">
                     <div class="title">
-                        <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+                        <a href="{{ post.url }}">{{ post.title }}</a>
                     </div>
                     <div class="date">
                         {{ post.date|date: "%Y-%m-%d" }}
@@ -120,9 +120,5 @@ title: 写代码的猴子
         {% endfor %}
     </div>
 
-    <!--<div class="aside">ssssssssssdjskldjal;skd;laksd';alksd;'asld;'sl'</div>-->
-
 </div>
-
-
 </body>

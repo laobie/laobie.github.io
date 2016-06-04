@@ -5,7 +5,7 @@
     border-bottom: 1px lightgray solid;
 }
 
-.title-colum {
+.title-column {
     display: table;
     width: 100%;
 }
@@ -102,10 +102,10 @@
 }
 
 .page-num {
-    font-size: 15px;
+    font-size: 1em;
     color: black;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .page-part a {
@@ -125,8 +125,8 @@
 }
 
 .page-pre a {
-    text-decoration: none;
     font-size: 0.9em;
+    text-decoration: none;
     color: cadetblue;
 }
 
@@ -139,7 +139,6 @@
     display: table;
     width: 100%;
     margin-bottom: 5px;
-    /*border-bottom: 1px solid lightgray;*/
     font-size: 0.8em;
     color: grey;
 }
