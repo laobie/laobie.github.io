@@ -55,7 +55,7 @@ StatusBarUtil.setColorForDrawerLayout(Activity activity, DrawerLayout drawerLayo
 ##### 1. 在 build.gradle 文件中添加依赖, StatusBarUtil 已经发布在 JCenter:
 
 ~~~groovy
-compile 'com.jaeger.statusbaruitl:library:1.0.0'
+compile 'com.jaeger.statusbaruitl:library:1.1.1'
 ~~~
 
 ##### 2. 在 `setContentView()` 之后调用你需要的方法，例如:
