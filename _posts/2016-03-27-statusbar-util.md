@@ -13,6 +13,20 @@ category: Android
 ### Sample 下载
 [下载 StatusBarUtil-Demo](http://fir.im/5mnp)
 
+### 更新日志
+
+- 1.2.0
+
+    支持为使用 ImageView 作为头部的界面设置状态栏透明
+
+- 1.1.1
+
+    修复部分 4.4 上的 bug
+
+- 1.1.0
+
+    修复 bug
+
 ### 特性
 
 ##### 1. 设置状态栏颜色
@@ -46,8 +60,17 @@ StatusBarUtil.setColorForDrawerLayout(Activity activity, DrawerLayout drawerLayo
 ~~~
 
 ![](https://raw.githubusercontent.com/laobie/StatusBarUtil/master/img/set_color_for_drawer_layout.png)
+
+##### 5. 为使用 ImageView 作为头部的界面设置状态栏透明
+
+~~~java
+StatusBarUtil.setTranslucentForImageView(Activity activity, int statusBarAlpha, View needOffsetView)
+~~~
+
+![](https://raw.githubusercontent.com/laobie/StatusBarUtil/master/img/set_for_image_view_page.png)
+
   
-##### 5. 通过传入 `statusBarAlpha` 参数，可以改变状态栏的透明度值，默认值是112。
+##### 6. 通过传入 `statusBarAlpha` 参数，可以改变状态栏的透明度值，默认值是112。
   
 
 ### 使用
@@ -55,7 +78,7 @@ StatusBarUtil.setColorForDrawerLayout(Activity activity, DrawerLayout drawerLayo
 ##### 1. 在 build.gradle 文件中添加依赖, StatusBarUtil 已经发布在 JCenter:
 
 ~~~groovy
-compile 'com.jaeger.statusbaruitl:library:1.1.1'
+compile 'com.jaeger.statusbaruitl:library:1.2.0'
 ~~~
 
 ##### 2. 在 `setContentView()` 之后调用你需要的方法，例如:
