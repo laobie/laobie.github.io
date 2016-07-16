@@ -1,7 +1,7 @@
 highlighter: rouge
 gems: [jekyll-paginate]
 encoding: utf-8
-paginate: 6
+paginate: 8
 paginate_path: "page:num"
 markdown: kramdown
 kramdown:

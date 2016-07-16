@@ -1,228 +1,253 @@
-.item {
-    display: table;
-    width: 100%;
-    margin-top: 8px;
-    border-bottom: 1px lightgray solid;
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.title-column {
-    display: table;
+body {
+    background-color: #FFFFFF;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: auto;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
     width: 100%;
+    color: #383838;
+    font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","PingFang-SC-Regular","STHeiti", "Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei";
+
+}
+
+.main-content {
+    padding-bottom: 60px;
+}
+
+.head {
+    border: none;
+    margin-bottom: 0;
+    position: relative;
+    display: block;
+}
+
+.tool-bar {
+    position: fixed;
+    width: 100%;
+    min-height: 64px;
+    background-color: transparent;
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    /*background: #002c42;*/
+    overflow: visible !important;
+}
+
+.bg {
+    width: 100%;
+    height: 64px;
+    opacity: 0.8;
+    background-color: #303841;
+    display: block;
+    position: absolute
 }
 
 .title {
-    display: table-cell;
-    width: 70%;
+    color: #FFFFFF;
+    height: 64px;
+    text-align: center;
+    font-size: 22px;
+    padding: 21px 32px 21px 32px;
+    display: block;
+    position: absolute;
 }
 
-.date {
-    display: table-cell;
-    text-align: right;
-    font-size: 0.9em;
-    color: grey;
+.title, .sign , .head_item{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+
 }
 
-.excerpt {
-    width: 100%;
-    color: gray;
-    font-size: 0.875em;
-    margin: 10px 0 10px 0;
+.title-sign {
+    position: absolute;
+    color: #FFF;
+    margin-left: 8px;
+    margin-top: 130px;
+    display: inline-block;
+    font-size: 24px;
 }
 
-.item a {
-    font-size: 1.125em;
-    text-decoration: none;
-    color: #2185D5;
-}
-
-.item a:hover {
-    color: gray;
-}
-
-.home-body {
-    font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;
-    line-height: 1.7;
-    background: ghostwhite;
-}
-
-.content-body {
-    padding-top: 60px;
-}
-
-.post-list {
-    float: left;
-    width: 100%;
-    height: 100%;
-}
-
-.aside {
-    float: left;
-    position: relative;
-    width: 20%;
-    margin-left: -20%;
-    margin-top: 20px;
-}
-
-.main-wrap {
-    height: 100%;
-    margin: 0 0 0 25%;
-    padding: 16px 36px 0 36px;
-    /*border-left:  1px solid lightgray;*/
-    /*border-right: 1px solid lightgray;*/
-}
-
-.nav {
-    float: left;
-    background: #3A4750;
-    width: 22%;
-    padding-left: 24px;
-    padding-right: 24px;
-    position: relative;
-    margin-left: -101%;
-    height: 120%;
-}
-
-.page {
-    width: 100%;
-    display: table;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-.page-next, .page-pre {
-    display: table-cell;
-    width: 30px;
-}
-
-.page-part {
-    display: table-cell;
+.sign {
+    color: #FFF;
+    margin: 24px auto 0 auto;
+    display: block;
+    font-size: 24px;
     text-align: center;
 }
 
-.page-num {
-    font-size: 1em;
-    color: black;
-    margin-left: 32px;
-    margin-right: 32px;
-}
-
-.page-part a {
-    text-decoration: none;
-    font-size: 0.9em;
-    color: green;
-}
-
-.page-part a:hover {
-    color: red;
-}
-
-.page-next a {
-    font-size: 0.9em;
-    text-decoration: none;
-    color: cadetblue;
-}
-
-.page-pre a {
-    font-size: 0.9em;
-    text-decoration: none;
-    color: cadetblue;
-}
-
-.category {
-    font-size: 1em;
-    width: 100%;
-}
-
-.category-item {
-    display: table;
-    width: 100%;
-    margin-bottom: 5px;
-    font-size: 0.8em;
-    color: grey;
-}
-
-.category-title {
-    display: table-cell;
-    padding-top: 16px;
-    width: 80%;
-    font-size: 1em;
-    color: #2185D5;
-}
-
-.category-count {
-    display: table-cell;
-    width: 20%;
-    text-align: right;
-    color: #2185D5;
-}
-
-.category-item-post {
+.avatar {
     display: block;
-    width: 100%;
-    font-size: 0.75em;
-    padding-top: 6px;
+    height: 150px;
+    margin: 0 auto;
+    padding-top: 88px;
 }
 
-.category-item-post-title {
-    display: table-cell;
+a {
+    text-decoration: none;
+    color: #383838;
+}
+
+.head_item {
+    color: #FFFFFF;
+    position: relative;
+    float: right;
+    padding: 25px 32px 25px 16px;
+    border-radius: 3px;
+    font-size: 18px;
+    right: 0;
+}
+
+.head_item a {
+    color: #FFFFFF;
+}
+
+.head_item:hover {
+    color: #9f9f9f;
+}
+
+.header_bg {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 360px;
+    background: url(http://ac-qygvx1cc.clouddn.com/964494ce41e561ea.jpg) center;
+    background-size: cover;
+}
+
+.foot {
+    clear: both;
+    position: relative;
+    color: #fff;
+    display: block;
+    padding: 30px 0;
+    background: #000000 no-repeat;
+}
+
+.footer1 {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #fff;
+    display: block;
+    width: 80%;
+
+}
+
+.col-md-12 {
+    clear: both;
+    padding: 0;
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+.content {
+    padding-top: 20px;
+    height: 100%;
+    background-color: #FFFFFF;
+    margin: auto 20%;
+}
+
+.post-item {
+    width: 100%;
+    padding: 26px 0 26px 0;
+    display: inline-block;
+    border-bottom: 1px dashed lightgray;
+}
+
+.post-title {
+    width: 80%;
+    font-size: 26px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333333;
+    font-weight: 600;
+}
+
+.post-excerpt {
+    margin-top: 15px;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    color: #707070;
+    font-size: 18px;
+}
+
+.post-excerpt:hover {
+    color: #929292;
+}
+
+.post-title:hover {
+    color: #a1a4a5;
+}
+
+.post-date {
+    /*border-radius: 5px;*/
+    /*border: 1px dashed #2F2F2F;*/
+    color: #2F2F2F;
+    margin-top: 6px;
+    float: right;
+    text-align: end;
     margin-left: 8px;
-    width: 100%;
+    font-size: 16px;
+    padding: 4px;
+    position: relative;
+    display: inline-block;
 }
 
-.category-item-post-date {
-    display: table-cell;
-    width: 20%;
-    color: whitesmoke;
-    text-align: right;
+.bottom-page {
+    margin-top: 16px;
+    height: 64px;
 }
 
-.category-item-post-title a {
-    color: whitesmoke;
-    text-decoration: none;
+.previous-page, .next-page {
+    position: relative;
+    line-height: 64px;
+    left: 0;
+    width: auto;
+    height: 64px;
 }
 
-.category-item-post-title a:hover {
-    color: springgreen;
+.previous-page {
+    float: left;
 }
 
-.excerpt a {
-    color: #2185D5;
-    text-decoration: none;
-    font-size: 0.875em;
+.next-page {
+    float: right;
 }
 
-.cnzz {
+.page {
+    text-align: center;
+    height: 64px;
+    float: none;
+}
+
+.page-img {
+    margin-top: 16px;
+    width: 32px;
+    height: 32px;
+}
+
+.page-num {
+    text-align: center;
+    line-height: 72px;
+    height: 72px;
+    margin:0 8px;
+    font-size: 20px;
+    color: #000;
+}
+
+.cnzz{
     display: none;
 }
-
-@media screen and (max-width: 768px) {
-
-    .nav {
-        width: 0;
-        display: none;
-    }
-
-    .main-wrap {
-        margin: 0 0 0 -5%;
-    }
-
-    .item a {
-        font-size: 0.9em;
-    }
-
-    .excerpt {
-        font-size: 0.8em;
-    }
-
-    .date {
-        font-size: 0.8em;
-    }
-
-}
-
-
-
-
-
