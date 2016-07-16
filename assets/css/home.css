@@ -150,6 +150,12 @@ a {
     min-height: 1px;
 }
 
+.avatar-div a:hover img {
+    filter: alpha(Opacity=50);
+    -moz-opacity: 0.8;
+    opacity: 0.8
+}
+
 .content {
     padding-top: 20px;
     height: auto;
@@ -253,31 +259,32 @@ a {
 
 @media screen and (max-width: 768px) {
 
-
-    .tool-bar{
+    .tool-bar {
         position: absolute;
     }
 
-    .sign{
+    .sign {
         font-size: 1.1em;
     }
-    .title{
+
+    .title {
         font-size: 1.2em;
     }
 
-    .avatar{
+    .avatar {
         height: 80px;
     }
 
-    .header_bg{
+    .header_bg {
         height: 240px;
     }
 
-    .head_item{
+    .head_item {
         font-size: 1em;
         padding: 25px 8px 25px 8px;
 
     }
+
     .content {
         padding-top: 8px;
         margin: auto 10px;
@@ -286,12 +293,14 @@ a {
     .post-title {
         font-size: 1.2em;
     }
+
     .post-date {
         margin: 6px auto auto auto;
         font-size: 0.8em;
         padding: 0;
     }
-    .post-excerpt{
+
+    .post-excerpt {
         font-size: 0.95em;
     }
 }
