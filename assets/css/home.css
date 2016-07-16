@@ -14,7 +14,7 @@ body {
     padding: 0;
     width: 100%;
     color: #383838;
-    font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","PingFang-SC-Regular","STHeiti", "Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei";
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang-SC-Regular", "STHeiti", "Helvetica", "Arial", "Verdana", "sans-serif", "Microsoft YaHei";
 
 }
 
@@ -54,13 +54,13 @@ body {
     color: #FFFFFF;
     height: 64px;
     text-align: center;
-    font-size: 22px;
+    font-size: 1.375em;
     padding: 21px 32px 21px 32px;
     display: block;
     position: absolute;
 }
 
-.title, .sign , .head_item{
+.title, .sign, .head_item {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
 
 }
@@ -71,14 +71,14 @@ body {
     margin-left: 8px;
     margin-top: 130px;
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 .sign {
     color: #FFF;
     margin: 24px auto 0 auto;
     display: block;
-    font-size: 24px;
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -100,7 +100,7 @@ a {
     float: right;
     padding: 25px 32px 25px 16px;
     border-radius: 3px;
-    font-size: 18px;
+    font-size: 1.125em;
     right: 0;
 }
 
@@ -152,7 +152,7 @@ a {
 
 .content {
     padding-top: 20px;
-    height: 100%;
+    height: auto;
     background-color: #FFFFFF;
     margin: auto 20%;
 }
@@ -166,7 +166,7 @@ a {
 
 .post-title {
     width: 80%;
-    font-size: 26px;
+    font-size: 1.625em;
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -181,7 +181,7 @@ a {
     position: relative;
     display: inline-block;
     color: #707070;
-    font-size: 18px;
+    font-size: 1.125em;
 }
 
 .post-excerpt:hover {
@@ -200,14 +200,13 @@ a {
     float: right;
     text-align: end;
     margin-left: 8px;
-    font-size: 16px;
+    font-size: 1em;
     padding: 4px;
     position: relative;
     display: inline-block;
 }
 
 .bottom-page {
-    margin-top: 16px;
     height: 64px;
 }
 
@@ -243,11 +242,56 @@ a {
     text-align: center;
     line-height: 72px;
     height: 72px;
-    margin:0 8px;
-    font-size: 20px;
+    margin: 0 8px;
+    font-size: 1.25em;
     color: #000;
 }
 
-.cnzz{
+.cnzz {
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .tool-bar{
+        position: absolute;
+    }
+
+    .sign{
+        font-size: 1.1em;
+    }
+    .title{
+        font-size: 1.2em;
+    }
+
+    .avatar{
+        height: 80px;
+    }
+
+    .header_bg{
+        height: 240px;
+    }
+
+    .head_item{
+        font-size: 1em;
+        padding: 25px 8px 25px 8px;
+
+    }
+    .content {
+        padding-top: 8px;
+        margin: auto 10px;
+    }
+
+    .post-title {
+        font-size: 1.2em;
+    }
+    .post-date {
+        margin: 6px auto auto auto;
+        font-size: 0.8em;
+        padding: 0;
+    }
+    .post-excerpt{
+        font-size: 0.95em;
+    }
 }
