@@ -75,19 +75,17 @@ title: 写代码的猴子
         </div>
 
         <div class="page">
-            {% if paginator.page == 1 %}
-            <a class="page-num">1</a>
-            {% else %}
-            <a href="/" class="page-num">{{ count }}</a>
-            {% endif %}
 
-            {% for count in (2..paginator.total_pages) %}
-            {% if count == paginator.page %}
-            <a class="page-num">{{ count }}</a>
+            {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            <em class="page-num">{{ page }}</em>
+            {% elsif page == 1 %}
+            <a class="page-num" href="/">{{ page }}</a>
             {% else %}
-            <a href="/page{{ count }}" class="page-num">{{ count }}</a>
+            <a class="page-num" href="/page{{ page }}">{{ page }}</a>
             {% endif %}
             {% endfor %}
+
         </div>
     </div>
 
