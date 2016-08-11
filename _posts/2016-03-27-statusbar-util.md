@@ -64,7 +64,7 @@ StatusBarUtil.setTranslucent(Activity activity, int statusBarAlpha)
 
 ![](https://raw.githubusercontent.com/laobie/StatusBarUtil/master/img/set_translucnet.png)
 ​
-	
+​	
 ##### 3. 设置状态栏全透明
 
 ~~~java
