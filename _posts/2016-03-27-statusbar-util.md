@@ -14,6 +14,25 @@ category: Android
 [下载 StatusBarUtil-Demo](http://fir.im/5mnp)
 
 ### 更新日志
++ 1.2.3
+
+  - 修复 `setTranslucentForImageView` ，现在支持传 null 作为 needOffsetView 的值
+
+  - 新增当 fragment 头部是 ImageView 时设置透明状态栏的方法
+
+    ~~~ java
+    setTranslucentForImageViewInFragment(Activity activity, View needOffsetView)
+    setTransparentForImageViewInFragment(Activity activity, View needOffsetView)
+    ~~~
+
+  - 修复根布局是 CoordinatorLayout 时设置状态栏全透明和半透明的 bug
+
+    ~~~ java
+    setTranslucentForCoordinatorLayout(Activity activity, int statusBarAlpha)
+    ~~~
+
+
+
 
 - 1.2.0
 
@@ -30,7 +49,7 @@ category: Android
 ### 特性
 
 ##### 1. 设置状态栏颜色
-	
+
 ~~~java
 StatusBarUtil.setColor(Activity activity, int color)
 ~~~
@@ -42,17 +61,18 @@ StatusBarUtil.setColor(Activity activity, int color)
 ~~~java
 StatusBarUtil.setTranslucent(Activity activity, int statusBarAlpha)
 ~~~
-	
+
 ![](https://raw.githubusercontent.com/laobie/StatusBarUtil/master/img/set_translucnet.png)
+​
 	
 ##### 3. 设置状态栏全透明
 
 ~~~java
 StatusBarUtil.setTransparent(Activity activity)
 ~~~
-	
+
 ![](https://raw.githubusercontent.com/laobie/StatusBarUtil/master/img/set_transparent.png)
-  
+
 ##### 4. 为包含 `DrawerLayout` 的界面设置状态栏颜色（也可以设置半透明和全透明）
 
 ~~~java
@@ -69,16 +89,19 @@ StatusBarUtil.setTranslucentForImageView(Activity activity, int statusBarAlpha, 
 
 ![](https://raw.githubusercontent.com/laobie/StatusBarUtil/master/img/set_for_image_view_page.png)
 
-  
-##### 6. 通过传入 `statusBarAlpha` 参数，可以改变状态栏的透明度值，默认值是112。
-  
+##### 6. 在 Fragment 中使用
+
+![](http://ac-qygvx1cc.clouddn.com/f79b11ecae3b6043.gif)
+
+##### 7. 通过传入 `statusBarAlpha` 参数，可以改变状态栏的透明度值，默认值是112。
+
 
 ### 使用
 
 ##### 1. 在 build.gradle 文件中添加依赖, StatusBarUtil 已经发布在 JCenter:
 
 ~~~groovy
-compile 'com.jaeger.statusbaruitl:library:1.2.0'
+compile 'com.jaeger.statusbaruitl:library:1.2.3'
 ~~~
 
 ##### 2. 在 `setContentView()` 之后调用你需要的方法，例如:
@@ -106,6 +129,8 @@ StatusBarUtil.setColor(MainActivity.this, mColor);
 ~~~
 
 ##### 4. 当你设置了 `statusBarAlpha` 值时，该值需要在 0 ~ 255 之间
+
+##### 5. 在 Fragment 中的使用可以参照 [UseInFragmentActivity.java](https://github.com/laobie/StatusBarUtil/blob/master/sample/src/main/java/com/jaeger/statusbarutil/UseInFragmentActivity.java) 来实现
 
 ### 最后
 如果你有任何建议或问题，请及时联系我。如果你对这个工具类有优化，欢迎 fork 提 pr。
