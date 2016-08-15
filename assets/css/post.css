@@ -62,6 +62,10 @@ body {
     letter-spacing: 0.03em;
 }
 
+.cnzz {
+    display: none;
+}
+
 H2 {
     margin-bottom: 60px;
     padding: 5px;
@@ -208,7 +212,7 @@ td {
 
     .post-content {
         font-size: 0.9em;
-        margin: 0 0 5% 0;
+        margin: 0 0 0% 0;
         padding: 2% 5% 5% 5%;
         width: 90%;
         letter-spacing: 0;
