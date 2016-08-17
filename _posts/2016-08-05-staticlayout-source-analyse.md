@@ -157,266 +157,267 @@ StaticLayout 中的 `generate()` 方法近 300 行，其完成了文本的段落
 
         在接下来的字体测量中，会使用 fmCache 数组来缓存字体测量的信息，缓存 top, bottom, ascent, 和 descen 四个值，因此 fmCache 数组的大小始终是4的倍数。
 
-2. 接下来就是按照一个个段落来处理文本：
+2.  接下来就是按照一个个段落来处理文本：
 
 
-      ```java
-      for (int paraStart = bufStart; paraSt
-          paraEnd = TextUtils.indexOf(sourc
-          if (paraEnd < 0)
-              paraEnd = bufEnd;
-          else
-              paraEnd++;
-          ...
-      }
-      ```
+    ```java
+    for (int paraStart = bufStart; paraSt
+        paraEnd = TextUtils.indexOf(sourc
+        if (paraEnd < 0)
+            paraEnd = bufEnd;
+        else
+            paraEnd++;
+        ...
+    }
+    ```
     
-      通过查找换行符，确定每个段落的起止位置，接下来的处理，均是对该段落文本的处理。
+    通过查找换行符，确定每个段落的起止位置，接下来的处理，均是对该段落文本的处理。
 
 3. span 文本的处理
 
-4. 处理段落文本 :
+4.  处理段落文本 :
 
-      ```java
-               measured.setPara(source, paraStart, paraEnd, textDir, b);
-               char[] chs = measured.mChars;
-               float[] widths = measured.mWidths;
-               byte[] chdirs = measured.mLevels;
-               int dir = measured.mDir;
-               boolean easy = measured.mEasy;
-      ```
+    ```java
+    measured.setPara(source, paraStart, paraEnd, textDir, b);
+    char[] chs = measured.mChars;
+    float[] widths = measured.mWidths;
+    byte[] chdirs = measured.mLevels;
+    int dir = measured.mDir;
+    boolean easy = measured.mEasy;
+    ```
 
-5. 处理制表位，这里的制表位是使用 `TabStopSpan` 方式插入到文本中的，通过 Spanned 接口提供的 `getSpans(int start, int end, Class<T> type)` 方法来获取到 TabStopSpan，排序后将所有的制表位的位置存在 variableTabStops 数组中。
+5.  处理制表位，这里的制表位是使用 `TabStopSpan` 方式插入到文本中的，通过 Spanned 接口提供的 `getSpans(int start, int end, Class<T> type)` 方法来获取到 TabStopSpan，排序后将所有的制表位的位置存在 variableTabStops 数组中。
 
-      ```java
-      int[] variableTabStops = null;
-      if (spanned != null) {
-          TabStopSpan[] spans = getParagraphSpans(spanned, paraStart,
-                  paraEnd, TabStopSpan.class);
-          if (spans.length > 0) {
-              int[] stops = new int[spans.length];
-              for (int i = 0; i < spans.length; i++) {
-                  stops[i] = spans[i].getTabStop();
-              }
-              Arrays.sort(stops, 0, stops.length);
-              variableTabStops = stops;
-      }}
-      ```
-
-6. 完成以上处理后，就是交给 JNI 层来处理段落文本，主要处理了段落的制表行缩进、折行等；需要再分析。
-
-      ``` java
-      nSetupParagraph(b.mNativePtr, chs, paraEnd - paraStart,
-            firstWidth, firstWidthLineCount, restWidth,
-            variableTabStops, TAB_INCREMENT, b.mBreakStrategy, b.mHyphenationFrequency);
-      ```
-
-7. 处理缩进的源码如下：
-
-      ``` java
-      if (mLeftIndents != null || mRightIndents != null) {
-          int leftLen = mLeftIndents == null ? 0 : mLeftIndents.length;
-          int rightLen = mRightIndents == null ? 0 : mRightIndents.length;
-          int indentsLen = Math.max(1, Math.min(leftLen, rightLen) - mLineCount);
-          int[] indents = new int[indentsLen];
-          for (int i = 0; i < indentsLen; i++) {
-              int leftMargin = mLeftIndents == null ? 0 :
-                      mLeftIndents[Math.min(i + mLineCount, leftLen - 1)];
-              int rightMargin = mRightIndents == null ? 0 :
-                      mRightIndents[Math.min(i + mLineCount, rightLen - 1)];
-              indents[i] = leftMargin + rightMargin;
-          }
-          nSetIndents(b.mNativePtr, indents);
-      }
-      ```
-
-         开始的条件判断使用的 mLeftIndents 和 mRightIndents 变量是通过 Builder 对象来赋值的：
-
-      ```java
-          mLeftIndents = b.mLeftIndents;
-          mRightIndents = b.mRightIndents;
-      ```
-
-         但是比较困惑的是，源码中并没有对 Builder 对象这两个字段赋值的地方，因此这里的条件判断结果都是 false，实际 debug 测试了下，这个地方的判断确实始终是 false，所以具体的逻辑还需要再分析下。可以看见的是，在方法的最后，同样是调用 JNI 层的方法设置缩进。
-
-
-8. 缓存字体测量信息，源码如下：
-
-      ```java
-      for (int spanStart = paraStart, spanEnd; spanStart < paraEnd; spanStart = spanEnd) {
-          if (fmCacheCount * 4 >= fmCache.length) {
-              int[] grow = new int[fmCacheCount * 4 * 2];
-              System.arraycopy(fmCache, 0, grow, 0, fmCacheCount * 4);
-              fmCache = grow;
-          }
-          if (spanEndCacheCount >= spanEndCache.length) {
-              int[] grow = new int[spanEndCacheCount * 2];
-              System.arraycopy(spanEndCache, 0, grow, 0, spanEndCacheCount);
-              spanEndCache = grow;
-          }
-          if (spanned == null) {
-              spanEnd = paraEnd;
-              int spanLen = spanEnd - spanStart;
-              measured.addStyleRun(paint, spanLen, fm);
-          } else {
-              spanEnd = spanned.nextSpanTransition(spanStart, paraEnd,
-                      MetricAffectingSpan.class);
-              int spanLen = spanEnd - spanStart;
-              MetricAffectingSpan[] spans =
-                      spanned.getSpans(spanStart, spanEnd, MetricAffectingSpan.class);
-              spans = TextUtils.removeEmptySpans(spans, spanned, MetricAffectingSpan.class);
-              measured.addStyleRun(paint, spans, spanLen, fm);
-          }
-          // the order of storage here (top, bottom, ascent, descent) has to match the code below
-          // where these values are retrieved
-          fmCache[fmCacheCount * 4 + 0] = fm.top;
-          fmCache[fmCacheCount * 4 + 1] = fm.bottom;
-          fmCache[fmCacheCount * 4 + 2] = fm.ascent;
-          fmCache[fmCacheCount * 4 + 3] = fm.descent;
-          fmCacheCount++;
-          spanEndCache[spanEndCacheCount] = spanEnd;
-          spanEndCacheCount++;
-      }
-      ```
-
-      fmCache 的初始化时的大小是 16，因此在每次循环开始时，需要判断下是否需要对 fmCache 扩容，这里的扩容同样保证了 fmCache 的大小是4的倍数，同时每次扩容时都是双倍扩容。
-
-      这里也会对文本中的 Span 的结束位置使用 spanEndCache 缓存记录下来，这里处理的 span 具体类型是 MetricAffectingSpan，顾名思义就是对字体会有影响的 Span，需要单独拿出来处理，缓存字体测量信息。
-
-      具体的测量则是交给 MeasuredText 类的 `addStyleRun(TextPaint paint, int len, Paint.FontMetricsInt fm)` 和 `addStyleRun(TextPaint paint, MetricAffectingSpan[] spans, int len, Paint.FontMetricsInt fm)` 方法来处理，具体的处理涉及到文字的排版，感兴趣的可以自己查看源码，这里不再详细分析了。
-
-      测量完成后，字体测量信息的值4个一组地存储在 fmCache 数组中，spanEnd 值存储在 spanEndCache 数组中。
-
-9. 计算每行宽度和折行处理，宽度的计算和折行的处理分别借助 JNI 层的 `nGetWidths()` 和 `nComputeLineBreaks()` 方法来处理。
-
-      
-      ``` java
-            nGetWidths(b.mNativePtr, widths);
-            // 得到当前行内包含的折行数目
-            int breakCount = nComputeLineBreaks(b.mNativePtr, lineBreaks, lineBreaks.breaks,
-                    lineBreaks.widths, lineBreaks.flags, lineBreaks.breaks.length);
-            int[] breaks = lineBreaks.breaks;
-            float[] lineWidths = lineBreaks.widths;
-            int[] flags = lineBreaks.flags;
-            // 得到剩下的行数 = 最大允许行数 - 当前行数
-            final int remainingLineCount = mMaximumVisibleLineCount - mLineCount;
-            final boolean ellipsisMayBeApplied = ellipsize != null
-                    && (ellipsize == TextUtils.TruncateAt.END
-                        || (mMaximumVisibleLineCount == 1
-                                && ellipsize != TextUtils.TruncateAt.MARQUEE));
-            // 如果剩下的行数小于当前行包含的折行数目，则需要将最后一行和超出的行处理成单行
-            if (remainingLineCount > 0 && remainingLineCount < breakCount &&
-                    ellipsisMayBeApplied) {
-                // Treat the last line and overflowed lines as a single line.
-                breaks[remainingLineCount - 1] = breaks[breakCount - 1];
-                // 计算 width 和 flag 值
-                float width = 0;
-                int flag = 0;
-                for (int i = remainingLineCount - 1; i < breakCount; i++) {
-                    width += lineWidths[i];
-                    flag |= flags[i] & TAB_MASK;
-                }
-                lineWidths[remainingLineCount - 1] = width;
-                flags[remainingLineCount - 1] = flag;
-                // 设置当前行中的折行数为可用的行数
-                breakCount = remainingLineCount;
+    ```java
+    int[] variableTabStops = null;
+    if (spanned != null) {
+        TabStopSpan[] spans = getParagraphSpans(spanned, paraStart,
+                paraEnd, TabStopSpan.class);
+        if (spans.length > 0) {
+            int[] stops = new int[spans.length];
+            for (int i = 0; i < spans.length; i++) {
+                stops[i] = spans[i].getTabStop();
             }
-      ```
-      
-      处理完折行后，会判断下是否需要省略处理，如果需要，则根据允许的最大行数和当前行包含的折行数目来确定需要处理成省略的那一行，并设置相关的 width 和 flag 信息。
+            Arrays.sort(stops, 0, stops.length);
+            variableTabStops = stops;
+    }}
+    ```
+
+6.  完成以上处理后，就是交给 JNI 层来处理段落文本，主要处理了段落的制表行缩进、折行等；需要再分析。
+
+    ``` java
+    nSetupParagraph(b.mNativePtr, chs, paraEnd - paraStart,
+          firstWidth, firstWidthLineCount, restWidth,
+          variableTabStops, TAB_INCREMENT, b.mBreakStrategy, b.mHyphenationFrequency);
+    ```
+
+7.  处理缩进的源码如下：
+
+    ``` java
+    if (mLeftIndents != null || mRightIndents != null) {
+        int leftLen = mLeftIndents == null ? 0 : mLeftIndents.length;
+        int rightLen = mRightIndents == null ? 0 : mRightIndents.length;
+        int indentsLen = Math.max(1, Math.min(leftLen, rightLen) - mLineCount);
+        int[] indents = new int[indentsLen];
+        for (int i = 0; i < indentsLen; i++) {
+            int leftMargin = mLeftIndents == null ? 0 :
+                    mLeftIndents[Math.min(i + mLineCount, leftLen - 1)];
+            int rightMargin = mRightIndents == null ? 0 :
+                    mRightIndents[Math.min(i + mLineCount, rightLen - 1)];
+            indents[i] = leftMargin + rightMargin;
+        }
+        nSetIndents(b.mNativePtr, indents);
+    }
+    ```
+
+    开始的条件判断使用的 mLeftIndents 和 mRightIndents 变量是通过 Builder 对象来赋值的：
+
+    ```java
+    mLeftIndents = b.mLeftIndents;
+    mRightIndents = b.mRightIndents;
+    ```
+
+    但是比较困惑的是，源码中并没有对 Builder 对象这两个字段赋值的地方，因此这里的条件判断结果都是 false，实际 debug 测试了下，这个地方的判断确实始终是 false，所以具体的逻辑还需要再分析下。可以看见的是，在方法的最后，同样是调用 JNI 层的方法设置缩进。
+
+
+8.  缓存字体测量信息，源码如下：
+
+    ```java
+    for (int spanStart = paraStart, spanEnd; spanStart < paraEnd; spanStart = spanEnd) {
+        if (fmCacheCount * 4 >= fmCache.length) {
+            int[] grow = new int[fmCacheCount * 4 * 2];
+            System.arraycopy(fmCache, 0, grow, 0, fmCacheCount * 4);
+            fmCache = grow;
+        }
+        if (spanEndCacheCount >= spanEndCache.length) {
+            int[] grow = new int[spanEndCacheCount * 2];
+            System.arraycopy(spanEndCache, 0, grow, 0, spanEndCacheCount);
+            spanEndCache = grow;
+        }
+        if (spanned == null) {
+            spanEnd = paraEnd;
+            int spanLen = spanEnd - spanStart;
+            measured.addStyleRun(paint, spanLen, fm);
+        } else {
+            spanEnd = spanned.nextSpanTransition(spanStart, paraEnd,
+                    MetricAffectingSpan.class);
+            int spanLen = spanEnd - spanStart;
+            MetricAffectingSpan[] spans =
+                    spanned.getSpans(spanStart, spanEnd, MetricAffectingSpan.class);
+            spans = TextUtils.removeEmptySpans(spans, spanned, MetricAffectingSpan.class);
+            measured.addStyleRun(paint, spans, spanLen, fm);
+        }
+        // the order of storage here (top, bottom, ascent, descent) has to match the code below
+        // where these values are retrieved
+        fmCache[fmCacheCount * 4 + 0] = fm.top;
+        fmCache[fmCacheCount * 4 + 1] = fm.bottom;
+        fmCache[fmCacheCount * 4 + 2] = fm.ascent;
+        fmCache[fmCacheCount * 4 + 3] = fm.descent;
+        fmCacheCount++;
+        spanEndCache[spanEndCacheCount] = spanEnd;
+        spanEndCacheCount++;
+    }
+    ```
+
+    fmCache 的初始化时的大小是 16，因此在每次循环开始时，需要判断下是否需要对 fmCache 扩容，这里的扩容同样保证了 fmCache 的大小是4的倍数，同时每次扩容时都是双倍扩容。
+
+    这里也会对文本中的 Span 的结束位置使用 spanEndCache 缓存记录下来，这里处理的 span 具体类型是 MetricAffectingSpan，顾名思义就是对字体会有影响的 Span，需要单独拿出来处理，缓存字体测量信息。
+
+    具体的测量则是交给 MeasuredText 类的 `addStyleRun(TextPaint paint, int len, Paint.FontMetricsInt fm)` 和 `addStyleRun(TextPaint paint, MetricAffectingSpan[] spans, int len, Paint.FontMetricsInt fm)` 方法来处理，具体的处理涉及到文字的排版，感兴趣的可以自己查看源码，这里不再详细分析了。
+
+    测量完成后，字体测量信息的值4个一组地存储在 fmCache 数组中，spanEnd 值存储在 spanEndCache 数组中。
+
+9.  计算每行宽度和折行处理，宽度的计算和折行的处理分别借助 JNI 层的 `nGetWidths()` 和 `nComputeLineBreaks()` 方法来处理。
+
+    
+    ``` java
+     nGetWidths(b.mNativePtr, widths);
+     // 得到当前行内包含的折行数目
+     int breakCount = nComputeLineBreaks(b.mNativePtr, lineBreaks, lineBreaks.breaks,
+             lineBreaks.widths, lineBreaks.flags, lineBreaks.breaks.length);
+     int[] breaks = lineBreaks.breaks;
+     float[] lineWidths = lineBreaks.widths;
+     int[] flags = lineBreaks.flags;
+     // 得到剩下的行数 = 最大允许行数 - 当前行数
+     final int remainingLineCount = mMaximumVisibleLineCount - mLineCount;
+     final boolean ellipsisMayBeApplied = ellipsize != null
+             && (ellipsize == TextUtils.TruncateAt.END
+                 || (mMaximumVisibleLineCount == 1
+                         && ellipsize != TextUtils.TruncateAt.MARQUEE));
+     // 如果剩下的行数小于当前行包含的折行数目，则需要将最后一行和超出的行处理成单行
+     if (remainingLineCount > 0 && remainingLineCount < breakCount &&
+             ellipsisMayBeApplied) {
+         // Treat the last line and overflowed lines as a single line.
+         breaks[remainingLineCount - 1] = breaks[breakCount - 1];
+         // 计算 width 和 flag 值
+         float width = 0;
+         int flag = 0;
+         for (int i = remainingLineCount - 1; i < breakCount; i++) {
+             width += lineWidths[i];
+             flag |= flags[i] & TAB_MASK;
+         }
+         lineWidths[remainingLineCount - 1] = width;
+         flags[remainingLineCount - 1] = flag;
+         // 设置当前行中的折行数为可用的行数
+         breakCount = remainingLineCount;
+     }
+    ```
+    
+    处理完折行后，会判断下是否需要省略处理，如果需要，则根据允许的最大行数和当前行包含的折行数目来确定需要处理成省略的那一行，并设置相关的 width 和 flag 信息。
 
 10. 处理文本中 Span 和折行：
 
-      ``` java
-       int here = paraStart;
-       int fmTop = 0, fmBottom = 0, fmAscent = 0, fmDescent = 0;
-       int fmCacheIndex = 0;
-       int spanEndCacheIndex = 0;
-       int breakIndex = 0;
-       for (int spanStart = paraStart, spanEnd; spanStart < paraEnd; spanStart = spanEnd) {
-           // 从之前存储的数据中获取 span 结束位置
-           spanEnd = spanEndCache[spanEndCacheIndex++];
-           // 恢复之前存储的字体测量信息
-           // retrieve cached metrics, order matches above
-           fm.top = fmCache[fmCacheIndex * 4 + 0];
-           fm.bottom = fmCache[fmCacheIndex * 4 + 1];
-           fm.ascent = fmCache[fmCacheIndex * 4 + 2];
-           fm.descent = fmCache[fmCacheIndex * 4 + 3];
-           fmCacheIndex++;
-           // 参照前面提到的字体测量的几个值的说明，这里的 top 和 ascent 取值小的，bottom 和 descent 取值大的,保证文本均可以正常显示
-           if (fm.top < fmTop) {
-               fmTop = fm.top;
-           }
-           if (fm.ascent < fmAscent) {
-               fmAscent = fm.ascent;
-           }
-           if (fm.descent > fmDescent) {
-               fmDescent = fm.descent;
-           }
-           if (fm.bottom > fmBottom) {
-               fmBottom = fm.bottom;
-           }
-           // 跳过 span 之前的折行
-           while (breakIndex < breakCount && paraStart + breaks[breakIndex] < spanStart) {
-               breakIndex++;
-           }
-           // 处理 span 中的折行
-           while (breakIndex < breakCount && paraStart + breaks[breakIndex] <= spanEnd) {
-               int endPos = paraStart + breaks[breakIndex];
-               boolean moreChars = (endPos < bufEnd);
-               v = out(source, here, endPos,
-                       fmAscent, fmDescent, fmTop, fmBottom,
-                       v, spacingmult, spacingadd, chooseHt,chooseHtv, fm, flags[breakIndex],
-                       needMultiply, chdirs, dir, easy, bufEnd, includepad, trackpad,
-                       chs, widths, paraStart, ellipsize, ellipsizedWidth,
-                       lineWidths[breakIndex], paint, moreChars);
-               if (endPos < spanEnd) {
-                   // 如果 Span 文本还未处理完成，则恢复当前的 fontMetrics 信息
-                   // 否则归零处理，处理下一段 Span
-                   // preserve metrics for current span
-                   fmTop = fm.top;
-                   fmBottom = fm.bottom;
-                   fmAscent = fm.ascent;
-                   fmDescent = fm.descent;
-               } else {
-                   fmTop = fmBottom = fmAscent = fmDescent = 0;
-               }
-               here = endPos;
-               breakIndex++;
-               // 如果处理该段落时行数已经超过最大可见行数，则直接终止后面的处理
-               if (mLineCount >= mMaximumVisibleLineCount) {
-                   return;
-               }
-           }
-       }
-       // 如果段落结束就是整个文本的结束，则跳出处理段落的循环，否则处理下一段。
-       if (paraEnd == bufEnd)
-           break;
-      ```
+    ``` java
+     int here = paraStart;
+     int fmTop = 0, fmBottom = 0, fmAscent = 0, fmDescent = 0;
+     int fmCacheIndex = 0;
+     int spanEndCacheIndex = 0;
+     int breakIndex = 0;
+     for (int spanStart = paraStart, spanEnd; spanStart < paraEnd; spanStart = spanEnd) {
+         // 从之前存储的数据中获取 span 结束位置
+         spanEnd = spanEndCache[spanEndCacheIndex++];
+         // 恢复之前存储的字体测量信息
+         // retrieve cached metrics, order matches above
+         fm.top = fmCache[fmCacheIndex * 4 + 0];
+         fm.bottom = fmCache[fmCacheIndex * 4 + 1];
+         fm.ascent = fmCache[fmCacheIndex * 4 + 2];
+         fm.descent = fmCache[fmCacheIndex * 4 + 3];
+         fmCacheIndex++;
+         // 参照前面提到的字体测量的几个值的说明，这里的 top 和 ascent 取值小的，bottom 和 descent 取值大的,保证文本均可以正常显示
+         if (fm.top < fmTop) {
+             fmTop = fm.top;
+         }
+         if (fm.ascent < fmAscent) {
+             fmAscent = fm.ascent;
+         }
+         if (fm.descent > fmDescent) {
+             fmDescent = fm.descent;
+         }
+         if (fm.bottom > fmBottom) {
+             fmBottom = fm.bottom;
+         }
+         // 跳过 span 之前的折行
+         while (breakIndex < breakCount && paraStart + breaks[breakIndex] < spanStart) {
+             breakIndex++;
+         }
+         // 处理 span 中的折行
+         while (breakIndex < breakCount && paraStart + breaks[breakIndex] <= spanEnd) {
+             int endPos = paraStart + breaks[breakIndex];
+             boolean moreChars = (endPos < bufEnd);
+             v = out(source, here, endPos,
+                     fmAscent, fmDescent, fmTop, fmBottom,
+                     v, spacingmult, spacingadd, chooseHt,chooseHtv, fm, flags[breakIndex],
+                     needMultiply, chdirs, dir, easy, bufEnd, includepad, trackpad,
+                     chs, widths, paraStart, ellipsize, ellipsizedWidth,
+                     lineWidths[breakIndex], paint, moreChars);
+             if (endPos < spanEnd) {
+                 // 如果 Span 文本还未处理完成，则恢复当前的 fontMetrics 信息
+                 // 否则归零处理，处理下一段 Span
+                 // preserve metrics for current span
+                 fmTop = fm.top;
+                 fmBottom = fm.bottom;
+                 fmAscent = fm.ascent;
+                 fmDescent = fm.descent;
+             } else {
+                 fmTop = fmBottom = fmAscent = fmDescent = 0;
+             }
+             here = endPos;
+             breakIndex++;
+             // 如果处理该段落时行数已经超过最大可见行数，则直接终止后面的处理
+             if (mLineCount >= mMaximumVisibleLineCount) {
+                 return;
+             }
+         }
+     }
+     // 如果段落结束就是整个文本的结束，则跳出处理段落的循环，否则处理下一段。
+     if (paraEnd == bufEnd)
+         break;
+    ```
 
     至此，以段落为单位的文本就处理完毕，包括文本的折行、Span 的处理都已完成。
 
 11. 当需要处理的文本起止位置相同时（即需要处理的文本为空），且前面是换行符时，此时也需要将该空白处理成一个段落。代码如下：
 
-      ``` java
-        if ((bufEnd == bufStart || source.charAt(bufEnd - 1) == CHAR_NEW_LINE) &&
-                mLineCount < mMaximumVisibleLineCount) {
-            // Log.e("text", "output last " + bufEnd);
-            measured.setPara(source, bufEnd, bufEnd, textDir, b);
-            paint.getFontMetricsInt(fm);
-            v = out(source,
-                    bufEnd, bufEnd, fm.ascent, fm.descent,
-                    fm.top, fm.bottom,
-                    v,
-                    spacingmult, spacingadd, null,
-                    null, fm, 0,
-                    needMultiply, measured.mLevels, measured.mDir, measured.mEasy, bufEnd,
-                    includepad, trackpad, null,
-                    null, bufStart, ellipsize,
-                    ellipsizedWidth, 0, paint, false);
-      ```
-       
-      第10点和第11点分析中均出现了 `out()` 方法，前面提到，该方法也是 StaticLayout 源码中的一个重要的方法，接下来会分析下 `out` 方法中做了什么处理。 
+    ``` java
+      if ((bufEnd == bufStart || source.charAt(bufEnd - 1) == CHAR_NEW_LINE) &&
+              mLineCount < mMaximumVisibleLineCount) {
+          // Log.e("text", "output last " + bufEnd);
+          measured.setPara(source, bufEnd, bufEnd, textDir, b);
+          paint.getFontMetricsInt(fm);
+          v = out(source,
+                  bufEnd, bufEnd, fm.ascent, fm.descent,
+                  fm.top, fm.bottom,
+                  v,
+                  spacingmult, spacingadd, null,
+                  null, fm, 0,
+                  needMultiply, measured.mLevels, measured.mDir, measured.mEasy, bufEnd,
+                  includepad, trackpad, null,
+                  null, bufStart, ellipsize,
+                  ellipsizedWidth, 0, paint, false);
+      }
+    ```
+     
+    第10点和第11点分析中均出现了 `out()` 方法，前面提到，该方法也是 StaticLayout 源码中的一个重要的方法，接下来会分析下 `out` 方法中做了什么处理。 
 
 #### out 方法分析
 `out()` 方法在我看来，就是 layout 中的 out。如果说 `generate()` 大部分是处理一些折行、段落相关的数据，那么 `out()` 方法就是将这些数据使用起来，真正地布局出来（注意，布局不是显示，显示的话还是在父类的 `drawText()` 方法中进行的）。
