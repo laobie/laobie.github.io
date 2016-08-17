@@ -14,24 +14,26 @@ category: Android
 [下载 StatusBarUtil-Demo](http://fir.im/5mnp)
 
 ### 更新日志
-+ 1.2.3
++  1.2.4
 
-  - 修复 `setTranslucentForImageView` ，现在支持传 null 作为 needOffsetView 的值
+   - 修复 `setTranslucentForImageViewInFragment()` 方法的一个 bug
 
-  - 新增当 fragment 头部是 ImageView 时设置透明状态栏的方法
++  1.2.3
 
-    ~~~ java
-    setTranslucentForImageViewInFragment(Activity activity, View needOffsetView)
-    setTransparentForImageViewInFragment(Activity activity, View needOffsetView)
-    ~~~
+   - 修复 `setTranslucentForImageView` ，现在支持传 null 作为 needOffsetView 的值
 
-  - 修复根布局是 CoordinatorLayout 时设置状态栏全透明和半透明的 bug
+   - 新增当 fragment 头部是 ImageView 时设置透明状态栏的方法
 
-    ~~~ java
-    setTranslucentForCoordinatorLayout(Activity activity, int statusBarAlpha)
-    ~~~
+     ~~~ java
+     setTranslucentForImageViewInFragment(Activity activity, View needOffsetView)
+     setTransparentForImageViewInFragment(Activity activity, View needOffsetView)
+     ~~~
 
+   - 修复根布局是 CoordinatorLayout 时设置状态栏全透明和半透明的 bug
 
+     ~~~ java
+     setTranslucentForCoordinatorLayout(Activity activity, int statusBarAlpha)
+     ~~~
 
 
 - 1.2.0
@@ -101,7 +103,7 @@ StatusBarUtil.setTranslucentForImageView(Activity activity, int statusBarAlpha, 
 ##### 1. 在 build.gradle 文件中添加依赖, StatusBarUtil 已经发布在 JCenter:
 
 ~~~groovy
-compile 'com.jaeger.statusbaruitl:library:1.2.3'
+compile 'com.jaeger.statusbaruitl:library:1.2.4'
 ~~~
 
 ##### 2. 在 `setContentView()` 之后调用你需要的方法，例如:
