@@ -27,13 +27,14 @@ body {
 }
 
 .post-title {
-    font-size: 1.3em;
+    font-size: 1.25em;
     width: 80%;
     padding-right: 20%;
     color: ghostwhite;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    letter-spacing: 0.1em;
 }
 
 .header-inside {
@@ -120,7 +121,7 @@ blockquote {
 a {
     text-decoration: none;
     padding: 1px;
-    color: #3a9661;
+    color: #137ccd;
 }
 
 a:hover {
