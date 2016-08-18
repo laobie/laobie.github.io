@@ -51,7 +51,7 @@ body {
 }
 
 .post-content {
-    font-size: 0.98em;
+    font-size: 0.96em;
     line-height: 1.68;
     font-weight: normal;
     background: ghostwhite;
@@ -115,12 +115,7 @@ blockquote {
     margin-left: 20px;
 }
 
-pre {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    line-height: 1.5;
-    font-size: 0.9em;
-    overflow: auto;
-}
+
 
 a {
     text-decoration: none;
@@ -154,9 +149,24 @@ hr {
 
 code {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    color: #2784bf;
-    max-width: 100%;
-    font-size: 90%;
+    color: #e65c04;
+    letter-spacing: 0;
+    font-size: 85%;
+}
+
+pre {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    line-height: 1.68;
+    font-size: 0.96em;
+    overflow: auto;
+
+}
+
+pre code {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    color: #e65c04;
+    letter-spacing: 0.025em;
+    font-size: 85%;
 }
 
 ul {

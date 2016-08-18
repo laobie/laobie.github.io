@@ -172,7 +172,7 @@ a {
 
 .post-title {
     width: 80%;
-    font-size: 1.625em;
+    font-size: 1.6em;
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -187,7 +187,8 @@ a {
     position: relative;
     display: inline-block;
     color: #707070;
-    font-size: 1.125em;
+    letter-spacing: 0.01em;
+    font-size: 1.1em;
 }
 
 .post-excerpt:hover {
