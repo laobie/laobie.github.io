@@ -1,0 +1,64 @@
+---
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>归档</title>
+    <link rel="icon" href="http://ac-qygvx1cc.clouddn.com/70ce1195c8672357.png"/>
+    <meta name="theme-color" content="#323D45">
+</head>
+
+<body>
+<header id="masthead" class="site-header" role="banner">
+    <div class="header-inside">
+        <div class="home-title">
+            <a href='http://laobie.github.io/'> <img width="24px" src="http://ac-qygvx1cc.clouddn.com/c5e465aba7eb84f2.png"></a>
+        </div>
+        <div class="post-title">归档</div>
+    </div>
+</header>
+<div class="post-content">
+    {% for category in site.categories %}
+    <div class="category-item">
+        <div class="category-title"> {{ category | first | capitalize }}</div>
+        <div class="category-count">{{ category | last | size }}</div>
+    </div>
+    {% for post in category.last %}
+    <div class="article-item">
+        <div class="article-title">
+            <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+            <span class="article-date">{{post.date | date:"%Y %m-%d"}}</span>
+        </div>
+    </div>
+    {% endfor %}
+    {% endfor %}
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="laobie.github.io-articles.html" data-title="关于本站" data-url="http://laobie.github.io/articles.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name: "jaeger"};
+        (function () {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+    <div class="cnzz">
+        <script type="text/javascript">
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cspan id='cnzz_stat_icon_1256704919'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256704919%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+</div>
+</body>
+</html>
