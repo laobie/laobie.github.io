@@ -155,7 +155,7 @@ excerpt: 本文翻译自 Android Studio Tips by Philippe Breault，一共收集�
 
 #### 16. 在外部打开文件（Open File Externally）
 
-- **描述：**通过这个快捷键，简单地点击Tab，就可以打开当前文件所在的位置或者该文件的任意上层路径。
+- **描述：**通过这个快捷键，简单地点击 Tab，就可以打开当前文件所在的位置或者该文件的任意上层路径。
 - **快捷键：**Cmd + 单击Tab(OS X)、Ctrl + 点击Tab(Windows/Linux);
 
 ![](../../../../assets/img/studio_tips/62-openfinder.gif)
