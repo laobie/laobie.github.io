@@ -15,7 +15,6 @@ body {
     width: 100%;
     color: #383838;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang-SC-Regular", "STHeiti", "Helvetica", "Arial", "Verdana", "sans-serif", "Microsoft YaHei";
-
 }
 
 .main-content {
@@ -52,10 +51,10 @@ body {
 
 .title {
     color: #FFFFFF;
-    height: 64px;
+    /*height: 64px;*/
     text-align: center;
-    font-size: 1.375em;
-    padding: 21px 32px 21px 32px;
+    font-size: 1.3em;
+    padding: 20px 32px 20px 32px;
     display: block;
     position: absolute;
 }
@@ -80,13 +79,23 @@ body {
     display: block;
     font-size: 1.5em;
     text-align: center;
+    text-shadow: 3px 5px 8px #232323;
+}
+
+.avatar_div {
+    display: block;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 100px;
 }
 
 .avatar {
-    display: block;
     height: 150px;
-    margin: 0 auto;
-    padding-top: 88px;
+    width: 150px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
 }
 
 a {
@@ -108,8 +117,12 @@ a {
     color: #FFFFFF;
 }
 
+.title:hover {
+    color: #9c9c9c;
+}
+
 .head_item:hover {
-    color: #9f9f9f;
+    color: #9c9c9c;
 }
 
 .header_bg {
@@ -150,10 +163,14 @@ a {
     min-height: 1px;
 }
 
-.avatar-div a:hover img {
+.avatar_div a:hover img {
     filter: alpha(Opacity=50);
-    -moz-opacity: 0.8;
-    opacity: 0.8
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+    -moz-box-shadow: 0 0 36px rgba(202, 19, 8, 100);
+    -webkit-box-shadow: 0 0 36px rgba(202, 19, 8, 100);
+    box-shadow: 0 0 36px rgba(202, 19, 8, 100);
+    cursor: pointer;
 }
 
 .content {
@@ -268,10 +285,19 @@ a {
 
     .title {
         font-size: 1.2em;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    .avatar_div {
+        height: 80px;
+        width: 80px;
+        padding-top: 90px;
     }
 
     .avatar {
         height: 80px;
+        width: 80px;
     }
 
     .header_bg {
@@ -279,7 +305,7 @@ a {
     }
 
     .head_item {
-        font-size: 1em;
+        font-size: 0.92em;
         padding: 25px 8px 25px 8px;
 
     }
