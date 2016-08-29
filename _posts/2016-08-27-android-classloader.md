@@ -514,22 +514,22 @@ protected Class<?> loadClass(String className, boolean resolve) throws ClassNotF
 
 ### 参考资料
 
-[JVM 的工作原理,层次结构以及 GC 工作原理](https://segmentfault.com/a/1190000002579346)
+- [JVM 的工作原理,层次结构以及 GC 工作原理](https://segmentfault.com/a/1190000002579346)
 
-[深入分析Java ClassLoader原理](http://blog.csdn.net/xyang81/article/details/7292380)
+- [深入分析Java ClassLoader原理](http://blog.csdn.net/xyang81/article/details/7292380)
 
-[Android动态加载基础 ClassLoader工作机制](https://segmentfault.com/a/1190000004062880)
+- [Android动态加载基础 ClassLoader工作机制](https://segmentfault.com/a/1190000004062880)
 
-[各大热补丁方案分析和比较](http://blog.zhaiyifan.cn/2015/11/20/HotPatchCompare/)
+- [各大热补丁方案分析和比较](http://blog.zhaiyifan.cn/2015/11/20/HotPatchCompare/)
 
-[android-dynamical-loading](https://github.com/kaedea/android-dynamical-loading)
+- [android-dynamical-loading](https://github.com/kaedea/android-dynamical-loading)
 
-[dex分包变形记](http://bugly.qq.com/bbs/forum.php?mod=viewthread&tid=193)
+- [dex分包变形记](http://bugly.qq.com/bbs/forum.php?mod=viewthread&tid=193)
 
-[Android ClassLoader机制](http://blog.csdn.net/mr_liabill/article/details/50497055)
+- [Android ClassLoader机制](http://blog.csdn.net/mr_liabill/article/details/50497055)
 
-[彻底搞懂 Java ClassLoader](http://weli.iteye.com/blog/1682625)
+- [彻底搞懂 Java ClassLoader](http://weli.iteye.com/blog/1682625)
 
-[从源码分析 Android dexClassLoader 加载机制原理](http://blog.csdn.net/nanzhiwen666/article/details/50515895)
+- [从源码分析 Android dexClassLoader 加载机制原理](http://blog.csdn.net/nanzhiwen666/article/details/50515895)
 
-[码农故事](http://www.iloveandroid.net/)
+- [码农故事](http://www.iloveandroid.net/)
