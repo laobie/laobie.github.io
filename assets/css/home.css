@@ -57,11 +57,11 @@ body {
     padding: 20px 32px 20px 32px;
     display: block;
     position: absolute;
+
 }
 
 .title, .sign, .head_item {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
-
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif ,"Microsoft YaHei",微软雅黑;
 }
 
 .title-sign {
@@ -213,7 +213,7 @@ a {
 }
 
 .post-title:hover {
-    color: #a1a4a5;
+    color: #929292;
 }
 
 .post-date {

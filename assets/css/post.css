@@ -3,7 +3,8 @@ body {
     margin: 0;
     width: 100%;
     background: #2F2F2F;
-    font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+    /*font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;*/
+    font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑, SimSun, 宋体, Helvetica, Tahoma, "Arial sans-serif";
 }
 
 .site-header {
@@ -24,6 +25,7 @@ body {
     height: 100%;
     display: table-cell;
     vertical-align: middle;
+    font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .post-title {
