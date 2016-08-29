@@ -20,6 +20,11 @@ body {
     box-sizing: border-box;
 }
 
+p {
+    -webkit-margin-before: 0.35em;
+    -webkit-margin-after: 0.35em;
+}
+
 .home-title {
     width: 20%;
     height: 100%;
