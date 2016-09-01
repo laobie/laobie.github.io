@@ -74,7 +74,7 @@ ODEX 相关的细节可以阅读以下文章扩展：
 
 #### BaseDexClassLoader 及其子类
 
-在 Android 开发者官网上的 [ClassLoader](https://developer.android.com/reference/java/lang/ClassLoader.html) 的文档说明中我们可以看到，ClassLoader 是个抽象类，其具体实现的子类有 `BaseDexClassLoader` 和 ` SecureClassLoader` 。
+在 Android 开发者官网上的 [ClassLoader](https://developer.android.com/reference/java/lang/ClassLoader.html) 的文档说明中我们可以看到，ClassLoader 是个抽象类，其具体实现的子类有 `BaseDexClassLoader` 和 `SecureClassLoader` 。
 
 SecureClassLoader 的子类是 `URLClassLoader` ，其只能用来加载 jar 文件，这在 Android 的 Dalvik/ART  上没法使用的。
 
