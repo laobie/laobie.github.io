@@ -80,6 +80,7 @@ body {
     font-size: 1.5em;
     text-align: center;
     text-shadow: 3px 5px 8px #232323;
+    -webkit-font-smoothing: antialiased;
 }
 
 .avatar_div {
@@ -189,13 +190,14 @@ a {
 
 .post-title {
     width: 80%;
-    font-size: 1.56em;
+    font-size: 1.4em;
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #333333;
+    color: #555555;
     font-weight: 400;
+    -webkit-font-smoothing: antialiased;
 }
 
 .post-excerpt {
@@ -205,19 +207,20 @@ a {
     display: inline-block;
     color: #707070;
     letter-spacing: 0.01em;
-    font-size: 1.1em;
+    font-size: 1.05em;
+    -webkit-font-smoothing: antialiased;
 }
 
 .post-excerpt:hover {
-    color: #929292;
+    color: #5A9094;
 }
 
 .post-title:hover {
-    color: #929292;
+    color: #5A9094;
 }
 
 .post-date {
-    color: #2F2F2F;
+    color: #555555;
     margin-top: 6px;
     float: right;
     text-align: end;
@@ -226,6 +229,7 @@ a {
     padding: 4px;
     position: relative;
     display: inline-block;
+    -webkit-font-smoothing: antialiased;
 }
 
 .bottom-page {
