@@ -88,7 +88,7 @@ body {
     height: 150px;
     width: 150px;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 110px;
 }
 
 .avatar {
@@ -195,9 +195,9 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #555555;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
+    color: #444444;
+    font-weight: 300;
+    /*-webkit-font-smoothing: antialiased;*/
 }
 
 .post-excerpt {
@@ -205,7 +205,7 @@ a {
     line-height: 1.5;
     position: relative;
     display: inline-block;
-    color: #707070;
+    color: #555555;
     letter-spacing: 0.01em;
     font-size: 1.05em;
     -webkit-font-smoothing: antialiased;
@@ -320,7 +320,7 @@ a {
     }
 
     .post-title {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .post-date {
