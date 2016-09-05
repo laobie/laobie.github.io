@@ -3,8 +3,7 @@ body {
     margin: 0;
     width: 100%;
     background: url("http://ac-qygvx1cc.clouddn.com/f013a2ea22a8b4a6.png");
-    /*font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;*/
-    font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑, SimSun, 宋体, Helvetica, Tahoma, "Arial sans-serif";
+    font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑, SimSun, 宋体, Helvetica, Tahoma, "Arial sans-serif", serif;
 }
 
 .site-header {
@@ -68,7 +67,7 @@ p {
     width: 60%;
     margin: 75px 10% 5%;
     letter-spacing: 0.03em;
-    color: #4b4b4b;
+    color: #535353;
     font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -193,8 +192,11 @@ img {
 
 blockquote {
     margin-left: 0;
-    color: #777;
-    border-left: 3px solid #ddd;
+    color: #454545;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-left: 4px solid #b4b4b4;
+    background: #e2e2e2;
 }
 
 blockquote p {
