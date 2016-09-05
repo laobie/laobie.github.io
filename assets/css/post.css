@@ -196,11 +196,12 @@ blockquote {
     padding-top: 5px;
     padding-bottom: 5px;
     border-left: 4px solid #b4b4b4;
-    background: #e2e2e2;
+    background: #e9e9e9;
 }
 
 blockquote p {
     text-indent: 0;
+    padding-left: 0.5em;
 }
 
 hr {
