@@ -25,54 +25,68 @@ excerpt: 本文主要描述在 Markdown 写作中，通过 Python 脚本实现�
 
 ### 使用
 
-#### 1. 安装环境和依赖
-1. Python 2.7 环境，自行搜索
-2. 安装 `tinify` package，遇到问题可以看 [TinyPNG – API Reference](https://tinypng.com/developers/reference/python)：
-	
-	    pip install --upgrade tinify
-		
-		
-3. 安装 `leancloud-sdk` package，遇到问题可以看 [LeanCloud Python Doc](https://leancloud.cn/docs/python_guide.html)：
-	
-		pip install leancloud-sdk
+1. 安装环境和依赖
 
-	or
-	
-		easy_install leancloud-sdk
-		
-#### 2. 填写你申请的相关 API KEY(在 `replace_image_in_md.py` 文件中填写)
-	
-~~~python
-TINY_API_KEY = "your_tiny_png_api_key"
-LEAN_CLOUD_API_ID = "your_lean_cloud_app_id"
-LEAN_CLOUD_API_KEY = "your_lean_cloud_api_key"
-~~~
-[获取 TinyPNG api key](https://tinypng.com/developers)
-	
-[获取 LeanCloud api key & id](https://leancloud.cn/)
+   1. Python 2.7 环境，自行搜索
+   2. 安装 `tinify` package，遇到问题可以看 [TinyPNG – API Reference](https://tinypng.com/developers/reference/python)：
 
-#### 3. 编写你的 Markdown 文件 并 引用本地图片文件，如下图所示:
-	
-	this is a image 
-	![](img/monkey.jpg)
-
-#### 4. 使用自动化脚本:
-	
-	python replace_image_in_md.py your.md output.md
+	  ```
+	  pip install --upgrade tinify
+      ```
 		
-执行完之后，本地图片的引用将会被替换成压缩后的图片的外链( url )，如下图所示：
+   3. 安装 `leancloud-sdk` package，遇到问题可以看 [LeanCloud Python Doc](https://leancloud.cn/docs/python_guide.html)：
+
+	  ```bash
+      pip install leancloud-sdk
+      ```
+	  or
+
+	  ```
+	  easy_install leancloud-sdk
+	  ```
+		
+2. 填写你申请的相关 API KEY(在 `replace_image_in_md.py` 文件中填写)
 	
-	this is a image 
-	![](http://ac-QYgvX1CC.clouddn.com/a2ec3a2a375f8c61.jpg))
+   ```python
+   TINY_API_KEY = "your_tiny_png_api_key"
+   LEAN_CLOUD_API_ID = "your_lean_cloud_app_id"
+   LEAN_CLOUD_API_KEY = "your_lean_cloud_api_key"
+   ```
+   [获取 TinyPNG api key](https://tinypng.com/developers)
+	
+   [获取 LeanCloud api key & id](https://leancloud.cn/)
+
+3. 编写你的 Markdown 文件 并 引用本地图片文件，如下图所示:
+
+   ```
+   this is a image
+   ![](img/monkey.jpg)
+   ```
+
+4. 使用自动化脚本:
+	
+   python replace_image_in_md.py your.md output.md
+		
+   执行完之后，本地图片的引用将会被替换成压缩后的图片的外链( url )，如下图所示：
+
+   ```
+   this is a image
+   ![](http://ac-QYgvX1CC.clouddn.com/a2ec3a2a375f8c61.jpg))
+   ```
 
 ### 小技巧
+
 如果你是 Linux 或 OS X 用户,你可以将该脚本放在一个固定的位置，然后在你的 `.bashrc` 或者 `.zshrc` 中添加类似下面的 alias：
 
-	alias lzmd="python ~/Develop/tools/lazymd/replace_image_in_md.py"
+```bash
+alias lzmd="python ~/Develop/tools/lazymd/replace_image_in_md.py"
+```
 	
 然后在你需要使用脚本的时候，在任何地方打开终端，输入 `lzmd` 即可：
 
-	lzmd your.md output.md
+```bash
+lzmd your.md output.md
+```
 
 ### 最后
 感谢基友 [Brucezz](https://github.com/brucezz) 在开发中提供的帮助。

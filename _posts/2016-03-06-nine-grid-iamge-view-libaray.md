@@ -26,7 +26,7 @@ category: Android
 ### 特性
 + 设置图片之间的间隔	
 
-	`app:imgGap="4dp"` 或`nineGridImageView.setGap(int gap);`
+	`app:imgGap="4dp"` 或 `nineGridImageView.setGap(int gap);`
 	
 + 设置最大图片数：
 
@@ -56,83 +56,86 @@ category: Android
 
 ### 用法
 
-#### 1. 首先添加依赖
+1. 首先添加依赖
 
-	compile 'com.jaeger.ninegridimageview:library:1.0.1'
+   ```groovy
+   compile 'com.jaeger.ninegridimageview:library:1.0.1'
+   ```
 	
-#### 2. 在布局文件中添加 NineGridImageView， 如下所示：
+2. 在布局文件中添加 NineGridImageView， 如下所示：
 	
-~~~ xml
-<com.jaeger.ninegridimageview.NineGridImageView
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:layout_width="match_parent"
-    app:imgGap="4dp"
-    app:showStyle="fill"
-    app:singleImgSize="120dp"/>
-~~~
+   ``` xml
+   <com.jaeger.ninegridimageview.NineGridImageView
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       android:layout_height="wrap_content"
+       android:layout_margin="16dp"
+       android:layout_width="match_parent"
+       app:imgGap="4dp"
+       app:showStyle="fill"
+       app:singleImgSize="120dp"/>
+   ```
         
-#### 3. 为 NineGridImageView 设置 NineGridImageViewAdapter
-~~~ java
-nineGridImageView.setAdapter(nineGridViewAdapter);
-~~~
-下面是 `NineGridImageViewAdapter.class` 的源码:
+3. 为 NineGridImageView 设置 NineGridImageViewAdapter
+
+   ``` java
+   nineGridImageView.setAdapter(nineGridViewAdapter);
+   ```
+
+   下面是 `NineGridImageViewAdapter.class` 的源码:
 	
-~~~ java
-public abstract class NineGridImageViewAdapter<T> {
+   ``` java
+   public abstract class NineGridImageViewAdapter<T> {
 
-    protected abstract void onDisplayImage(Context context, ImageView imageView, T t);
+       protected abstract void onDisplayImage(Context context, ImageView imageView, T t);
 
-    protected void onItemImageClick(Context context, int index, List<T> list) {
-    
-    }
+       protected void onItemImageClick(Context context, int index, List<T> list) {
 
-    protected ImageView generateImageView(Context context) {
-        GridImageView imageView = new GridImageView(context);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        return imageView;
-    }
-}			
-~~~		   
+       }
+
+       protected ImageView generateImageView(Context context) {
+           GridImageView imageView = new GridImageView(context);
+           imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+           return imageView;
+       }
+   }
+   ```
 		
-+ T 是你图片的数据类型, 你可以简单的使用 String 类型也可以是你自定义的类型；
-+ 你必须重写 `onDisplayImage(Context context, ImageView imageView, T t)` 方法去设置显示图片的方式, 你可以使用 Picasso、Glide 、ImageLoader 或者其他的图片加载库，你也可以给 `ImageView` 设置一个占位图；
-+ 如果你需要处理图片的点击事件，你可以重写 `onItemImageClick(Context context, int index, List<T> list)` 方法，加上你自己的处理逻辑；
-+ 如果你要使用自定义的 `ImageView`，你可以重写 `generateImageView(Context context)` 方法， 去生成自定的 `ImageView`。
+   + T 是你图片的数据类型, 你可以简单的使用 String 类型也可以是你自定义的类型；
+   + 你必须重写 `onDisplayImage(Context context, ImageView imageView, T t)` 方法去设置显示图片的方式, 你可以使用 Picasso、Glide 、ImageLoader 或者其他的图片加载库，你也可以给 `ImageView` 设置一个占位图；
+   + 如果你需要处理图片的点击事件，你可以重写 `onItemImageClick(Context context, int index, List<T> list)` 方法，加上你自己的处理逻辑；
+   + 如果你要使用自定义的 `ImageView`，你可以重写 `generateImageView(Context context)` 方法， 去生成自定的 `ImageView`。
 	
-下面是一段示例代码:
+   下面是一段示例代码:
 
-~~~ java	
-private NineGridImageViewAdapter<Photo> mAdapter = new NineGridImageViewAdapter<Photo>() {
-	@Override
-	protected void onDisplayImage(Context context, ImageView imageView, Photo photo) {
-		Picasso.with(context)
-                    .load(photo.getSmallUrl)
-                    .placeholder(R.drawable.ic_default_image)
-                    .into(imageView);
-            }
-
-        @Override
-        protected ImageView generateImageView(Context context) {
-            return super.generateImageView(context);
-        }
-
-        @Override
-        protected void onItemImageClick(Context context, int index, List<Photo> photoList) {
+   ``` java
+   private NineGridImageViewAdapter<Photo> mAdapter = new NineGridImageViewAdapter<Photo>() {
+       @Override
+       protected void onDisplayImage(Context context, ImageView imageView, Photo photo) {
+           Picasso.with(context)
+               .load(photo.getSmallUrl)
+               .placeholder(R.drawable.ic_default_image)
+               .into(imageView);
+       }
+       @Override
+       protected ImageView generateImageView(Context context) {
+           return super.generateImageView(context);
+       }
+       @Override
+       protected void onItemImageClick(Context context, int index, List<Photo> photoList) {
            showBigPicture(context, photoList.get(index).getBigUrl());
-        }
-    };
-        
-...
-	mNineGridImageView.setAdapter(mAdapter);
-...
-~~~
+       }
 
-#### 4. 给 NineGridImageView 设置图片数据：
-~~~ java
-nineGridImageView.setImagesData(List<T> imageDataList);
-~~~
+           
+   ...
+   	mNineGridImageView.setAdapter(mAdapter);
+   ...
+   ```
+
+4. 给 NineGridImageView 设置图片数据：
+
+   ``` java
+   nineGridImageView.setImagesData(List<T> imageDataList);
+   ```
 
 ### 参考资料
 - [自定义九宫格控件NineGridLayout](https://github.com/panyiho/NineGridView)
