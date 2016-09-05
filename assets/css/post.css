@@ -140,7 +140,7 @@ H3 {
     margin-bottom: 16px;
     font-size: 1.4em;
     border-bottom: 1px LightGrey solid;
-    width: 98%;
+    width: 100%;
     line-height: 1.5;
     color: #454545;
 }
@@ -192,6 +192,7 @@ img {
 
 blockquote {
     margin-left: 0;
+    margin-right: 0;
     color: #454545;
     padding-top: 5px;
     padding-bottom: 5px;

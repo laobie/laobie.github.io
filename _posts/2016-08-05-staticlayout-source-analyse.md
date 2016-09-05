@@ -167,7 +167,7 @@ StaticLayout 中的 `generate()` 方法近 300 行，其完成了文本的段落
             paraEnd = bufEnd;
         else
             paraEnd++;
-                                                                                     
+
         ...
     }
     ```
