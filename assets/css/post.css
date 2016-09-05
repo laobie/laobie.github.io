@@ -20,8 +20,8 @@ body {
 }
 
 p {
-    -webkit-margin-before: 0.35em;
-    -webkit-margin-after: 0.35em;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
 }
 
 .home-title {
