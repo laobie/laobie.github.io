@@ -136,22 +136,23 @@ H2 {
 }
 
 H3 {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    font-size: 1.4em;
-    border-bottom: 1px LightGrey solid;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+    border-bottom: 2px LightGrey solid;
+    padding-bottom: 5px;
     width: 100%;
     line-height: 1.5;
     color: #454545;
 }
 
 H4 {
-    margin-top: 3px;
-    margin-bottom: 3px;
-    width: 98%;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    width: 100%;
     font: blod;
-    font-size: 1.15em;
-    color: #434343;
+    font-size: 1.25em;
+    color: #4c4c4c;
     line-height: 120%;
 }
 
