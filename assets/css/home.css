@@ -61,7 +61,7 @@ body {
 }
 
 .title, .sign, .head_item {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif ,"Microsoft YaHei",微软雅黑;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif, "Microsoft YaHei", 微软雅黑;
 }
 
 .title-sign {
@@ -133,15 +133,6 @@ a {
     height: 360px;
     background: url(http://ac-qygvx1cc.clouddn.com/964494ce41e561ea.jpg) center;
     background-size: cover;
-}
-
-.foot {
-    clear: both;
-    position: relative;
-    color: #fff;
-    display: block;
-    padding: 30px 0;
-    background: #000000 no-repeat;
 }
 
 .footer1 {
@@ -233,6 +224,7 @@ a {
 }
 
 .bottom-page {
+    margin-top: 8px;
     height: 64px;
 }
 
@@ -275,6 +267,23 @@ a {
 
 .cnzz {
     display: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.footer {
+    margin-top: 16px;
+    padding: 24px 0;
+    background-color: #303841;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.8em;
+    -webkit-font-smoothing: antialiased;
 }
 
 @media screen and (max-width: 768px) {
