@@ -300,8 +300,7 @@ a {
 
     .title {
         font-size: 1.2em;
-        padding-top: 21px;
-        padding-bottom: 21px;
+        padding: 21px 16px;
     }
 
     .avatar_div {
