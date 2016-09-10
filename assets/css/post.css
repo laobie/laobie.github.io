@@ -3,17 +3,18 @@ body {
     margin: 0;
     width: 100%;
     background: url("http://ac-qygvx1cc.clouddn.com/f013a2ea22a8b4a6.png");
-    font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑, SimSun, 宋体, Helvetica, Tahoma, "Arial sans-serif", serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang-SC-Regular", "STHeiti", "Helvetica", "Arial", "Verdana", "sans-serif", "Microsoft YaHei";
 }
 
 .site-header {
-    width: 100%;
+    width: 80%;
     background: #303841;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 30;
     height: 75px;
+    margin: auto 10%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -25,17 +26,17 @@ p {
 }
 
 .home-title {
-    width: 20%;
+    width: 10%;
     height: 100%;
     display: table-cell;
     vertical-align: middle;
-    font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .post-title {
-    font-size: 1.3em;
-    width: 80%;
-    padding-right: 20%;
+    font-size: 1.25em;
+    width: 90%;
+    height: 75px;
+    padding-right: 10%;
     color: ghostwhite;
     display: table-cell;
     text-align: center;
@@ -65,7 +66,7 @@ p {
     display: block;
     padding: 2% 10% 5% 10%;
     width: 60%;
-    margin: 75px 10% 5%;
+    margin: 75px 10% 0;
     letter-spacing: 0.03em;
     color: #535353;
     font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
@@ -77,52 +78,19 @@ p {
     display: none;
 }
 
-.category-item {
-    color: #555555;
-    width: 100%;
-    display: inline-block;
-    margin: 14px 0 0 0;
+.wrapper {
+    margin: 0 auto;
+    max-width: 1100px;
 }
 
-.category-title {
-    font-size: 1.6em;
-    display: inline-block;
-}
-
-.category-count {
-    font-size: 1.5em;
-    margin-left: 16px;
-    float: right;
-    display: inline-block;
-}
-
-.article-item {
-    width: 100%;
-    display: inline-block;
-    padding-bottom: 8px;
-    padding-top: 12px;
-    border-bottom: 1px dashed lightgray;
-}
-
-.article-title {
-    width: 100%;
-    font-size: 1.08em;
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: #333333;
-    font-weight: 400;
-}
-
-.article-date {
-    color: #6a6a6a;
-    float: right;
-    text-align: end;
-    margin-left: 16px;
-    font-size: 0.95em;
-    position: relative;
-    display: inline-block;
+.footer {
+    padding: 24px 0;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.8em;
+    -webkit-font-smoothing: antialiased;
 }
 
 H2 {
@@ -281,11 +249,17 @@ td {
 
     .site-header {
         position: static;
+        margin: auto auto;
+        width: 100%;
+    }
+
+    .home-title {
+        width: 20%;
     }
 
     .post-content {
         font-size: 0.9em;
-        margin: 0 0 0% 0;
+        margin: 0 0 0 0;
         padding: 2% 5% 5% 5%;
         width: 90%;
         letter-spacing: 0;
@@ -293,6 +267,7 @@ td {
 
     .post-title {
         font-size: 1em;
+        width: 80%;
     }
 
 }
