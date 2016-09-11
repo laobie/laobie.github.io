@@ -1,16 +1,16 @@
 ---
 layout: post
-title: 第一个插件:FindViewByMe
+title: 第一个插件: FindViewByMe
 category: Android
 ---
 
 FindViewByMe 是一个自动生成 FindViewById 代码的 IDEA/Android Studio 插件，支持 Activity、Fragment 和 ViewHolder 中的 findViewById 的代码生成。
 
-该插件适用于IntelliJ IDEA 和 Android Studio，以下说明以 Android Studio (简称 AS )为例。
+该插件适用于 IntelliJ IDEA 和 Android Studio，以下说明以 Android Studio (简称 AS )为例。
 
 #### 1. 下载和安装
 - 主菜单依次选择 `File | Settings` ，打开设置对话框，选择 `Plugins`；
-- 搜索框中输入“findviewbyme”,点击下面的“Browse”；
+- 搜索框中输入 “findviewbyme” ,点击下面的“Browse”；
 
   ![](http://ac-qygvx1cc.clouddn.com/ed9e903a164b3de8.png)
   
@@ -20,7 +20,7 @@ FindViewByMe 是一个自动生成 FindViewById 代码的 IDEA/Android Studio �
 
 
 #### 2. 基本使用
-- 当你写完一个layout文件，在该文件编辑界面任意位置右键，发现菜单中有一个 `Find View By Me` 的选项；
+- 当你写完一个 layout 文件，在该文件编辑界面任意位置右键，发现菜单中有一个 `Find View By Me` 的选项；
 
 ![](http://ac-qygvx1cc.clouddn.com/4c8d9c9bc1a997b3.png)
 

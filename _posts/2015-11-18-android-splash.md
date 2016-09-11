@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Android启动页(Splash)的实现
+title: Android 启动页 (Splash) 的实现
 category: Android
 
 ---
 
-App启动页(Splash)，最经典的莫过于微信的启动页了。不过启动页是个好的设计还是不好的设计呢？本文不讨论这个问题，仅从一个开发者的角度来讲解下Android应用启动页的实现，以及一些需要注意的地方。
+App 启动页 (Splash)，最经典的莫过于微信的启动页了。不过启动页是个好的设计还是不好的设计呢？本文不讨论这个问题，仅从一个开发者的角度来讲解下Android应用启动页的实现，以及一些需要注意的地方。
 
 ### 基本实现
 先显示一个界面，停留1~2s，然后跳转到另一个界面。
 这里有个延时跳转，可以用 Timer、Handler 实现，我这里用 Handler 来实现。
 
 #### 1. 添加 `SplashActivity`
-首先假设App打开的第一个界面为 `MainActivity`，新建一个 `SplashActivity`，在 `AndroidManifest` 中将 `SplashActivity` 设置为启动后第一个打开的页面：
+首先假设 App 打开的第一个界面为 `MainActivity`，新建一个 `SplashActivity`，在 `AndroidManifest` 中将 `SplashActivity` 设置为启动后第一个打开的页面：
 
 ~~~xml
 <activity
@@ -26,7 +26,7 @@ App启动页(Splash)，最经典的莫过于微信的启动页了。不过启动
 </activity>
 ~~~
         
-  这里只是将` MainActivity` 的 `intent-filter` 参数剪切给 `SplashActivity`，此时你打开 App 第一个显示的就是 `SplashActivity` 了。
+  这里只是将 `MainActivity` 的 `intent-filter` 参数剪切给 `SplashActivity`，此时你打开 App 第一个显示的就是 `SplashActivity` 了。
 
 #### 2. 添加跳转
 跳转是用 Handler 的 `postDelayed()` 方法来设置延时来实现的，在 `SplashActivity` 的 `onCreate()` 方法中添加一下的代码，就可以实现在1500毫秒后跳转到 `MainActivity` 了。
