@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 第一个插件: FindViewByMe
+title: 第一个插件：FindViewByMe
 category: Android
 ---
 
