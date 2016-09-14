@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Android App 多语言切换
 category: Android
 ---

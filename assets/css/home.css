@@ -14,7 +14,6 @@ body {
     padding: 0 10%;
     width: 80%;
     background: url("http://ac-qygvx1cc.clouddn.com/f013a2ea22a8b4a6.png");
-
     color: #383838;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang-SC-Regular", "STHeiti", "Helvetica", "Arial", "Verdana", "sans-serif", "Microsoft YaHei";
 }
@@ -82,7 +81,6 @@ body {
     font-size: 1.3em;
     text-align: center;
     text-shadow: 3px 5px 8px #232323;
-    /*-webkit-font-smoothing: antialiased;*/
 }
 
 .avatar_div {

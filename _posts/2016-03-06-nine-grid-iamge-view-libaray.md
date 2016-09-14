@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 第一个开源控件：NineGridImageView（九宫格图片控件）
 category: Android 
 ---

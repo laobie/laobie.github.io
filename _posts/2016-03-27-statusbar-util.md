@@ -1,5 +1,4 @@
 ---
-layout: post
 title: StatusBarUtil 状态栏工具类（实现沉浸式状态栏/变色状态栏）
 category: Android 
 ---

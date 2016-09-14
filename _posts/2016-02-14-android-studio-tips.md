@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Android Studio 小技巧合集
 category: Android 
 excerpt: 本文翻译自 Android Studio Tips by Philippe Breault，一共收集了60多条 Android Studio 的使用小技巧，包含一些常用的快捷键、编码技巧，以及部分调试时比较方便的技巧。掌握一些常见的快捷键和技巧，可以让我们的开发工作事半功倍。

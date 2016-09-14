@@ -1,8 +1,6 @@
 ---
-layout: post
 title: Android 启动页 (Splash) 的实现
 category: Android
-
 ---
 
 App 启动页 (Splash)，最经典的莫过于微信的启动页了。不过启动页是个好的设计还是不好的设计呢？本文不讨论这个问题，仅从一个开发者的角度来讲解下Android应用启动页的实现，以及一些需要注意的地方。

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: NavigationView 的使用
 category: Android 
 ---

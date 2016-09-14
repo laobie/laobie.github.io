@@ -1,5 +1,4 @@
 ---
-layout: post
 title: StaticLayout 源码分析
 category: Android 
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Android App 沉浸式状态栏解决方案
 category: Android 
 ---
