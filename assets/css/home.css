@@ -82,7 +82,7 @@ body {
     font-size: 1.3em;
     text-align: center;
     text-shadow: 3px 5px 8px #232323;
-    -webkit-font-smoothing: antialiased;
+    /*-webkit-font-smoothing: antialiased;*/
 }
 
 .avatar_div {
