@@ -13,6 +13,11 @@ category: Android
 [下载 StatusBarUtil-Demo](http://fir.im/5mnp)
 
 ### 更新日志
++  1.2.5
+
+	- 添加 `@ColorInt` 注解，现在如果传入 `R.color.xx`，就会提示使用错误
+	- 修复 DrawerLayout 内容布局设置 paddding 失效的 bug
+	
 +  1.2.4
 
    - 修复 `setTranslucentForImageViewInFragment()` 方法的一个 bug
@@ -102,7 +107,7 @@ category: Android
 1. 在 build.gradle 文件中添加依赖, StatusBarUtil 已经发布在 JCenter:
 
    ```groovy
-   compile 'com.jaeger.statusbaruitl:library:1.2.4'
+   compile 'com.jaeger.statusbaruitl:library:1.2.5'
    ```
 
 2. 在 `setContentView()` 之后调用你需要的方法，例如:
