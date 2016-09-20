@@ -9,6 +9,8 @@ excerpt: 从去年下半年开始，热修复技术在 Android 技术社区热�
 >- 作者：[Jaeger]( https://github.com/laobie )
 >- 审阅者：[Zheaoli](https://github.com/Zheaoli), [xcc3641](https://github.com/xcc3641) 
 
+从去年下半年开始，热修复技术在 Android 技术社区热了一阵子，这种不用发布新版本就可以修复线上 bug 的技术确实有很大的需求，最近正好在研究一些开源的热修复方案，本文就其中常用的 ClassLoader 方式实现的热修复方案中的 ClassLoader 机制作一个简单的介绍。
+
 ### ClassLoader 简介
 
 > 对于 Java 程序来说，编写程序就是编写类，运行程序也就是运行类（编译得到的 class 文件），其中起到关键作用的就是类加载器 ClassLoader。
