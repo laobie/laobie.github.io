@@ -10,6 +10,11 @@ category: Android
 ![](http://ac-qygvx1cc.clouddn.com/ee5906c846ad3346.png)
 
 ### 更新日志
+
++ 1.0.2
+ 
+   移除 Support 依赖库
+   
 + 1.0.1 
 	
 	- bug修复：没有图片数据或者数据为0时，不显示本view；
@@ -58,7 +63,7 @@ category: Android
 1. 首先添加依赖
 
    ```groovy
-   compile 'com.jaeger.ninegridimageview:library:1.0.1'
+   compile 'com.jaeger.ninegridimageview:library:1.0.2'
    ```
 	
 2. 在布局文件中添加 NineGridImageView， 如下所示：
