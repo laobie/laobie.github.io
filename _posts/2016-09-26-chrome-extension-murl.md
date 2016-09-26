@@ -282,3 +282,5 @@ excerpt: mUrl 是一个 Chrome 插件，打开一个网页，然后点插件，�
 - [纯JavaScript实现的复制剪切库–clipboard\.js \| Specs' Blog\-就爱PHP](http://9iphp.com/web/javascript/js-copy-library-clipboard-js.html)
 
 - [Getting Started: Building a Chrome Extension \- Google Chrome](https://developer.chrome.com/extensions/getstarted)
+
+- [ku/CreateLink: Make Link alternative to chrome](https://github.com/ku/CreateLink)
