@@ -1,7 +1,7 @@
 ---
 title: mUrl：自动生成 Markdown 格式的链接
 category: Chrome Extension
-excerpt: mUrl 是一个 Chrome 插件，打开一个网页，然后点插件，此时 Markdown 格式的链接就复制到剪切板上了，直接粘贴到 Markdown 文件中即可。
+excerpt: mUrl 是一个 Chrome 插件，打开一个网页，然后点插件，此时 Markdown 格式的链接就复制到剪贴板上了，直接粘贴到 Markdown 文件中即可。
 ---
 
 因为懒，花了半个下午时间开发了一个 Chrome 插件，第一次接触这方面东西，写个博客记录下开发过程。
@@ -152,7 +152,7 @@ excerpt: mUrl 是一个 Chrome 插件，打开一个网页，然后点插件，�
 
    - clipboard.js
 
-   这两个文件，就通过以下进行了声明：
+   这两个文件，就通过以下进行了引用：
 
    ```html
    <script src="popup.js"></script>
