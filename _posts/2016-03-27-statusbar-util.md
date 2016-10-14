@@ -14,6 +14,12 @@ category: Android
 
 ### 更新日志
 
++  1.2.7
+   
+   - 新增 `setColorForSwipeBack` 方法，支持滑动返回，目前支持的滑动返回库有：
+
+   	- [r0adkll/Slidr](https://github.com/r0adkll/Slidr)   
+   		
 +  1.2.6
    
    - 升级 support 包到 24.2.1 版本
@@ -103,8 +109,16 @@ category: Android
 6. 在 Fragment 中使用
 
    ![](http://ac-qygvx1cc.clouddn.com/f79b11ecae3b6043.gif)
+   
+7. 为滑动返回界面设置状态栏颜色
 
-7. 通过传入 `statusBarAlpha` 参数，可以改变状态栏的透明度值，默认值是112。
+   ```java
+   StatusBarUtil.setColorForSwipeBack(Activity activity, @ColorInt int color, int statusBarAlpha)
+   ```
+	
+	![](https://raw.githubusercontent.com/laobie/StatusBarUtil/master/img/set_color_for_swipe_back_page.png)
+
+8. 通过传入 `statusBarAlpha` 参数，可以改变状态栏的透明度值，默认值是112。
 
 
 ### 使用
@@ -112,7 +126,7 @@ category: Android
 1. 在 build.gradle 文件中添加依赖, StatusBarUtil 已经发布在 JCenter:
 
    ```groovy
-   compile 'com.jaeger.statusbaruitl:library:1.2.6'
+   compile 'com.jaeger.statusbaruitl:library:1.2.7'
    ```
 
 2. 在 `setContentView()` 之后调用你需要的方法，例如:
