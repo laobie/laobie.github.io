@@ -74,6 +74,7 @@ p {
     -webkit-font-smoothing: antialiased;
 }
 
+
 .category-item {
     color: #555555;
     width: 100%;
@@ -246,6 +247,14 @@ pre code {
 
 ul {
     margin-left: -5px;
+}
+
+.avatar {
+    height: 160px;
+    width: 160px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
 }
 
 table {
