@@ -34,10 +34,9 @@ body {
     width: 80%;
     margin-left: -10%;
     margin-right: 10%;
-    min-height: 64px;
+    height: 64px;
     background-color: transparent;
     display: block !important;
-    height: auto !important;
     overflow: visible !important;
     padding: 0 10%;
 }
@@ -108,8 +107,7 @@ a {
     color: #FFFFFF;
     position: relative;
     float: right;
-    padding: 25px 20px 25px 16px;
-    border-radius: 3px;
+    padding: 20px 20px;
     font-size: 1.125em;
     right: 0;
 }
