@@ -1,5 +1,5 @@
 ---
-title: Android Studio 小技巧合集
+title: Android Studio 小技巧/快捷键 合集
 category: Android 
 excerpt: 本文翻译自 Android Studio Tips by Philippe Breault，一共收集了60多条 Android Studio 的使用小技巧，包含一些常用的快捷键、编码技巧，以及部分调试时比较方便的技巧。掌握一些常见的快捷键和技巧，可以让我们的开发工作事半功倍。
 ---
@@ -14,7 +14,7 @@ excerpt: 本文翻译自 Android Studio Tips by Philippe Breault，一共收集�
 
 ### 写在前面
 本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tips-by-Philippe-Breault/wiki" target="_blank">Android Studio Tips by Philippe Breault</a>，一共收集了62个 Android Studio 使用小技巧和快捷键。
-根据这些小技巧的使用场景，本文将这62个小技巧分为常用技巧（1 -- 28）、编码技巧（29 -- 49）和调试技巧（50 -- 62），分成三个部分。
+根据这些小技巧的使用场景，本文将这63个小技巧分为常用技巧（1 -- 28）、编码技巧（29 -- 50）和调试技巧（51 -- 63），分成三个部分。
 
 每个小技巧都配有 gif 动图，由于原图在 google photo 上，加载较慢，本文全部转存到七牛上了。
 
@@ -452,13 +452,20 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 ![](../../../../assets/img/studio_tips/20-unwrap.gif)
 
+#### 50. 手动唤出自动补全（Class Name Completion）
+- **描述：**一般使用 Android Studio 的时候，自动提示会在你想要提示的时候自动出现，比如输入 `Log.` ，就出现 `Log.d()`、`Log.e`、`Log.i()` 等提示。不过如果在自动提示的时候手一抖选错的话，比如想选 `Log.d()` 结果选了 `Log.e()` ，你可能会把 `.e()` 都删掉，然后再输入一个 . ，
+然后弹出自动补全提示。其实这时候只需要删除 `e()` 然后手动唤出自动补全即可。
+- **快捷键：** Ctrl + Alt + Space (OS X/Windows/Linux) (可能存在快捷键冲突无法唤出，修改下快捷键即可)
+
+![](../../../../assets/img/studio_tips/class_name_completion.gif)
+
 <br />
 <hr size="3px" color="#4285F4"/>
 <center> <font size="6" color="green">调试技巧</font></center>
 <hr size="3px" color="#4285F4"/>
 <br />
 
-#### 50. 分析传入数据流（Analyze data flow to here）
+#### 51. 分析传入数据流（Analyze data flow to here）
 
 - **描述：**这个操作将会根据当前选中的变量、参数或者字段，分析出其传递到此处的路径。
 当你进入某段陌生的代码，试图明白某个参数是怎么传递到此处的时候，这是一个非常有用的操作。
@@ -468,7 +475,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 ![](../../../../assets/img/studio_tips/31-analyzedataflow.gif)
 
-#### 51. 堆栈追踪分析（Analyze Stacktrace）
+#### 52. 堆栈追踪分析（Analyze Stacktrace）
 
 - **描述：** 这个操作读取一份堆栈追踪信息，并且使它像logcat中那样可以点击。当你从bug报告中或者终端复制了一份堆栈追踪，使用该操作可以很方便地调试。
 - **调用：**Menu → Analyze → Analyze Stacktrace
@@ -477,7 +484,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 ![](../../../../assets/img/studio_tips/30-analyzestacktrace.gif)
 
-#### 52.  关联调试程序（Attach Debugger）
+#### 53.  关联调试程序（Attach Debugger）
 
 - **描述：**随时启动调试程序，即使你没有以调试模式启动你的应用。这是一个很方便的操作，因为你不必为了调试程序而以调试模式重新部署你的应用。当别人正在测试应用，突然遇到一个bug而将设备交给你时，你也可以很快地进入调试模式。
 - **调用：**点击工具栏图标或者Menu → Build → Attach to Android Process
@@ -485,42 +492,42 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 ![](../../../../assets/img/studio_tips/26-attachdebugger.gif)
 
-#### 53. 条件断点（Conditional Breakpoints）
+#### 54. 条件断点（Conditional Breakpoints）
 
 - **描述：**简单说，就是当设定的条件满足时，才会触发断点。你可以基于当前范围输入一个java布尔表达式，并且条件输入框内是支持代码补全的。
 - **调用：**右键需要填写表达式的断点，然后输入布尔表达式。
 
 ![](../../../../assets/img/studio_tips/22-conditionalbreakpoint.gif)
 
-#### 54. 禁用断点（Disable Breakpoints）
+#### 55. 禁用断点（Disable Breakpoints）
 
 - 这个操作将使得断点。当你有一个设置过复杂条件的断点或者是日志断点，当前不需要，但是下次又不用重新创建，该操作是很方便的。
 - **调用：**按住Alt，然后单击断点即可。
 
 ![](../../../../assets/img/studio_tips/25-diablebreakpoint.gif)
 
-#### 55. 计算表达式（Evaluate Expression）
+#### 56. 计算表达式（Evaluate Expression）
 
 - **描述：**这个操作可以用来查看变量的内容并且计算几乎任何有效的java表达式。需要注意的是，如果你修改了变量的状态，这个状态在你恢复代码执行后依然会保留。
 - **快捷键：**处在断点状态时，光标放在变量处，按Alt + F8，即可显示计算表达式对话框。
 
 ![](../../../../assets/img/studio_tips/27-evaluateexpression.gif)
 
-#### 56. 审查变量（Inspect Variable）
+#### 57. 审查变量（Inspect Variable）
 
 - **描述：**该操作可以在不打开计算表达式对话框就能审查表达式的值。
 - **快捷键：**调试状态下，按住Alt键，然后单击表达式即可。
 
 ![](../../../../assets/img/studio_tips/28-mouse_evaluate_expression.gif)
 
-#### 57. 日志断点（Logging Breakpoints）
+#### 58. 日志断点（Logging Breakpoints）
 
 - **描述：**这是一种打印日志而不是暂停的断点，当你想打印一些日志信息但是不想添加`log`代码后重新部署项目，这是一个非常有用的操作。
 - **调用：**在断点上右键，取消`Suspend`的勾选，然后勾选上`Log evaluated Expression`，并在输入框中输入你要打印的日志信息。
 
 ![](../../../../assets/img/studio_tips/23-loggingbreakpoints.gif)
 
-#### 58. 标记对象（Mark Object）
+#### 59. 标记对象（Mark Object）
 
 - **描述：**当你在调试的时候，这个操作可以让你给某个特殊的对象添加一个标签，方便你后面很快地辨认。在调试时，当你从一堆相似的对象中查看某个对象是否和之前是一样的，这就是一个非常有用的操作。
 - **调用：**右键你需要标记的对象，选中`Mark Object`，输入标签；
@@ -528,7 +535,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 ![](../../../../assets/img/studio_tips/29-markobject.gif)﻿
 
-#### 59. 显示当前运行点（Show Execution Point）
+#### 60. 显示当前运行点（Show Execution Point）
 
 - **描述：**该操作会立刻把你的光标移回到当前debug处。
 
@@ -542,14 +549,14 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 ![](../../../../assets/img/studio_tips/36-executionpoint.gif)
 
-#### 60. 终止进程（Stop Process）
+#### 61. 终止进程（Stop Process）
 
 - **描述：**该操作会终止当前正在运行的任务。如果任务数量大于一，则显示一个列表供你选择。在终止调试或者中止编译的时候特别有用！
 - **快捷键：**Cmd + F2(OS X)、Ctrl + F2（Windows、Linux）；
 
 ![](../../../../assets/img/studio_tips/35-stoprocess.gif)
 
-#### 61. 临时断点（Temporary Breakpoints）
+#### 62. 临时断点（Temporary Breakpoints）
 
 - **描述：**通过该操作可以添加一个断点，这个断点会在第一次被命中的时候自动移除。
 
@@ -557,7 +564,7 @@ IDE能帮我们干点啥呢？当然是一个舒服的界面来编写和测试�
 
 ![](../../../../assets/img/studio_tips/24-temporarybreakpoints.gif)
 
-#### 62. 调用层级树弹窗（The Call Hierarchy Popup）
+#### 63. 调用层级树弹窗（The Call Hierarchy Popup）
 
 - **描述：**该操作会给你展示 在一个方法的声明和调用之间所有可能的路径。
 
