@@ -4,7 +4,7 @@ category: Android
 excerpt: Android 从一诞生到现在已经发布的 7.0 版本，卡顿和不流畅问题却一直被人们所诟病。从开发角度来说，每个开发者都应该关注下性能优化，在平时的开发工作中注意一些细节，尽可能地去优化应用。本文作为性能优化系列的开篇，先从过度绘制优化讲起。
 --- 
 >- 文章来源：itsCoder 的 [WeeklyBolg](https://github.com/itsCoder/weeklyblog) 项目
->- itsCoder主页：[http://itscoder.com/](http://itscoder.com/)
+>- itsCoder 主页：[http://itscoder.com/](http://itscoder.com/)
 >- 作者：[Jaeger]( https://github.com/laobie)
 >- 审阅者：[yongyu0102 \(用语\)](https://github.com/yongyu0102)
 

@@ -5,7 +5,7 @@ excerpt: 从去年下半年开始，热修复技术在 Android 技术社区热�
 ---
 
 >- 文章来源：itsCoder 的 [WeeklyBolg](https://github.com/itsCoder/weeklyblog) 项目
->- itsCoder主页：[http://itscoder.com/](http://itscoder.com/)
+>- itsCoder 主页：[http://itscoder.com/](http://itscoder.com/)
 >- 作者：[Jaeger]( https://github.com/laobie )
 >- 审阅者：[Zheaoli](https://github.com/Zheaoli), [xcc3641](https://github.com/xcc3641) 
 

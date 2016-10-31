@@ -5,7 +5,7 @@ excerpt: 在之前的文章中，讲解了 Android 中的 ClassLoader 工作原�
 --- 
 
 >- 文章来源：itsCoder 的 [WeeklyBolg](https://github.com/itsCoder/weeklyblog) 项目
->- itsCoder主页：[http://itscoder.com/](http://itscoder.com/)
+>- itsCoder 主页：[http://itscoder.com/](http://itscoder.com/)
 >- 作者：[Jaeger]( https://github.com/laobie)
 >- 审阅者：[Hymanme](https://github.com/hymanme), [Brucezz](https://github.com/brucezz)
 
