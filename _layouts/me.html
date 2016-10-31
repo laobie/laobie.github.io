@@ -1,44 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <link rel="stylesheet" type="text/css" href="/assets/css/post.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
-
+<link rel="stylesheet" href="/assets/css/syntax.css">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>关于我</title>
-    <link rel="icon" href="http://ac-qygvx1cc.clouddn.com/07a9ad9b928f842d.png"/>
+    <title>{{page.title}}</title>
     <meta name="theme-color" content="#323D45">
+    <link rel="icon" href="http://ac-qygvx1cc.clouddn.com/da83ef5136eb1cd1.png"/>
 </head>
 
 <body>
+
 <header id="masthead" class="site-header" role="banner">
     <div class="header-inside">
         <div class="home-title">
-            <a href='http://laobie.github.io/'> <img width="24px" src="http://ac-qygvx1cc.clouddn.com/c5e465aba7eb84f2.png"></a>
+            <a href='http://laobie.github.io/'>
+                <img width="24px" src="http://ac-qygvx1cc.clouddn.com/c5e465aba7eb84f2.png"></a>
         </div>
-        <div class="post-title"> 这是一只猴子</div>
+        <div class="post-title"> {{page.title}} {{page.header}}</div>
     </div>
 </header>
+
 <div class="post-content">
-    <center>
-     <img src="http://ac-qygvx1cc.clouddn.com/f0108b2596e9fdcb.jpg" class="avatar"/>
-        <strong>写代码的猴子</strong>
-        <br/>
-    </center>
 
-    <br/>Android 开发者，Google 粉，Moto 死忠。
-    <br/>混迹于知乎，微博，以及妹纸多的地方。
-    <br/>不是处女座，但是比处女座还处女座。导致轻微的洁癖，严重的代码洁癖。
-    <br/>人生目标：成为很厉害的人。
-    <br/>不是单身狗。
-
-    <br/><br/>
-    通过以下方式可以找到我：
-    <li>知乎：<a href="http://www.zhihu.com/people/jaeger" target="_blank">Jaeger</a></li>
-    <li>微博：<a href="http://weibo.com/xdmdhz" target="_blank">写代码的猴子</a></li>
-    <li>GitHub：<a href="https://github.com/laobie" target="_blank">laobie</a></li>
-    <li>邮箱：<a href="mailto:chjie.jaeger@gmail.com" target="_blank">chjie.jaeger@gmail.com</a></li>
+    {{ content }}
 
     <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="laobie.github.io-me.html" data-title="关于我" data-url="http://laobie.github.io/me.html"></div>
@@ -57,7 +43,6 @@
     </script>
     <!-- 多说公共JS代码 end -->
     <div class="cnzz">
-
         <script type="text/javascript">
             var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
             document.write(unescape("%3Cspan id='cnzz_stat_icon_1256704919'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256704919%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
@@ -65,5 +50,9 @@
     </div>
 
 </div>
+
+{% include footer.html %}
+
 </body>
+
 </html>

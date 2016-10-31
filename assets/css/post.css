@@ -250,8 +250,8 @@ ul {
 }
 
 .avatar {
-    height: 160px;
-    width: 160px;
+    height: 120px;
+    width: 120px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -321,6 +321,10 @@ td {
     .post-title {
         font-size: 1em;
         width: 80%;
+    }
+    .avatar{
+        height: 60px;
+        width: 60px;
     }
 
 }
