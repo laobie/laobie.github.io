@@ -236,7 +236,7 @@ category: Android
 
 ### 在项目中使用
 
-以上代码我整理成了一个工具类，放在 github 上：[StatusBarUtils.java 文件](https://github.com/laobie/StatusBarDemo/blob/master/app/src/main/java/com/jaeger/statusbardemo/StatusBarUtils.java)
+以上代码我整理成了一个工具类库，放在 github 上：[laobie/StatusBarUtil](https://github.com/laobie/StatusBarUtil)
 
 在项目中推荐这样使用，在 `BaseActivity` 中重写 `setContentView(int layoutResID)` 方法，新建一个 `setStatusBar()`方法，全局设置状态栏颜色，因为一般 App 大部分界面状态栏都是主题色。 
 
@@ -284,7 +284,7 @@ public class ImageStatusBarActivity extends BaseActivity {
 
 ### 源码和Demo下载
 
-[StatusBarDemo Github 地址](https://github.com/laobie/StatusBarDemo)
+[laobie/StatusBarUtil 项目地址](https://github.com/laobie/StatusBarUtil)
 
 [Demo apk 下载](http://fir.im/5mnp)
 

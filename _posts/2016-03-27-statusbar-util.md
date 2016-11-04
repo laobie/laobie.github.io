@@ -14,6 +14,10 @@ category: Android
 
 ### 更新日志
 
++  1.3.0
+ 
+    - 完善 setColor 逻辑，避免潜在的问题
+
 +  1.2.8
 
 	- 修复 `setColorDiff` 方法中的一个 bug
@@ -130,7 +134,7 @@ category: Android
 1. 在 build.gradle 文件中添加依赖, StatusBarUtil 已经发布在 JCenter:
 
    ```groovy
-   compile 'com.jaeger.statusbaruitl:library:1.2.8'
+   compile 'com.jaeger.statusbaruitl:library:1.3.0'
    ```
 
 2. 在 `setContentView()` 之后调用你需要的方法，例如:
