@@ -3,7 +3,7 @@ body {
     margin: 0;
     width: 100%;
     background: url("http://ac-qygvx1cc.clouddn.com/f013a2ea22a8b4a6.png");
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang-SC-Regular", "STHeiti", "Helvetica", "Arial", "Verdana", "sans-serif", "Microsoft YaHei";
+    font-family:  -apple-system-font, "Helvetica Neue",Tahoma,"PingFang SC","lantinghei sc","Microsoft Yahei", sans-serif;
 }
 
 .site-header {
@@ -21,8 +21,10 @@ body {
 }
 
 p {
-    -webkit-margin-before: 0.5em;
-    -webkit-margin-after: 0.5em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
 
 .home-title {
@@ -37,7 +39,7 @@ p {
     width: 90%;
     height: 75px;
     padding-right: 10%;
-    color: ghostwhite;
+    color: white;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -60,15 +62,18 @@ p {
 }
 
 .post-content {
+    word-wrap: break-word;
     font-size: 1em;
-    line-height: 1.68;
+    line-height: 1.8;
+    overflow: hidden;
     background: ghostwhite;
     display: block;
     padding: 2% 10% 5% 10%;
     width: 60%;
     margin: 75px 10% 0;
+    text-rendering: geometricPrecision;
     letter-spacing: 0.03em;
-    color: #535353;
+    color: #363636;
     font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;

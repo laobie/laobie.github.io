@@ -161,30 +161,30 @@ a {
 
 .post-item {
     width: 100%;
-    padding: 26px 0 26px 0;
+    padding: 30px 0 30px 0;
     display: inline-block;
     border-bottom: 1px dashed #9c9c9c;
 }
 
 .post-title {
     width: 80%;
-    font-size: 1.35em;
+    font-size: 1.5em;
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #444444;
-    font-weight: 300;
-    /*-webkit-font-smoothing: antialiased;*/
+    color: #333333;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
 }
 
 .post-excerpt {
-    margin-top: 15px;
-    line-height: 1.5;
+    margin-top: 24px;
+    line-height: 1.6;
     position: relative;
     display: inline-block;
     color: #555555;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
     font-size: 1.05em;
     -webkit-font-smoothing: antialiased;
 }
@@ -338,6 +338,7 @@ a {
     }
 
     .post-excerpt {
+        margin-top: 15px;
         font-size: 0.95em;
     }
 
