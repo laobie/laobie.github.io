@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang-SC-Regular", "STHeiti", "Helvetica", "Arial", "Verdana", "sans-serif", "Microsoft YaHei";
+}
+
+.ss_ad {
+    align-content: center;
+    background: #f13c3a;
+    padding: 16px 8px;
+    margin: 24px auto;
+}
+
+.ss_ad a {
+    color: white;
+    padding: 4px 0;
+    text-decoration: none;
+    margin: 0;
+}
+
+.ss_ad a:hover {
+    color: #ffea00;
+}
+
+.ss_ad_title {
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+.ss_ad_subtitle {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+}
+
+.ss_ad_link {
+    text-align: center;
+    margin-top: 8px;
+}
