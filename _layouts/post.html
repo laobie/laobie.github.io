@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>{{page.title}}</title>
     <meta name="theme-color" content="#323D45">
+    <title>{{page.title}}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
     <link rel="icon" href="http://ac-qygvx1cc.clouddn.com/da83ef5136eb1cd1.png"/>
 </head>
 
@@ -25,8 +25,10 @@
 <div class="post-content">
 
     {{ content }}
+    {% include reward.html %}
     <div style="border-bottom: dotted #303841 2px;margin-top: 56px"></div>
     {% include ssbetter.html %}
+
 
     <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key={{page.id}} data-title={{page.title}}
@@ -56,5 +58,4 @@
 {% include footer.html %}
 
 </body>
-
 </html>

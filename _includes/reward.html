@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/assets/css/reward.css">
+</head>
+<body>
+<div style="padding:0; margin: 40px auto 10px; width: 100%; text-align: center;">
+    <div style="font-size: 1em; margin: 10px auto;color:#f44336;font-weight: bold"> 如果觉得本文对你有帮助，不妨请猴子吃个桃子</div>
+    <button id="rewardButton" disable="enable"
+            onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block">
+            <img id="wechat_qr" src="/assets/misc/wechat.jpg" alt="wdxtub WeChat Pay"/>
+            <p>微信打赏</p>
+        </div>
+
+        <div id="alipay" style="display: inline-block">
+            <img id="alipay_qr" src="/assets/misc/alipay.jpg" alt="wdxtub Alipay"/>
+            <p>支付宝打赏</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
