@@ -34,7 +34,7 @@
 }
 
 #QR {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 #QR a {
@@ -45,14 +45,16 @@
     width: 180px;
     max-width: 100%;
     display: inline-block;
-    margin: 0.8em 2em 0 0;
+    margin: 0 1em;
 }
 
 #wechat p {
+    font-weight: bold;
     color: #1BB823;
 }
 
 #alipay p {
+    font-weight: bold;
     color: #1CA9E6;
 }
 
