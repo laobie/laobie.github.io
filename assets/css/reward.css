@@ -69,3 +69,12 @@
     -webkit-animation: roll 0.1s infinite linear;
     -moz-animation: roll 0.1s infinite linear;
 }
+
+@media screen and (max-width: 768px) {
+    #rewardButton span {
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+        line-height: 60px;
+    }
+}

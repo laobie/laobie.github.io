@@ -32,3 +32,11 @@
     text-align: center;
     margin-top: 8px;
 }
+
+@media screen and (max-width: 768px) {
+    .ss_ad_subtitle {
+        font-size: 1em;
+        font-weight: bold;
+        color: white;
+    }
+}
