@@ -166,19 +166,17 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #333333;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
+    color: #555555;
+    font-weight: bolder;
 }
 
 .post-excerpt {
     margin-top: 24px;
     line-height: 1.6;
     display: inline-block;
-    color: #555555;
+    color: #777777;
     letter-spacing: 0.02em;
-    font-size: 1.05em;
-    -webkit-font-smoothing: antialiased;
+    font-size: 1em;
 }
 
 .post-excerpt:hover {
@@ -199,7 +197,7 @@ a {
     padding: 4px;
     position: relative;
     display: inline-block;
-    -webkit-font-smoothing: antialiased;
+    /*-webkit-font-smoothing: antialiased;*/
 }
 
 .bottom-page {
