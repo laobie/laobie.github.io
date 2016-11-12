@@ -50,7 +50,7 @@ Beavior 包含两个默认的构造方法：
 
 2. `public boolean onDependentViewChanged (CoordinatorLayout parent, V child, View dependency)`
 	
-	根据上面提到的，当 child 依赖某个 view 时，该 view 的位置或者布局发生变化时，会调用本方法，在本方法里面可以对 child 作相应的调整。例如 toolbar 逐渐隐藏消失时，toolbar 下面的内容view需要相应的上移。
+	根据上面提到的，当 child 依赖某个 view 时，该 view 的位置或者布局发生变化时，会调用本方法，在本方法里面可以对 child 作相应的调整。例如 toolbar 逐渐隐藏消失时，toolbar 下面的内容 view 需要相应的上移。
 		
 3. 
 		  
