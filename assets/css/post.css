@@ -13,7 +13,7 @@ body {
     top: 0;
     left: 0;
     z-index: 30;
-    height: 75px;
+    height: 64px;
     margin: auto 10%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -45,7 +45,7 @@ img {
 }
 
 .post-title {
-    font-size: 1.25em;
+    font-size: 1.2em;
     width: 90%;
     padding-right: 10%;
     color: white;
@@ -59,7 +59,7 @@ img {
 .header-inside {
     display: table;
     width: 100%;
-    height: 75px;
+    height: 64px;
 }
 
 .home-title a {
@@ -80,7 +80,7 @@ img {
     display: block;
     padding: 2% 10% 5% 10%;
     width: 60%;
-    margin: 75px 10% 0;
+    margin: 64px 10% 0;
     text-rendering: geometricPrecision;
     letter-spacing: 0.03em;
     color: #363636;

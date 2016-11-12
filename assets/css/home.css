@@ -319,10 +319,12 @@ a {
     }
 
     .post-title {
-        font-size: 1.1em;
+        width: 100%;
+        font-size: 1.2em;
     }
 
     .post-date {
+        display: none;
         margin: 6px auto auto auto;
         font-size: 0.8em;
         padding: 0;
