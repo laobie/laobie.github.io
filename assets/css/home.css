@@ -156,7 +156,7 @@ a {
     width: 100%;
     padding: 30px 0 30px 0;
     display: inline-block;
-    border-bottom: 1px dashed #9c9c9c;
+    border-bottom: 1px dashed #c2c2c2;
 }
 
 .post-title {
@@ -236,33 +236,34 @@ a {
     height: 32px;
 }
 
+.page-img a {
+    color: black;
+}
+
+.page-img a:hover {
+    color: #5A9094;
+}
+
 .page-num {
+    display: inline;
     text-align: center;
     line-height: 72px;
     height: 72px;
     margin: 0 8px;
     font-size: 1.25em;
-    color: #333333;
+    color: #5A9094;
+}
+
+.page-num a {
+    color: black;
+}
+
+.page-num a:hover {
+    color: #5A9094;
 }
 
 .cnzz {
     display: none;
-}
-
-.wrapper {
-    margin: 0 auto;
-    max-width: 1100px;
-}
-
-.footer {
-    padding: 24px 0;
-    /*background-color: #303841;*/
-    text-align: center;
-    letter-spacing: 0.08em;
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 0.8em;
-    -webkit-font-smoothing: antialiased;
 }
 
 @media screen and (max-width: 768px) {

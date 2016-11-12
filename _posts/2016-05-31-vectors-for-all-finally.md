@@ -1,5 +1,5 @@
 ---
-title: 【译】Vectors For All (最终篇)
+title: Vectors For All (最终篇)【译】
 category: Android
 excerpt: 本文来自掘金翻译计划，带来了矢量图在 Android 开发中最新的消息，一起来拥抱矢量图吧！
 ---

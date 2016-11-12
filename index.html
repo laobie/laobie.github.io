@@ -47,7 +47,7 @@ title: 写代码的猴子
     <div class="post-item">
 
         <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
-        <div class="post-date"> {{ post.date|date: "%Y-%m-%d" }}</div>
+        <div class="post-date"><i class="fa fa-calendar fa-1x"> &nbsp;&nbsp;{{ post.date|date: "%Y-%m-%d" }}</i></div>
         <a href="{{ post.url }}" class="post-excerpt">{{ post.excerpt }}</a>
 
     </div>
@@ -58,7 +58,9 @@ title: 写代码的猴子
         <div class="previous-page">
             {% if paginator.previous_page %}
             <a href="{{ paginator.previous_page_path }}">
-                <img class="page-img" src="http://ac-qygvx1cc.clouddn.com/7f1f21d3492b6f9a.svg"/>
+                <div class="page-img">
+                    <i class="fa fa-angle-left fa-2x"></i>
+                </div>
             </a>
             {% else %}
             <span></span>
@@ -68,7 +70,9 @@ title: 写代码的猴子
         <div class="next-page">
             {% if paginator.next_page %}
             <a href="{{ paginator.next_page_path }}">
-                <img class="page-img" src="http://ac-qygvx1cc.clouddn.com/15281a74df1176d5.svg"/>
+                <div class="page-img">
+                    <i class="fa fa-angle-right fa-2x"></i>
+                </div>
             </a>
             {% else %}
             <span></span>
@@ -76,14 +80,17 @@ title: 写代码的猴子
         </div>
 
         <div class="page">
-
             {% for page in (1..paginator.total_pages) %}
             {% if page == paginator.page %}
-            <em class="page-num">{{ page }}</em>
+            <div class="page-num">{{ page }}</div>
             {% elsif page == 1 %}
-            <a class="page-num" href="/">{{ page }}</a>
+            <div class="page-num">
+                <a href="/">{{ page }}</a>
+            </div>
             {% else %}
-            <a class="page-num" href="/page{{ page }}">{{ page }}</a>
+            <div class="page-num">
+                <a href="/page{{ page }}">{{ page }}</a>
+            </div>
             {% endif %}
             {% endfor %}
 
