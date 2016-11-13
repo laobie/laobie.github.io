@@ -19,10 +19,12 @@
 }
 
 .footer-icon a {
-    font-size: 2em;
     text-decoration: none;
     color: whitesmoke;
     margin: 0 10px;
+}
+.footer-icon span{
+    font-size: 29px;
 }
 
 .footer-icon a:hover{
