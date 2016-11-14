@@ -238,7 +238,7 @@ a {
 }
 
 .page-img a:hover {
-    color: #5A9094;
+    color: #409259;
 }
 
 .page-num {
@@ -248,7 +248,7 @@ a {
     height: 72px;
     margin: 0 8px;
     font-size: 1.25em;
-    color: #5A9094;
+    color: #409259;
 }
 
 .page-num a {
@@ -256,7 +256,7 @@ a {
 }
 
 .page-num a:hover {
-    color: #5A9094;
+    color: #409259;
 }
 
 .cnzz {
