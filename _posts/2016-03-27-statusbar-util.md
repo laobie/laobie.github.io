@@ -12,64 +12,6 @@ category: Android
 ### Sample 下载
 [下载 StatusBarUtil-Demo](http://fir.im/5mnp)
 
-### 更新日志
-
-+  1.3.0
- 
-    - 完善 setColor 逻辑，避免潜在的问题
-
-+  1.2.8
-
-	- 修复 `setColorDiff` 方法中的一个 bug
-	
-+  1.2.7
-   
-   - 新增 `setColorForSwipeBack` 方法，支持滑动返回，目前支持的滑动返回库有：
-
-   	- [r0adkll/Slidr](https://github.com/r0adkll/Slidr)   
-   		
-+  1.2.6
-   
-   - 升级 support 包到 24.2.1 版本
-   
-+  1.2.5
-
-	- 添加 `@ColorInt` 注解，现在如果传入 `R.color.xx`，就会提示使用错误
-	- 修复 DrawerLayout 内容布局设置 paddding 失效的 bug
-	
-+  1.2.4
-
-   - 修复 `setTranslucentForImageViewInFragment()` 方法的一个 bug
-
-+  1.2.3
-
-   - 修复 `setTranslucentForImageView` ，现在支持传 null 作为 needOffsetView 的值
-
-   - 新增当 fragment 头部是 ImageView 时设置透明状态栏的方法
-
-     ``` java
-     setTranslucentForImageViewInFragment(Activity activity, View needOffsetView)
-     setTransparentForImageViewInFragment(Activity activity, View needOffsetView)
-     ```
-
-   - 修复根布局是 CoordinatorLayout 时设置状态栏全透明和半透明的 bug
-
-     ``` java
-     setTranslucentForCoordinatorLayout(Activity activity, int statusBarAlpha)
-     ```
-
-
-- 1.2.0
-
-    支持为使用 ImageView 作为头部的界面设置状态栏透明
-
-- 1.1.1
-
-    修复部分 4.4 上的 bug
-
-- 1.1.0
-
-    修复 bug
 
 ### 特性
 
@@ -134,7 +76,7 @@ category: Android
 1. 在 build.gradle 文件中添加依赖, StatusBarUtil 已经发布在 JCenter:
 
    ```groovy
-   compile 'com.jaeger.statusbaruitl:library:1.3.0'
+   compile 'com.jaeger.statusbaruitl:library:1.3.1'
    ```
 
 2. 在 `setContentView()` 之后调用你需要的方法，例如:
@@ -164,6 +106,69 @@ category: Android
 4. 当你设置了 `statusBarAlpha` 值时，该值需要在 0 ~ 255 之间
 
 5. 在 Fragment 中的使用可以参照 [UseInFragmentActivity.java](https://github.com/laobie/StatusBarUtil/blob/master/sample/src/main/java/com/jaeger/statusbarutil/UseInFragmentActivity.java) 来实现
+
+### 更新日志
+
++ 1.3.1
+
+	- bug 修复
+
++  1.3.0
+ 
+    - 完善 setColor 逻辑，避免潜在的问题
+
++  1.2.8
+
+	- 修复 `setColorDiff` 方法中的一个 bug
+	
++  1.2.7
+   
+   - 新增 `setColorForSwipeBack` 方法，支持滑动返回，目前支持的滑动返回库有：
+
+   	- [r0adkll/Slidr](https://github.com/r0adkll/Slidr)   
+   		
++  1.2.6
+   
+   - 升级 support 包到 24.2.1 版本
+   
++  1.2.5
+
+	- 添加 `@ColorInt` 注解，现在如果传入 `R.color.xx`，就会提示使用错误
+	- 修复 DrawerLayout 内容布局设置 paddding 失效的 bug
+	
++  1.2.4
+
+   - 修复 `setTranslucentForImageViewInFragment()` 方法的一个 bug
+
++  1.2.3
+
+   - 修复 `setTranslucentForImageView` ，现在支持传 null 作为 needOffsetView 的值
+
+   - 新增当 fragment 头部是 ImageView 时设置透明状态栏的方法
+
+     ``` java
+     setTranslucentForImageViewInFragment(Activity activity, View needOffsetView)
+     setTransparentForImageViewInFragment(Activity activity, View needOffsetView)
+     ```
+
+   - 修复根布局是 CoordinatorLayout 时设置状态栏全透明和半透明的 bug
+
+     ``` java
+     setTranslucentForCoordinatorLayout(Activity activity, int statusBarAlpha)
+     ```
+
+
+- 1.2.0
+
+    支持为使用 ImageView 作为头部的界面设置状态栏透明
+
+- 1.1.1
+
+    修复部分 4.4 上的 bug
+
+- 1.1.0
+
+    修复 bug
 
 ### 最后
 如果你有任何建议或问题，请及时联系我。如果你对这个工具类有优化，欢迎 fork 提 pr。
