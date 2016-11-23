@@ -443,8 +443,8 @@ private class OperateWindow {
     private int mHeight;
     public OperateWindow(final Context context) {
         View contentView = LayoutInflater.from(context).inflate(R.layout.layout_operate_windows, null);
-        contentView.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
-            View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+        contentView.measure(View.MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2, View.MeasureSpec.AT_MOST),
+            View.MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2, View.MeasureSpec.AT_MOST));
         mWidth = contentView.getMeasuredWidth();
         mHeight = contentView.getMeasuredHeight();
         mWindow =
