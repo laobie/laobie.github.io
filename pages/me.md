@@ -1,16 +1,16 @@
 ---
 title: 这是一只猴子
-layout: me
+layout: post
+permalink: /me/
+dskey: laobie.github.io-me.html
 ---
 
-{::nomarkdown}
 <center>
      <img src="http://ac-qygvx1cc.clouddn.com/f0108b2596e9fdcb.jpg" class="avatar"/>
      <strong>写代码的猴子</strong>
      <br/>
      <br/>
 </center>
-{:/nomarkdown}
 
 我是写代码的猴子，你可以叫我猴子。
 

@@ -7,7 +7,12 @@
     <title>{{page.title}}</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/post.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
-    <link rel="icon" href="http://ac-qygvx1cc.clouddn.com/da83ef5136eb1cd1.png"/>
+    {% if page.favicon %}
+    <link rel="icon" href={{page.favicon}}>
+    {% else %}
+    <link rel="icon" href=/assets/img/fav/post.png>
+    {% endif %}
+
 </head>
 
 <body>
@@ -32,9 +37,14 @@
 
 
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key={{page.id}} data-title={{page.title}}
-         data-url="laobie.github.io{{page.url}}"></div>
+    <!--兼容部分页面自定义了多说 key-->
+    {% if page.dskey %}
+    <div class="ds-thread" data-thread-key={{page.dskey}} data-title={{page.title}} data-url="{{site.url}}{{page.url}}"></div>
+    {% else %}
+    <div class="ds-thread" data-thread-key={{page.id}} data-title={{page.title}} data-url="{{site.url}}{{page.url}}"></div>
+    {% endif %}
     <!-- 多说评论框 end -->
+
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
         var duoshuoQuery = {short_name: "jaeger"};
