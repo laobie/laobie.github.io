@@ -3,6 +3,7 @@ title: 这是一只猴子
 layout: post
 permalink: /me/
 dskey: laobie.github.io-me.html
+show_ad: false
 ---
 
 <center>

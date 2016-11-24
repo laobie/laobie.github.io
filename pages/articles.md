@@ -4,6 +4,7 @@ layout: post
 permalink: /articles/
 dskey: laobie.github.io-articles.html
 favicon: /assets/img/fav/articles.png
+show_ad: false
 ---
 
 {% for category in site.categories %}

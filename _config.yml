@@ -10,6 +10,7 @@ kramdown:
 name: 写代码的猴子
 description: 当猴子不写代码时,他在写些什么。
 url: http://jaeger.itscoder.com/
+email: chjie.jaeger@gmail.com
 
 defaults:
  -
@@ -18,3 +19,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      show_ad: true
+
+# ---------------- #
+#      Socials     #
+# ---------------- #
+github_id: laobie
+weibo_id: xdmdhz
+zhihu_id: jaeger

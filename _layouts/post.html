@@ -31,10 +31,12 @@
 <div class="post-content">
 
     {{ content }}
-    {% include reward.html %}
-    <div style="border-bottom: dotted #303841 2px;"></div>
-    {% include ssbetter.html %}
 
+    {% if page.show_ad %}
+        {% include reward.html %}
+        <div style="border-bottom: dotted #303841 2px;"></div>
+        {% include ssbetter.html %}
+    {% endif %}
 
     <!-- 多说评论框 start -->
     <!--兼容部分页面自定义了多说 key-->
