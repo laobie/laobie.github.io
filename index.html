@@ -21,10 +21,9 @@ title: 写代码的猴子
     <div class="tool-bar">
         <div class="bg"></div>
         <a href="/" class="title">写代码的猴子</a>
-        <a href="/about" class="head_item">关于</a>
-        <a href="/me" class="head_item">猴子</a>
-        <a href="/articles" class="head_item">归档</a>
-        <a href="/feed" class="head_item">订阅</a>
+        {% for nav in site.navs %}
+        <a href="{{ nav.href }}" class="nav_item">{{ nav.label }}</a>
+        {% endfor %}}
     </div>
 </div>
 

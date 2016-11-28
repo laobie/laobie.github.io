@@ -53,7 +53,7 @@ body {
 
 }
 
-.title, .sign, .head_item {
+.title, .sign, .nav_item {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif, "Microsoft YaHei", 微软雅黑;
 }
 
@@ -96,7 +96,7 @@ a {
     color: #383838;
 }
 
-.head_item {
+.nav_item {
     color: #FFFFFF;
     position: relative;
     float: right;
@@ -105,7 +105,7 @@ a {
     right: 0;
 }
 
-.head_item a {
+.nav_item a {
     color: #FFFFFF;
 }
 
@@ -113,7 +113,7 @@ a {
     color: #9c9c9c;
 }
 
-.head_item:hover {
+.nav_item:hover {
     color: #9c9c9c;
 }
 
@@ -301,7 +301,7 @@ a {
         height: 240px;
     }
 
-    .head_item {
+    .nav_item {
         font-size: 0.92em;
         padding: 25px 8px 25px 8px;
 

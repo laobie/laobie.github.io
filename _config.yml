@@ -21,6 +21,23 @@ defaults:
       layout: "post"
       show_ad: true
 
+navs:
+  -
+    href: /about/
+    label: 关于
+  -
+    href: /me/
+    label: 猴子
+  -
+    href: /articles/
+    label: 归档
+  -
+    href: /feed/
+    label: 订阅
+  -
+    href: /learnvue/
+    label: 实验室
+
 # ---------------- #
 #      Socials     #
 # ---------------- #
