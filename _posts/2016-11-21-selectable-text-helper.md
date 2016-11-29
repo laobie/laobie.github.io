@@ -34,7 +34,7 @@ mTextView.setTextIsSelectable(true);
 
 看起来很容易，但是对于当时刚刚入门的我来说，这是个完全没头绪的任务。
 
-时隔一年之后，再遇到这个需求，这次通过 Google、GitHub ，以及参考 API 23 中 TextView 源码，基本上实现了自定义选择复制的功能，效果如下：
+时隔一年之后，再遇到这个需求，这次通过 Google、GitHub ，以及参考 SDK 23 中 TextView 源码，基本上实现了自定义选择复制的功能，效果如下：
 
 ![](http://ac-QYgvX1CC.clouddn.com/378d52583767882d.png)
 
@@ -107,7 +107,6 @@ mSelectableTextHelper = new SelectableTextHelper.Builder(mTvTest)
 
 ```java
 mTextView.setText(mTextView.getText(), TextView.BufferType.SPANNABLE);
-
 ```
 
 接下来给 TextView 设置相关的点击、长按、Touch 事件：

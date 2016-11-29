@@ -467,7 +467,7 @@ protected Class<?> loadClass(String className, boolean resolve) throws ClassNotF
                    try {
                        // 加载 HelloAndroid 类
                        Class clazz = dexClassLoader.loadClass("com.jaeger.HelloAndroid");
-                       // 强转成 ISayHello, 注意 ISayHello 的包名需要和 jar 包中的
+                       // 强转成 ISayHello, 注意 ISayHello 的包名需要和 jar 包中的一致
                        ISayHello iSayHello = (ISayHello) clazz.newInstance();
                        mTvInfo.setText(iSayHello.say());
                    } catch (ClassNotFoundException e) {
