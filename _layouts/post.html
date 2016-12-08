@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="theme-color" content="#323D45">
     <title>{{page.title}}</title>
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/post.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
     {% if page.favicon %}
@@ -28,9 +29,9 @@
     </div>
 </header>
 
-<div id="post-content" class="post-content">
+<div id="content" class="post-content">
 
-    {{ content }}
+    <div id="post-content"> {{ content }}</div>
 
     {% if page.show_ad %}
     {% include reward.html %}
@@ -63,20 +64,30 @@
     </script>
     <!-- 多说公共JS代码 end -->
 
-    <!-- 图片放大 -->
-    <script type="text/javascript">
-        var imgs = document.getElementById("post-content").getElementsByTagName("img");
-        for (var i = imgs.length - 1; i >= 0; i--) {
-            imgs[i].setAttribute("data-action", "zoom");
-        }
-    </script>
-    <script src="/assets/js/zoom.js"></script>
 
 </div>
 
 {% include footer.html %}
 
 {% include cnzz.html %}
+
+<a class="fa fa-hand-o-up fa-2x" id="btn-to-top" href="javascript:;"></a>
+
+<script type="text/javascript">
+
+    // 图片放大
+    var imgs = document.getElementById("post-content").getElementsByTagName("img");
+    for (var i = imgs.length - 1; i >= 0; i--) {
+        imgs[i].setAttribute("data-action", "zoom");
+    }
+
+    // 回到顶部
+    window.onload = function () {
+        goTop("btn-to-top");
+    }
+</script>
+<script src="/assets/js/zoom.js"></script>
+<script src="/assets/js/gotop.js"></script>
 
 </body>
 </html>
