@@ -28,22 +28,24 @@
     </div>
 </header>
 
-<div class="post-content">
+<div id="post-content" class="post-content">
 
     {{ content }}
 
     {% if page.show_ad %}
-        {% include reward.html %}
-        <div style="border-bottom: dotted #303841 2px;"></div>
-        {% include ssbetter.html %}
+    {% include reward.html %}
+    <div style="border-bottom: dotted #303841 2px;"></div>
+    {% include ssbetter.html %}
     {% endif %}
 
     <!-- 多说评论框 start -->
     <!--兼容部分页面自定义了多说 key-->
     {% if page.dskey %}
-    <div class="ds-thread" data-thread-key={{page.dskey}} data-title={{page.title}} data-url="{{site.url}}{{page.url}}"></div>
+    <div class="ds-thread" data-thread-key={{page.dskey}} data-title={{page.title}}
+         data-url="{{site.url}}{{page.url}}"></div>
     {% else %}
-    <div class="ds-thread" data-thread-key={{page.id}} data-title={{page.title}} data-url="{{site.url}}{{page.url}}"></div>
+    <div class="ds-thread" data-thread-key={{page.id}} data-title={{page.title}}
+         data-url="{{site.url}}{{page.url}}"></div>
     {% endif %}
     <!-- 多说评论框 end -->
 
@@ -60,6 +62,15 @@
         })();
     </script>
     <!-- 多说公共JS代码 end -->
+
+    <!-- 图片放大 -->
+    <script type="text/javascript">
+        var imgs = document.getElementById("post-content").getElementsByTagName("img");
+        for (var i = imgs.length - 1; i >= 0; i--) {
+            imgs[i].setAttribute("data-action", "zoom");
+        }
+    </script>
+    <script src="/assets/js/zoom.js"></script>
 
 </div>
 
