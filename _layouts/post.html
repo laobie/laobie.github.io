@@ -45,22 +45,25 @@
     <div class="ds-thread" data-thread-key={{page.dskey}} data-title={{page.title}}
          data-url="{{site.url}}{{page.url}}"></div>
     {% else %}
-    <div class="ds-thread" data-thread-key={{page.id}} data-title={{page.title}}
-         data-url="{{site.url}}{{page.url}}"></div>
+    <div class="ds-thread"
+         data-thread-key={{page.id}}
+         data-title={{page.title}}
+         data-url="{{site.url}}{{page.url}}">
+    </div>
     {% endif %}
     <!-- 多说评论框 end -->
 
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
-        var duoshuoQuery = {short_name: "jaeger"};
-        (function () {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';
-            ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
+      var duoshuoQuery = {short_name: "jaeger"};
+      (function () {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';
+        ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
     </script>
     <!-- 多说公共JS代码 end -->
 
@@ -74,16 +77,16 @@
 
 <script type="text/javascript">
 
-    // 图片放大
-    var imgs = document.getElementById("post-content").getElementsByTagName("img");
-    for (var i = imgs.length - 1; i >= 0; i--) {
-        imgs[i].setAttribute("data-action", "zoom");
-    }
+  // 图片放大
+  var imgs = document.getElementById("post-content").getElementsByTagName("img");
+  for (var i = imgs.length - 1; i >= 0; i--) {
+    imgs[i].setAttribute("data-action", "zoom");
+  }
 
-    // 回到顶部
-    window.onload = function () {
-        goTop("btn-to-top");
-    }
+  // 回到顶部
+  window.onload = function () {
+    goTop("btn-to-top");
+  }
 </script>
 <script src="/assets/js/zoom.js"></script>
 <script src="/assets/js/gotop.js"></script>
