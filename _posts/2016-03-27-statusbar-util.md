@@ -79,7 +79,7 @@ category: Android
 1. 在 build.gradle 文件中添加依赖, StatusBarUtil 已经发布在 JCenter:
 
    ```groovy
-   compile 'com.jaeger.statusbaruitl:library:1.3.5'
+   compile 'com.jaeger.statusbarutil:library:1.4.0'
    ```
 
 2. 在 `setContentView()` 之后调用你需要的方法，例如:
@@ -119,6 +119,14 @@ category: Android
 6. 在 Fragment 中的使用可以参照 [UseInFragmentActivity.java](https://github.com/laobie/StatusBarUtil/blob/master/sample/src/main/java/com/jaeger/statusbarutil/UseInFragmentActivity.java) 来实现
 
 ### 更新日志
+
+- 1.4.0
+
+  - 修改拼写错误
+
+- 1.3.6
+
+  - bug fix 
 
 - 1.3.5
   - 添加 `hideFakeStatusBarView` 方法来隐藏假的状态栏 View
