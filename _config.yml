@@ -8,7 +8,7 @@ kramdown:
   syntax_highlighter: rouge
 
 name: 写代码的猴子
-description: 当猴子不写代码时,他在写些什么。
+description: 当猴子不写代码时，他在写些什么
 url: http://jaeger.itscoder.com/
 email: chjie.jaeger@gmail.com
 

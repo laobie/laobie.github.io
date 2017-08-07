@@ -1,103 +1,37 @@
 ---
 title: 写代码的猴子
 ---
+<html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="theme-color" content="#323D45">
-    <title>写代码的猴子</title>
-    <link rel="icon" sizes="192x192" href="http://ac-qygvx1cc.clouddn.com/bddb9a8a5787b086.png">
-    <link rel="icon" href="http://ac-qygvx1cc.clouddn.com/bddb9a8a5787b086.png"/>
+    <meta name="theme-color" content="#151515">
+    <title>shadow</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/home.css" />
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
 </head>
 
-<link rel="stylesheet" type="text/css" href="/assets/css/home.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/header.css">
-
-
 <body>
-
-<div class="head">
-    <div class="tool-bar">
-        <div class="bg"></div>
-        <a href="/" class="title">写代码的猴子</a>
-        {% for nav in site.navs %}
-        <a href="{{ nav.href }}" class="nav_item">{{ nav.label }}</a>
-        {% endfor %}
-    </div>
-</div>
-
-<div class="header_bg">
-
-    <div class="avatar_div">
-        <a href="/me/">
-            <img src="/assets/img/def/ic_monkey.jpg" class="avatar"/>
-        </a>
+    <div class="base-info">
+        <div class="avatar"><img src="./img/monkey.jpg" /></div>
+        <span class="title">{{ site.name }}</span>
+        <span class="bio">{{ site.description }}</span>
     </div>
 
-    <a class="sign">当猴子不写代码时，他在写些什么。</a>
-</div>
-
-<div class="content">
-
-    {% for post in paginator.posts %}
-
-    <div class="post-item">
-
-        <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
-        <div class="post-date"><i class="fa fa-calendar fa-1x"> &nbsp;&nbsp;{{ post.date|date: "%m-%d,&nbsp;%Y" }}</i></div>
-        <a href="{{ post.url }}" class="post-excerpt">{{ post.excerpt }}</a>
-
+    <!-- <div class="self-des"> -->
+        <!-- 我是写代码的猴子 -->
+    <!-- </div> -->
+    <div class="divider"></div>
+    <div class="nav-tab">
+        <ul>
+            <li><a href="/">博客</a> </li>
+            <li><a href="/">项目</a> </li>
+            <li><a href="/">实验室</a> </li>
+            <li><a href="/">关于</a> </li>
+        </ul>
     </div>
-
-    {% endfor %}
-
-    <div class="bottom-page">
-        <div class="previous-page">
-            {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}">
-                <div class="page-img">
-                    <i class="fa fa-angle-left fa-2x"></i>
-                </div>
-            </a>
-            {% else %}
-            <span></span>
-            {% endif %}
-        </div>
-
-        <div class="next-page">
-            {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}">
-                <div class="page-img">
-                    <i class="fa fa-angle-right fa-2x"></i>
-                </div>
-            </a>
-            {% else %}
-            <span></span>
-            {% endif %}
-        </div>
-
-        <div class="page">
-            {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-            <div class="page-num">{{ page }}</div>
-            {% elsif page == 1 %}
-            <div class="page-num">
-                <a href="/">{{ page }}</a>
-            </div>
-            {% else %}
-            <div class="page-num">
-                <a href="/page{{ page }}">{{ page }}</a>
-            </div>
-            {% endif %}
-            {% endfor %}
-
-        </div>
-    </div>
-</div>
-
-{% include footer.html %}
-
-{% include cnzz.html %}
 
 </body>
+
+</html>

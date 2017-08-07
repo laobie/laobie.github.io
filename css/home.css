@@ -1,0 +1,93 @@
+body {
+    background: #151515;
+    color: white;
+}
+
+.base-info {
+    align-content: right;
+    letter-spacing: 0.1em;
+    margin: 160px 20% 40px;
+}
+
+.title {
+    display: block;
+    text-align: right;
+    font-size: 1.68em;
+    margin-top: 48px;
+}
+
+.bio {
+    display: block;
+    font-size: 0.94em;
+    text-align: right;
+    margin-top: 16px;
+    letter-spacing: 0.1em;
+}
+
+.avatar img {
+    display: block;
+    position: relative;
+    left: calc(100% - 120px);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.self-des {
+    margin: 20px 20%;
+    font-size: 0.86em;
+    letter-spacing: 0.15em;
+}
+
+.divider {
+    height: 2px;
+    border-radius: 1px;
+    background: #777;
+    margin: 100px 20% 10px;
+}
+
+.nav-tab {
+    margin: 0 20%;
+    text-align: right;
+}
+
+.nav-tab li {
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.nav-tab li+li::before {
+    content: "/";
+    margin: 0 20px;
+    font-weight: 900;
+    color: #777;
+}
+
+.nav-tab a {
+    font-size: 0.96em;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-tab a:hover {
+    color: grey;
+}
+
+@media screen and (max-width: 768px) {
+    .base-info {
+        align-content: right;
+        letter-spacing: 0.1em;
+        margin: 80px 6% 20px;
+    }
+    .divider {
+        margin: 100px 6% 10px;
+    }
+    .nav-tab {
+        margin: 0 6%;
+        text-align: right;
+    }
+
+    .nav-tab li+li::before {
+    margin: 0 15px;
+}
+}
