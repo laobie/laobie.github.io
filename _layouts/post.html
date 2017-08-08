@@ -1,95 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="theme-color" content="#323D45">
     <title>{{page.title}}</title>
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
-    {% if page.favicon %}
-    <link rel="icon" href={{page.favicon}}>
-    {% else %}
-    <link rel="icon" href=/assets/img/fav/post.png>
-    {% endif %}
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/post.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css"> {% if page.favicon %}
+    <link rel="icon" href={{page.favicon}}> {% else %}
+    <link rel="icon" href=/assets/img/fav/post.png> {% endif %}
 
 </head>
 
 <body>
-
-<header id="masthead" class="site-header" role="banner">
-    <div class="header-inside">
-        <div class="home-title">
-            <a href='http://laobie.github.io/'>
-                <img width="28px" src="/assets/img/def/ic_home.svg">
+    <div class="header">
+        <div class="nav-home">
+            <a href="/">
+            <span>{{ site.name }}</span>
+            <img src="{{ site.logo }}" />
             </a>
         </div>
-        <div class="post-title"> {{page.title}} {{page.header}}</div>
+        <span class="post-title">{{ page.title }}</span>
     </div>
-</header>
-
-<div id="content" class="post-content">
-
-    <div id="post-content"> {{ content }}</div>
-
-    {% if page.show_ad %}
-    <!-- {% include reward.html %} -->
-    <div style="border-bottom: dotted #303841 2px;"></div>
-    {% include ssbetter.html %}
-    {% endif %}
-
-    <!-- 多说评论框 start -->
-    <!--兼容部分页面自定义了多说 key-->
-    {% if page.dskey %}
-    <div class="ds-thread" data-thread-key={{page.dskey}} data-title={{page.title}}
-         data-url="{{site.url}}{{page.url}}"></div>
-    {% else %}
-    <div class="ds-thread"
-         data-thread-key={{page.id}}
-         data-title={{page.title}}
-         data-url="{{site.url}}{{page.url}}">
-    </div>
-    {% endif %}
-    <!-- 多说评论框 end -->
-
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-      var duoshuoQuery = {short_name: "jaeger"};
-      (function () {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';
-        ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-    </script>
-    <!-- 多说公共JS代码 end -->
-
-</div>
-
-{% include footer.html %}
-
-{% include cnzz.html %}
-
-<a class="fa fa-hand-o-up fa-2x" id="btn-to-top" href="javascript:;"></a>
-
-<script type="text/javascript">
-
-  // 图片放大
-  var imgs = document.getElementById("post-content").getElementsByTagName("img");
-  for (var i = imgs.length - 1; i >= 0; i--) {
-    imgs[i].setAttribute("data-action", "zoom");
-  }
-
-  // 回到顶部
-  window.onload = function () {
-    goTop("btn-to-top");
-  }
-</script>
-<script src="/assets/js/zoom.js"></script>
-<script src="/assets/js/gotop.js"></script>
-
+    <div class="post-content"> {{ content }}</div>
+   
+    {% include  ssbetter.html %}
+    {% include  footer.html %}
 </body>
+
 </html>

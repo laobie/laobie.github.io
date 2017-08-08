@@ -8,7 +8,8 @@ kramdown:
   syntax_highlighter: rouge
 
 name: 写代码的猴子
-description: 当猴子不写代码时，他在写些什么
+bio: 当猴子不写代码时，他在写些什么
+logo: "/img/monkey.jpg"
 url: http://jaeger.itscoder.com/
 email: chjie.jaeger@gmail.com
 
@@ -22,21 +23,26 @@ defaults:
       show_ad: true
 
 navs:
-  -
-    href: /about/
-    label: 关于
-  -
-    href: /me/
-    label: 猴子
-  -
-    href: /articles/
-    label: 归档
-  -
-    href: /feed/
-    label: 订阅
+
+  # -
+  #   href: /me/
+  #   label: 猴子
+  # -
+  #   href: /articles/
+  #   label: 归档
+  # -
+  #   href: /feed/
+  #   label: 订阅
+
+  - 
+    href: /blog/
+    label: 博客
   -
     href: /WebLab/
     label: 实验室
+  - 
+    href: /about/
+    label: 关于
 
 # ---------------- #
 #      Socials     #

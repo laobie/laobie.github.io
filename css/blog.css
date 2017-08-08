@@ -1,0 +1,68 @@
+body {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.post-list {
+    margin: 60px 15% 60px;
+    padding: 40px 6% 30px;
+    background: white;
+    color: black;
+}
+
+.post-list a {
+    color: black;
+    text-decoration: none;
+}
+
+.post-item {
+    font-size: 1em;
+    margin: 0px 10px;
+    padding: 20px 4% 0;
+    transition: 600ms;
+    -webkit-transition: scale(1);
+    -moz-transition: scale(1);
+    transition: scale(1);
+}
+
+.post-divider {
+    border-bottom: 1px dashed lightgray;
+    margin: 30px 0;
+}
+
+.post-item:hover {
+    background: #eaeaea;
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+}
+
+.post-item .post-title {
+    font-size: 1.15em;
+    margin: 10px 0 20px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.post-item .post-excerpt {
+    font-weight: 300;
+    display: block;
+    line-height: 1.5em;
+    font-size: 0.78em;
+    margin: 15px 0;
+    letter-spacing: 0.14em;
+}
+
+.post-item .post-excerpt p {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.post-item .post-date {
+    display: block;
+    position: relative;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 0.72em;
+    font-style: oblique;
+}

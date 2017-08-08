@@ -1,25 +1,3 @@
-body {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    background: url(../img/def/bg_body.png);
-    font-family: -apple-system-font, "Helvetica Neue", Tahoma, "PingFang SC", "lantinghei sc", "Microsoft Yahei", sans-serif;
-}
-
-.site-header {
-    width: 80%;
-    background: #303841;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 30;
-    height: 64px;
-    margin: auto 10%;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 p {
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
@@ -45,7 +23,7 @@ img {
     margin: 0 auto;
 }
 
-.post-title {
+/* .post-title {
     font-size: 1.2em;
     width: 90%;
     padding-right: 10%;
@@ -53,9 +31,8 @@ img {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    letter-spacing: 0.1em;
-    -webkit-font-smoothing: antialiased;
-}
+    letter-spacing: 0.05em;
+} */
 
 .header-inside {
     display: table;
@@ -72,22 +49,27 @@ img {
     color: gray;
 }
 
+.post-title{
+    font-size: 1.4em;
+    font-weight: 350;
+    letter-spacing: 0.12em;
+}
+
 .post-content {
     word-wrap: break-word;
-    font-size: 1em;
-    line-height: 1.8;
+    font-size: 0.8em;
+     line-height: 1.8;
     overflow: hidden;
     background: ghostwhite;
     display: block;
-    padding: 2% 10% 5% 10%;
-    width: 60%;
+    padding: 2% 7% 5%;
     margin: 64px 15% 0;
     text-rendering: geometricPrecision;
     letter-spacing: 0.03em;
     color: #363636;
-    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    /* font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif; */
     font-weight: 400;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; 
 }
 
 .category-item {
@@ -223,15 +205,18 @@ code {
 pre {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     line-height: 1.68;
-    font-size: 0.96em;
+    font-size: 1em;
     overflow: auto;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+
 }
 
 pre code {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     color: #e65c04;
-    letter-spacing: 0.025em;
-    font-size: 85%;
+    letter-spacing: 0.05em;
+    font-size: 90%;
 }
 
 ul {
@@ -255,11 +240,11 @@ table {
     font-size: 14px;
 }
 
-table>tbody>tr:nth-of-type(odd) {
+table > tbody > tr:nth-of-type(odd) {
     background-color: #f5f5f5;
 }
 
-table>tbody>tr:hover {
+table > tbody > tr:hover {
     background-color: lightblue;
 }
 
@@ -302,14 +287,17 @@ td {
 }
 
 @media screen and (max-width: 768px) {
+
     .site-header {
         position: static;
         margin: auto auto;
         width: 100%;
     }
+
     .home-title {
         width: 20%;
     }
+
     .post-content {
         font-size: 0.9em;
         margin: 0 0 0 0;
@@ -317,12 +305,15 @@ td {
         width: 90%;
         letter-spacing: 0;
     }
+
     .post-title {
         font-size: 1em;
         width: 80%;
     }
+
     .avatar {
         height: 60px;
         width: 60px;
     }
+
 }

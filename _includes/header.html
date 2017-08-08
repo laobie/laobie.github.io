@@ -1,0 +1,17 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+</head>
+<div class="header">
+    <div class="nav-home">
+        <a href="/">
+            <span>{{ site.name }}</span>
+            <img src="{{ site.logo }}" />
+            </a>
+
+    </div>
+    <span class="module-title">{{ page.title }}</span>
+    <ul class="nav-tab-others">
+        {% for nav in site.navs %} {% if nav.label != page.title %}
+        <li><a href="{{ nav.href }}">{{ nav.label }}</a></li>
+        {% endif %} {% endfor %}
+</div>

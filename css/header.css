@@ -1,0 +1,61 @@
+.header {
+    margin: 40px 15% 20px;
+}
+
+.nav-home {
+    text-align: right;
+}
+
+.nav-home a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-home span {
+    display: inline-block;
+    font-size: 0.9em;
+    letter-spacing: 0.12em;
+}
+
+.nav-home img {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    vertical-align: text-bottom;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.module-title {
+    display: inline-block;
+    font-size: 2.6em;
+    letter-spacing: 0.68em;
+    font-weight: 350;
+}
+
+.nav-tab-others {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.nav-tab-others li {
+    display: inline;
+    vertical-align: top;
+}
+
+.nav-tab-others li+li::before {
+    content: "/";
+    margin: 0 20px;
+    font-weight: 900;
+    color: #777;
+}
+
+.nav-tab-others a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.nav-tab-others :hover {
+    color: gold;
+}

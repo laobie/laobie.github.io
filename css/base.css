@@ -1,11 +1,16 @@
 * {
-    margin: 0;
-    padding: 0;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 20px;
 }
 
 * ::selection {
     background: blanchedalmond;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #151515;
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
 }

@@ -1,8 +1,3 @@
-body {
-    background: #151515;
-    color: white;
-}
-
 .base-info {
     align-content: right;
     letter-spacing: 0.1em;
@@ -64,13 +59,13 @@ body {
 }
 
 .nav-tab a {
-    font-size: 0.96em;
+    font-size: 0.9em;
     color: white;
     text-decoration: none;
 }
 
 .nav-tab a:hover {
-    color: grey;
+    color: gold;
 }
 
 @media screen and (max-width: 768px) {

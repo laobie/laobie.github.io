@@ -6,7 +6,7 @@ title: 写代码的猴子
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="#151515">
-    <title>shadow</title>
+    <title>{{ page.title }}</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/home.css" />
     <link rel="stylesheet" type="text/css" href="./css/base.css" />
@@ -14,21 +14,16 @@ title: 写代码的猴子
 
 <body>
     <div class="base-info">
-        <div class="avatar"><img src="./img/monkey.jpg" /></div>
+        <div class="avatar"><img src="{{ site.logo }}" /></div>
         <span class="title">{{ site.name }}</span>
         <span class="bio">{{ site.description }}</span>
     </div>
-
-    <!-- <div class="self-des"> -->
-        <!-- 我是写代码的猴子 -->
-    <!-- </div> -->
     <div class="divider"></div>
     <div class="nav-tab">
         <ul>
-            <li><a href="/">博客</a> </li>
-            <li><a href="/">项目</a> </li>
-            <li><a href="/">实验室</a> </li>
-            <li><a href="/">关于</a> </li>
+            {% for nav in site.navs %}
+            <li><a href="{{ nav.href }}">{{ nav.label }}</a></li>
+            {% endfor %}
         </ul>
     </div>
 
