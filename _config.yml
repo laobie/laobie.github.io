@@ -1,5 +1,5 @@
 highlighter: rouge
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 encoding: utf-8
 paginate: 8
 paginate_path: "page:num"
@@ -30,16 +30,15 @@ navs:
   # -
   #   href: /articles/
   #   label: 归档
-  # -
-  #   href: /feed/
-  #   label: 订阅
-
   - 
     href: /blog/
     label: 博客
   -
     href: /WebLab/
     label: 实验室
+  -
+    href: /feed/
+    label: 订阅
   - 
     href: /about/
     label: 关于

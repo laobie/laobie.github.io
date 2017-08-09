@@ -196,14 +196,16 @@ hr {
 }
 
 code {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console", "Courier New", monospace;
     color: #e65c04;
     letter-spacing: 0;
     font-size: 85%;
+    font-weight: normal;
 }
 
 pre {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console", "Courier New", monospace;
     line-height: 1.68;
     font-size: 1em;
     overflow: auto;
@@ -213,10 +215,10 @@ pre {
 }
 
 pre code {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console", "Courier New", monospace;
     color: #e65c04;
     letter-spacing: 0.05em;
-    font-size: 90%;
+    font-size: 85%;
 }
 
 ul {

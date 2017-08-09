@@ -47,7 +47,7 @@
 }
 
 .nav-tab li {
-    margin: 10px 0;
+    margin: 0;
     display: inline-block;
 }
 
@@ -81,8 +81,7 @@
         margin: 0 6%;
         text-align: right;
     }
-
     .nav-tab li+li::before {
-    margin: 0 15px;
-}
+        margin: 0 15px;
+    }
 }

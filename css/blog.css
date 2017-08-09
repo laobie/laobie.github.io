@@ -18,7 +18,7 @@ body {
 .post-item {
     font-size: 1em;
     margin: 0px 10px;
-    padding: 20px 4% 0;
+    padding: 20px 3% 0;
     transition: 600ms;
     -webkit-transition: scale(1);
     -moz-transition: scale(1);
@@ -38,7 +38,7 @@ body {
 }
 
 .post-item .post-title {
-    font-size: 1.15em;
+    font-size: 1.1em;
     margin: 10px 0 20px;
     font-weight: 400;
     letter-spacing: 0.02em;
@@ -48,7 +48,7 @@ body {
     font-weight: 300;
     display: block;
     line-height: 1.5em;
-    font-size: 0.78em;
+    font-size: 0.76em;
     margin: 15px 0;
     letter-spacing: 0.14em;
 }
