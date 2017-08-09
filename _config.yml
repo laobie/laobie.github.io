@@ -1,5 +1,5 @@
 highlighter: rouge
-plugins: [jekyll-paginate]
+gems: [jekyll-paginate]
 encoding: utf-8
 paginate: 8
 paginate_path: "page:num"
@@ -49,3 +49,4 @@ navs:
 github_id: laobie
 weibo_id: xdmdhz
 zhihu_id: jaeger
+twitter_id: jaeger_chen

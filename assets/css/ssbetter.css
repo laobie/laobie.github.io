@@ -2,7 +2,7 @@
     align-content: center;
     background: #27a768;
     padding: 16px 8px;
-    margin: 24px auto;
+    margin: 60px auto 30px;
 }
 
 .ss_ad a {
@@ -18,15 +18,21 @@
 
 .ss_ad_title {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.86em;
     color: white;
+    font-weight: 300;
 }
 
 .ss_ad_subtitle {
-    font-size: 1.3em;
-    font-weight: bold;
+    font-size: 1.15em;
+    font-weight: 400;
     text-align: center;
     color: white;
+    letter-spacing: 0.1em;
+}
+
+.ss_ad_subtitle :hover {
+    color: gold;
 }
 
 .ss_ad_link {

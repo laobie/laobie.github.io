@@ -6,6 +6,11 @@
     background: blanchedalmond;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,4 +18,13 @@ body {
     color: white;
     font-weight: 300;
     font-size: 20px;
+}
+
+.content-wrap {
+    min-height: 100%;
+}
+
+.content-main {
+    padding-bottom: 80px;
+    overflow: hidden;
 }

@@ -17,19 +17,23 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="nav-home">
-            <a href="/">
+    <div class="content-wrap">
+        <div class="content-main">
+            <div class="header">
+                <div class="nav-home">
+                    <a href="/">
             <span>{{ site.name }}</span>
             <img src="{{ site.logo }}" />
             </a>
+                </div>
+                <span class="post-title">{{ page.title }}</span>
+            </div>
+            <div class="post-content">
+                <div> {{ content }} </div>
+                {% include ssbetter.html %}
+            </div>
         </div>
-        <span class="post-title">{{ page.title }}</span>
-    </div>
-    <div class="post-content"> {{ content }}</div>
-   
-    {% include  ssbetter.html %}
-    {% include  footer.html %}
+        {% include footer.html %}
 </body>
 
 </html>

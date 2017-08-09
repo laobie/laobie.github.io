@@ -13,20 +13,24 @@ title: 写代码的猴子
 </head>
 
 <body>
-    <div class="base-info">
-        <div class="avatar"><img src="{{ site.logo }}" /></div>
-        <span class="title">{{ site.name }}</span>
-        <span class="bio">{{ site.description }}</span>
+    <div class="content-wrap">
+        <div class="content-main">
+            <div class="base-info">
+                <div class="avatar"><img src="{{ site.logo }}" /></div>
+                <span class="title">{{ site.name }}</span>
+                <span class="bio">{{ site.bio }}</span>
+            </div>
+            <div class="divider"></div>
+            <div class="nav-tab">
+                <ul>
+                    {% for nav in site.navs %}
+                    <li><a href="{{ nav.href }}">{{ nav.label }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="divider"></div>
-    <div class="nav-tab">
-        <ul>
-            {% for nav in site.navs %}
-            <li><a href="{{ nav.href }}">{{ nav.label }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-
+    {% include footer.html %}
 </body>
 
 </html>

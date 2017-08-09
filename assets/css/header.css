@@ -114,12 +114,4 @@
 }
 
 @media screen and (max-width: 768px) {
-
-    .main-navigation{
-        display: none;
-    }
-    .logo {
-        /*display: none;*/
-    }
-
 }
