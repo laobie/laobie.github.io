@@ -7,7 +7,7 @@
     letter-spacing: 0.03em;
     color: #363636;
     margin: 60px 15% 60px;
-    padding: 50px 6% 50px;
+    padding: 50px 6% 30px;
     background: white;
     color: black;
 }
@@ -209,7 +209,11 @@ td {
         padding-bottom: 120px;
     }
     .post-content {
+<<<<<<< HEAD
         font-size: 0.86em;
+=======
+        font-size: 0.9em;
+>>>>>>> finish beat 0.1
         padding: 20px 5%;
         width: 90%;
         margin: 0;
