@@ -12,6 +12,7 @@ bio: 当猴子不写代码时，他在写些什么
 logo: "/img/monkey.jpg"
 url: http://jaeger.itscoder.com/
 email: chjie.jaeger@gmail.com
+fav: "/favicon.ico"
 
 defaults:
  -
@@ -23,13 +24,6 @@ defaults:
       show_ad: true
 
 navs:
-
-  # -
-  #   href: /me/
-  #   label: 猴子
-  # -
-  #   href: /articles/
-  #   label: 归档
   - 
     href: /blog/
     label: 博客

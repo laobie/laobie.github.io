@@ -1,5 +1,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <meta name="theme-color" content="#151515"/>    
+    <meta charset="utf-8"/>
 </head>
 <div class="header">
     <div class="nav-home">
@@ -11,7 +13,9 @@
     </div>
     <span class="module-title">{{ page.title }}</span>
     <ul class="nav-tab-others">
-        {% for nav in site.navs %} {% if nav.label != page.title %}
-        <li><a href="{{ nav.href }}">{{ nav.label }}</a></li>
-        {% endif %} {% endfor %}
+        {% for nav in site.navs %} 
+            {% if nav.label != page.title %}
+                <li><a href="{{ nav.href }}">{{ nav.label }}</a></li>
+            {% endif %} 
+        {% endfor %}
 </div>
