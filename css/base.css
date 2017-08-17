@@ -1,13 +1,10 @@
-* {
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
 * ::selection {
     background: blanchedalmond;
 }
 
 html,
 body {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     height: 100%;
 }
 

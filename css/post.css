@@ -114,39 +114,24 @@ hr {
 }
 
 code {
-    font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console", "Courier New", monospace;
     color: #e65c04;
-    letter-spacing: 0;
-    font-size: 85%;
-    font-weight: normal;
-}
-
-pre {
     -webkit-font-smoothing: antialiased;
     font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console", "Courier New", monospace;
+    font-size: 85%;
+}
+
+pre code {
+    font-size: 80%;
+}
+pre {
     line-height: 1.68;
     font-size: 1em;
     overflow: auto;
     font-weight: normal;
-    letter-spacing: 0.2em;
-}
-
-pre code {
-    color: #e65c04;
-    letter-spacing: 0.08em;
-    font-size: 85%;
 }
 
 ul {
     margin-left: -5px;
-}
-
-.avatar {
-    height: 120px;
-    width: 120px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
 }
 
 table {
@@ -209,11 +194,7 @@ td {
         padding-bottom: 120px;
     }
     .post-content {
-<<<<<<< HEAD
-        font-size: 0.86em;
-=======
         font-size: 0.9em;
->>>>>>> finish beat 0.1
         padding: 20px 5%;
         width: 90%;
         margin: 0;
