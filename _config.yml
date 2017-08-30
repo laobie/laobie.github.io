@@ -28,7 +28,7 @@ navs:
     href: /blog/
     label: 博客
   -
-    href: /feed/
+    href: /feed.xml
     label: 订阅
   - 
     href: /about/
