@@ -28,9 +28,6 @@ navs:
     href: /blog/
     label: 博客
   -
-    href: /WebLab/
-    label: 实验室
-  -
     href: /feed/
     label: 订阅
   - 
