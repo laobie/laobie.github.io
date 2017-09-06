@@ -15,13 +15,14 @@
     display: inline-block;
     font-size: 0.9em;
     letter-spacing: 0.12em;
+    line-height: 30px;
 }
 
 .nav-home img {
     display: inline-block;
-    width: 48px;
-    height: 48px;
-    vertical-align: text-bottom;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
     margin-left: 10px;
     border-radius: 50%;
 }
@@ -30,7 +31,7 @@
     display: inline-block;
     font-size: 2.6em;
     letter-spacing: 0.2em;
-    font-weight: 350;
+    font-weight: 400;
 }
 
 .nav-tab-others {
