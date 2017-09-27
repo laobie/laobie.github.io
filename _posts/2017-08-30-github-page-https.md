@@ -46,7 +46,7 @@ excerpt: 2015 年底，不少互联网公司已经实现了全站 HTTPS 了，�
     在 `Domain management` 中设置自己的域名，我这里设置成 `jaeger.itscoder.com`。
      ![](/img/postimg/domin_setting.jpg)
 
-6. 在自己的域名管理中设置 DNS 解析，istCoder 组织的域名使用的是阿里云，在域名管理里面设置如下的域名解析规则：
+6. 在自己的域名管理中设置 DNS 解析，itsCoder 组织的域名使用的是阿里云，在域名管理里面设置如下的域名解析规则：
 
     ![](/img/postimg/set_domain_dns.png)
 
