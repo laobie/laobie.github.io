@@ -4,17 +4,14 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="theme-color" content="#151515"/>        
+    <meta name="theme-color" content="#151515" />
     <title>{{page.title}}</title>
     <link rel="stylesheet" type="text/css" href="/css/base.css">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/post.css">
-    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
-    {% if page.favicon %}
-        <link rel="icon" href={{page.favicon}}> 
-    {% else %}
-        <link rel="icon" href=/assets/img/fav/post.png> 
-    {% endif %}
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css"> {% if page.favicon %}
+    <link rel="icon" href={{page.favicon}}> {% else %}
+    <link rel="icon" href=/assets/img/fav/post.png> {% endif %}
 
 </head>
 
@@ -24,18 +21,18 @@
             <div class="header">
                 <div class="nav-home">
                     <a href="/">
-            <span>{{ site.name }}</span>
-            <img src="{{ site.logo }}" />
-            </a>
+                        <span>{{ site.name }}</span>
+                        <img src="{{ site.logo }}" />
+                    </a>
                 </div>
                 <span class="post-title">{{ page.title }}</span>
             </div>
             <div class="post-content">
                 <div> {{ content }} </div>
+                {% include reward.html %}
             </div>
         </div>
-        {% include footer.html %}
-        {% include cnzz.html %}
+        {% include footer.html %} {% include cnzz.html %}
 </body>
 
 </html>
