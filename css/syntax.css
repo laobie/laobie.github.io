@@ -1,4 +1,4 @@
-.highlight  { background: #2F2F2F; border-radius: 3px;padding: 10px;}
+.highlight  { background: #2F2F2F; border-radius: 3px;padding-left: 10px;padding-right: 10px;padding-top: 1px;padding-bottom: 1px;}
 
 .c { color: #75715e } /* Comment */
 .err { color: #960050; background-color: #1e0010 } /* Error */
