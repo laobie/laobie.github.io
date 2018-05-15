@@ -24,7 +24,7 @@ mTextView.setTextIsSelectable(true);
 
 - **不同版本选择复制样式不统一**：在原生系统上 6.0 之前和之后的操作样式是不同的，这里不得不说，6.0 以下的这个选择复制操作交互很不合理，且对应用的界面侵入太多。
 
-  ![](http://ac-QYgvX1CC.clouddn.com/d50f9abab0429d5c.png)
+  ![](/img/postimg/selectable_text_diff.png)
 
 - **万恶的国产 ROM 问题**：当时公司测试同事提 bug 反馈，在 vivo 手机上这么设置，长按之后并没有效果。（再一次吐槽乱改系统的国产 ROM，这也是为什么 Android 开发比起 iOS 费事费力的原因之一）
 
@@ -36,7 +36,7 @@ mTextView.setTextIsSelectable(true);
 
 时隔一年之后，再遇到这个需求，这次通过 Google、GitHub ，以及参考 SDK 23 中 TextView 源码，基本上实现了自定义选择复制的功能，效果如下：
 
-![](http://ac-QYgvX1CC.clouddn.com/378d52583767882d.png)
+![](/img/postimg/selectabletexthelper.png)
 
 保证所有的平台上显示效果一致，弹出的操作菜单可以自己定制，并设置相应的操作。
 
@@ -60,7 +60,7 @@ mSelectableTextHelper = new SelectableTextHelper.Builder(mTvTest)
 
 整个自定义的选择复制功能视图上主要有三个部分：
 
-![](http://ac-QYgvX1CC.clouddn.com/ea5c7296983d4e68.png)
+![](/img/postimg/selectable_text_helper_views.png)
 
 - 选择游标
 - 选中的文本
@@ -171,7 +171,7 @@ private void showSelectView(int x, int y) {
 - 在 show 方法开始，因为之前可能已经显示了选择相关的 View ，比如先长按 TextView 的 A 点，然后弹出选择游标、操作框，此时再长按 B 点，此时再次弹出选择游标和操作框时，就需要先隐藏之前的相关 View 了，这里就这样简单粗暴地处理了下。
 - `int startOffset = TextLayoutUtil.getPreciseOffset(mTextView, x, y);` 是一个很有意思的地方，这里参考了前面提到的开源项目里面的实现，这个方法通过传入 TextView 中一个点的坐标，就可以计算出来对应的最接近的那个文字的索引，简单说明如下：
 
- ![](http://ac-qygvx1cc.clouddn.com/766d4fc4e12099222bc2.jpeg)
+ ![](/img/postimg/get_text_offset.png)
 
  通过传入『种』那个字附近的某个点的坐标 (x,y)，就可以得出『种』在 TextView 的文本中的索引是 9 (从 0 开始计数)。
 
@@ -315,7 +315,7 @@ private class CursorHandle extends View {
 
 直接继承 PopupWindow 的话，没有 onDraw 方法 ，这里直接继承 View ，然后在 CursorHandle 的构造函数中初始化了一个 PopupWindow ，并将 CursorHandle 实例作为 contentView 传递进去，然后在 `onDraw()` 方法中绘制了自定义的选择游标，仿照 6.0 的选择游标效果。
 
-![](http://ac-qygvx1cc.clouddn.com/ba2a7ee85d2d0915c2bb.svg)
+![](/img/postimg/cursor_handle.svg)
 
 这个也是绘制起来也是很简单的，一个正方形和一个圆组合下即可，处理下是左边还是右边就可以了，具体参照上面的代码。
 
