@@ -67,7 +67,7 @@ NavigationView 的引入让 Android 侧边栏实现起来相当方便，最近�
 
 3. 然后注意到 NavigationView 其实是分两个部分的，一个是头部，一个是下面的菜单列表部分，如下图所示：
 	
-   ![](http://ac-qygvx1cc.clouddn.com/9585eb130bb180b5.png)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/9585eb130bb180b5.png)
 
    其中头部通过 `app:headerLayout="@layout/nav_header"` 属性添加，`nav_header` 的布局如下：
 
@@ -185,7 +185,7 @@ NavigationView 的引入让 Android 侧边栏实现起来相当方便，最近�
 
    当设计师为每一项的图标都设置了不同的颜色时，你将切好的彩色图标文件放进去，运行后发现全变成灰色了。此时可以通过 `app:itemIconTint="@color/blue"` 为图标统一设置颜色，前后效果如下：
 
-   ![](http://ac-qygvx1cc.clouddn.com/28339a52ef1959fb.png)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/28339a52ef1959fb.png)
 
    然而这还不是我们需要的效果，我们需要的是彩色的图标，而不是统一的图标颜色。
 
@@ -197,7 +197,7 @@ NavigationView 的引入让 Android 侧边栏实现起来相当方便，最近�
 
    最终效果如下：
 
-   ![](http://ac-qygvx1cc.clouddn.com/b6274eeeb060aafb.png)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/b6274eeeb060aafb.png)
 
 
 3. 添加分割线

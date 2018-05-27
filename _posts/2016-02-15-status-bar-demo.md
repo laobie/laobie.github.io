@@ -11,7 +11,7 @@ category: Android
 ### 前言
 在4.4之前状态栏一直是黑色的，在4.4中带来了 `windowTranslucentStatus` 这一特性，因此可以实现给状态栏设置颜色，如下图所示，状态栏颜色不再是黑色，而是可以定制的颜色。
 
-![](http://ac-qygvx1cc.clouddn.com/e61aeb3f3cc44354.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/e61aeb3f3cc44354.png)
 
 国内将状态栏变色叫做沉浸式状态栏，时间久了，叫的人多了，大家就不再深究，默认了这种叫法。
 
@@ -20,9 +20,9 @@ category: Android
 ### 需要解决的问题
 1. 4.4及其以上都是可以实现沉浸式状态栏效果的，5.0及其以上可以直接在主题中设置颜色，或者调用 `Window` 类中的 `setStatusBarColor(int color)` 来实现，这两种方式在5.0上都比较简单，但是如何兼容到4.4呢？
 2. 图片背景的页面,怎样让状态栏透明或者半透明（效果如下）？
-![](http://ac-qygvx1cc.clouddn.com/74a963666851b9bd.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/74a963666851b9bd.png)
 3. 使用 DrawerLayout 时，主界面实现沉浸状态栏同时，怎样保证抽屉视图也能延伸到状态栏（如下图所示），且兼容到4.4？
-![](http://ac-qygvx1cc.clouddn.com/9585eb130bb180b5.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/9585eb130bb180b5.png)
 
 以上就是本文要解决的问题，下面给出解决方案。
 
@@ -202,7 +202,7 @@ category: Android
 
 需要注意的是，`DrawerLayout` 的布局只能包含两个直接子布局，一个是内容布局，一个是抽屉布局，结构如前面的示例布局所示，如果内容布局的根布局如果不是 `LinearLayout` 需要对其子布局设置`padding top`值，否则仿状态栏色块会被遮挡在最下面，布局内容延伸到状态栏，如下图所示：
 
-![](http://ac-qygvx1cc.clouddn.com/49f7e6a7bd524179.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/49f7e6a7bd524179.png)
 
 （ps：就上图中的问题，目前的解决方案感觉并不是很好，如果你有更好的解决方案，请告诉我~）
 

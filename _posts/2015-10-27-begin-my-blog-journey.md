@@ -28,5 +28,5 @@ excerpt: 当猴子不写代码时，他在写些什么？
 
 共勉。
 
-![](http://ac-qygvx1cc.clouddn.com/e39ca7d59a2441a4.jpg)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/e39ca7d59a2441a4.jpg)
 <center>写代码的猴子</center>

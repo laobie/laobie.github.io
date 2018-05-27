@@ -17,7 +17,7 @@ excerpt: 从去年下半年开始，热修复技术在 Android 技术社区热�
 
 任何一个 Java 程序都是由若干个 class 文件组成的一个完整的 Java 程序，在程序运行时，需要将 class 文件加载到 JVM 中才可以使用，负责加载这些 class 文件的就是 Java 的类加载（ClassLoader）机制。
 
-![](http://ac-qygvx1cc.clouddn.com/78e71017bdd24420.jpeg)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/78e71017bdd24420.jpeg)
 
 因此 ClassLoader 的作用简单来说就是加载 class 文件，提供给程序运行时使用。
 
@@ -55,7 +55,7 @@ Android 的 Dalvik/ART 虚拟机如同标准 Java 的 JVM 虚拟机一样，也�
 
 Android 应用打包成 apk 文件时，class 文件会被打包成一个或者多个 dex 文件。将一个 apk 文件后缀改成 .zip 格式解压后（也可以直接解压，apk 文件本质是个 zip 文件），里面就有 class.dex 文件，由于 Android 的 65K 问题（不要纠结是 64K 还是 65K），使用 MultiDex 就会生成多个 dex 文件。
 
-![](http://ac-QYgvX1CC.clouddn.com/3c5e66e9e048d343.jpg)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/3c5e66e9e048d343.jpg)
 
 当 Android 系统安装一个应用的时候，会针对不同平台对 Dex 进行优化，这个过程由一个专门的工具来处理，叫 DexOpt 。DexOpt 是在第一次加载 Dex 文件的时候执行的，该过程会生成一个 ODEX 文件，即 Optimised Dex。执行 ODEX 的效率会比直接执行 Dex 文件的效率要高很多，加快 App 的启动和响应。
 
@@ -67,7 +67,7 @@ ODEX 相关的细节可以阅读以下文章扩展：
 
 > 注：本人的 5.0 机器 ODEX 优化后的文件是在 `/data/dalvilk-cache` 文件夹下的，6.0 机器该文件夹下只有 framework 和部分内置的 App 的优化后的 dex 文件，查找相关资料后没有找到明确的说法，目前猜测和 ROM 有关系，后续再深究下这个问题。
 
-![](http://ac-QYgvX1CC.clouddn.com/b79b994f71a47130.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/b79b994f71a47130.png)
 
 总之，Android 中的 Dalvik/ART 无法像 JVM 那样 **直接** 加载 class 文件和 jar 文件中的 class，需要通过 dx 工具来优化转换成 Dalvik byte code 才行，只能通过 dex 或者 包含 dex 的jar、apk 文件来加载（注意 odex 文件后缀可能是 .dex 或 .odex，也属于 dex 文件），因此 Android 中的 ClassLoader 工作就交给了 BaseDexClassLoader 来处理。
 
@@ -168,7 +168,7 @@ public static Class<?> forName(String className, boolean shouldInitialize,
 
 而 PathClassLoader 的实例化又是在哪进行的呢？在源码中寻找下其构造方法调用的地方，结果如下：
 
-![](http://ac-QYgvX1CC.clouddn.com/a0a44b8cac607cae.jpg)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/a0a44b8cac607cae.jpg)
 
 其中：
 
@@ -220,7 +220,7 @@ public DexClassLoader(String dexPath, String optimizedDirectory,
 
 先来看一眼 BaseClassLoader 的结构：
 
-![](http://ac-QYgvX1CC.clouddn.com/a6f9824c199cf304.jpg)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/a6f9824c199cf304.jpg)
 
 其中有个重要的字段 `private final DexPathList pathList` ，其继承 ClassLoader 实现的 `findClass()` 、`findResource()` 均是基于 pathList 来实现的（省略了部分源码）：
 
@@ -412,7 +412,7 @@ protected Class<?> loadClass(String className, boolean resolve) throws ClassNotF
 
    这一步使用 IntelliJ IDEA 导出有点问题，最终我是用 Eclipse 导出 jar 包的。
 
-   ![](http://ac-QYgvX1CC.clouddn.com/88ede5c72013c55b.jpg)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/88ede5c72013c55b.jpg)
 
 3. 使用 SDK 目录 > platform-tools 里面的 dx 工具生成包含 class.dex 的 jar 包
 
@@ -424,11 +424,11 @@ protected Class<?> loadClass(String className, boolean resolve) throws ClassNotF
 
    生成 `sayhello_dex.jar` 之后，用解压解压后就会发现其已经包含了 class.dex 文件了。
 
-   ![](http://ac-QYgvX1CC.clouddn.com/ba0d600fc2a90e2d.jpg)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/ba0d600fc2a90e2d.jpg)
 
 4. 将 `sayhello_dex.jar` 文件拷贝到手机存储空间的根目录，不一定是内存卡。
 
-   ![](http://ac-QYgvX1CC.clouddn.com/7efba4a5a816a8e1.png)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/7efba4a5a816a8e1.png)
 
 5. 新建一个 Android 项目，在 MainActivity 中添加如下的代码：
 
@@ -501,7 +501,7 @@ protected Class<?> loadClass(String className, boolean resolve) throws ClassNotF
 
 6. 接下来就是运行，运行的结果如图，和预期的一样，完美收工。
 
-   ![](http://ac-QYgvX1CC.clouddn.com/4b94e8fbecf66b72.png)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/4b94e8fbecf66b72.png)
 
 7. 示例代码以及 jar 包上传到 GitHub 了，请前往 [这里](https://github.com/laobie/TestClassLoader) 去查看。
 

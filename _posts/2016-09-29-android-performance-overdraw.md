@@ -16,13 +16,13 @@ Android 从一诞生到现在已经发布的 7.0 版本，卡顿和不流畅问�
 
 在 Android 手机的开发者选项中，有一个『调试 GPU 过度绘制』的选项，该选项开启之后，手机显示如下，显示出来的蓝色、绿色的色块就是过度绘制信息。
 
-![](http://ac-QYgvX1CC.clouddn.com/c7de9ce128cd8921.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/c7de9ce128cd8921.png)
 
 比如上面界面中的『调试 GPU 过度绘制 』的那个文本显示为蓝色，表示其过度绘制了一次，因为背景是白色的，然后文字是黑色的，导致文字所在的区域就会被绘制两次：一次是背景，一次是文字，所以就产生了过度重绘。
 
 在官网的 [Debug GPU Overdraw Walkthrough](https://developer.android.com/studio/profile/dev-options-overdraw.html) 说明中对过度重绘做了简单的介绍，其中屏幕上显示不同色块的具体含义如下所示：
 
-![](http://ac-QYgvX1CC.clouddn.com/46397b26da912658.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/46397b26da912658.png)
 
 每个颜色的说明如下：
 
@@ -77,7 +77,7 @@ Android 从一诞生到现在已经发布的 7.0 版本，卡顿和不流畅问�
 
    移除默认的 Window 背景的工作在项目初期做最好，因为有可能有的界面未设置背景色，这就会导致该界面显示成黑色的背景，如下所示，如果是后期移除的，就需要检查移除默认 Window 背景之后的界面是否显示正常。
 
-   ![](http://ac-QYgvX1CC.clouddn.com/8bb76d317ff0d5ff.png)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/8bb76d317ff0d5ff.png)
 
 2. 移除不必要的背景
 
@@ -133,7 +133,7 @@ Android 从一诞生到现在已经发布的 7.0 版本，卡顿和不流畅问�
 
    看起来是没问题的，但是因为我界面的背景和 item 布局的背景都是白色，所以 item 布局中的背景是不必要的，可以移除。优化前后的过度绘制结果如下：
 
-   ![](http://ac-QYgvX1CC.clouddn.com/eeffd1ea58fd9598.png)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/eeffd1ea58fd9598.png)
 
    很明显优化后过度绘制比之前均少了一次，但是这种场景还是比较特殊的，因为界面背景和 item 的背景色一样，假如不一样的话，就无法避免多 1 次过度绘制了。
 
@@ -187,7 +187,7 @@ Android 从一诞生到现在已经发布的 7.0 版本，卡顿和不流畅问�
 
    - 加深了布局层级，和之前的布局相比多了一级
 
-     ![](http://ac-QYgvX1CC.clouddn.com/2aceb1e5a933352a.jpg)
+     ![](https://lc-qygvx1cc.cn-n1.lcfile.com/2aceb1e5a933352a.jpg)
 
    - 多了 2 次过度绘制
 
@@ -198,7 +198,7 @@ Android 从一诞生到现在已经发布的 7.0 版本，卡顿和不流畅问�
 
    我们采用第二种解决方法，优化前后的对比如下：
 
-   ![](http://ac-QYgvX1CC.clouddn.com/fad0b600790d3986.png)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/fad0b600790d3986.png)
 
    优化后的布局 ImageView 和 item 背景区域均比优化前少了 2 次过度重绘，布局层级也没增加，需求也实现了。
 
@@ -214,7 +214,7 @@ Android 从一诞生到现在已经发布的 7.0 版本，卡顿和不流畅问�
 
    顾名思义就是给 Canvas 设置一个裁剪区，只有在这个裁剪矩形区域内的才会被绘制，区域之外的都不绘制。 `DrawerLayout` 就是一个很不错的例子，先来看一下使用 DrawerLayout 布局的过度绘制结果：
 
-   ![](http://ac-QYgvX1CC.clouddn.com/3ac552385fa37312.png)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/3ac552385fa37312.png)
 
    按道理左边的抽屉布局出来时，应该是和主界面的布局叠加起来的，但是为什么抽屉的背景过度绘制只有一次呢？如果是叠加的话，那最少是主界面过度绘制次数 +1，但是结果并不是这样。直接看源码：
 
@@ -250,7 +250,7 @@ Android 从一诞生到现在已经发布的 7.0 版本，卡顿和不流畅问�
 
    在 DrawerLayout 的 `drawChild()` 方法一开始会判断是是否是 DrawerLayout 的 ContentView，即非抽屉布局，如果是的话，则遍历 DrawerLayout 的 child view，拿到抽屉布局，如果是左边抽屉，则取抽屉布局的右边边界作为裁剪区的左边界，得到的裁剪矩形就是下图中的红色框部分，然后设置裁剪区域。右边抽屉同理。
 
-   ![](http://ac-QYgvX1CC.clouddn.com/f2bd8c92d4f03a9b.jpg)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/f2bd8c92d4f03a9b.jpg)
 
    这样一来，只有裁剪矩形内的界面需要绘制，自然就减少了抽屉布局的过度绘制。自定义控件时可以参照这个来优化过度绘制问题。
 
@@ -262,7 +262,7 @@ Android 从一诞生到现在已经发布的 7.0 版本，卡顿和不流畅问�
 
 先上图，前面是未开启 『调试 GPU 过度绘制』 的界面图，中间的是优化前的过度绘制结果，后面的是优化后的过度绘制结果，不难看出来，中间那张图过度绘制是很严重的，一眼看过去一片红，很显然不符合优化原则。
 
-![](http://ac-QYgvX1CC.clouddn.com/1bed5940cdfa0701.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/1bed5940cdfa0701.png)
 
 优化步骤如下：
 
@@ -288,7 +288,7 @@ Android 从一诞生到现在已经发布的 7.0 版本，卡顿和不流畅问�
 
 3. 在 **优化方法** 中讲到的 ViewPager 布局加 Fragment 实现的首页布局，一个不注意很容易出现过度绘制严重的问题，在移除 ViewPager 和 Activity 根布局的白色背景后，以及默认的 Window 背景，原来红成一片的首页现在基本上是大部分蓝色和小部分绿色了。
 
-   ![](http://ac-QYgvX1CC.clouddn.com/5e3d906c721cc9f3.png)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/5e3d906c721cc9f3.png)
 
 
 

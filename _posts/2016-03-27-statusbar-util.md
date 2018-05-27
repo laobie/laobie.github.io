@@ -59,7 +59,7 @@ category: Android
 
 6. 在 Fragment 中使用
 
-   ![](http://ac-qygvx1cc.clouddn.com/f79b11ecae3b6043.gif)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/f79b11ecae3b6043.gif)
 
 7. 为滑动返回界面设置状态栏颜色
 

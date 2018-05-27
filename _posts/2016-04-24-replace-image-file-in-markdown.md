@@ -12,7 +12,7 @@ excerpt: 本文主要描述在 Markdown 写作中，通过 Python 脚本实现�
 
 实现的效果如下：
 
-![](http://ac-QYgvX1CC.clouddn.com/04d2ff5eadd5717d.jpg)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/04d2ff5eadd5717d.jpg)
 
 ### 几点说明
 - **图片压缩**：本文直接调用的是 [TinyPNG](https://tinypng.com/) 站点的 API，该站提供的压缩服务还是不错的，图片压缩率高，且压缩前后显示效果差别很小。对于开发者而言，该网站上相关文档也是相当齐全的。
@@ -20,7 +20,7 @@ excerpt: 本文主要描述在 Markdown 写作中，通过 Python 脚本实现�
 - **本地数据库存储**：脚本中会将文件的 hash 值和 url 储存到本地数据库 `ImageInfo.db` 中，避免相同问题多次压缩上传。
 
 ### 简单流程图
-![](http://ac-qygvx1cc.clouddn.com/ffae3bc2fa108243.svg)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/ffae3bc2fa108243.svg)
 
 ### 使用
 
@@ -70,7 +70,7 @@ excerpt: 本文主要描述在 Markdown 写作中，通过 Python 脚本实现�
 
    ```
    this is a image
-   ![](http://ac-QYgvX1CC.clouddn.com/a2ec3a2a375f8c61.jpg))
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/a2ec3a2a375f8c61.jpg))
    ```
 
 ### 小技巧

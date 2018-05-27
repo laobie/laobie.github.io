@@ -45,7 +45,7 @@ excerpt: 在之前的文章中，讲解了 Android 中的 ClassLoader 工作原�
 
 基于 ClassLoader 方式实现的热修复思路如下图所示：
 
-![](http://ac-QYgvX1CC.clouddn.com/b1c92f1555e7fb4b.jpg)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/b1c92f1555e7fb4b.jpg)
 
 主要步骤：
 
@@ -120,7 +120,7 @@ excerpt: 在之前的文章中，讲解了 Android 中的 ClassLoader 工作原�
 
   > 注：Android 官方增加类的验证过程，并打上 CLASS_ISPREVERIFIED 标志，肯定是为了提升性能和效率的，因此这种解决方案对性能确实存在一定的影响，在微信的 Tinker 方案对比中，也给出了实际的效率对比，差距还是挺大的，因此在使用该方式实现热修复需要了解到这一点。
 
-  ![](http://ac-QYgvX1CC.clouddn.com/04eb03974bad8947.png)
+  ![](https://lc-qygvx1cc.cn-n1.lcfile.com/04eb03974bad8947.png)
 
 ### Nuva 项目的源码解读
 
@@ -128,7 +128,7 @@ excerpt: 在之前的文章中，讲解了 Android 中的 ClassLoader 工作原�
 
 1. 项目结构分析
 
-   ![](http://ac-QYgvX1CC.clouddn.com/473528c66cc757e3.jpg)
+   ![](https://lc-qygvx1cc.cn-n1.lcfile.com/473528c66cc757e3.jpg)
 
    Nuwa 项目的结构如上图所示，可以看出，项目结构并不复杂：
 

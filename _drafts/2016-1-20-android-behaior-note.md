@@ -13,7 +13,7 @@ CoordinatorLayout 的引入，让 View 之间的联动变得方便容易，使�
 其中引入一个全新的控件的 CoordinatorLayout，coordinator 是“协作者”的意思，顾名思义，这是一个可以让包含在其内部的子view互相协作的一个父布局。
 
 如下的一个界面：
-![](http://ac-qygvx1cc.clouddn.com/cda6d7acec7b7a2f.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/cda6d7acec7b7a2f.png)
 
 当列表在向下滑动时，Fab(悬浮按钮，下同)隐藏，当列表上滑时，Fab再次显示出来。这就需要列表和Fab的协作。
 

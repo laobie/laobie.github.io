@@ -7,7 +7,7 @@ category: Android
 
 这是一个自定义控件，用来显示类似微信朋友圈或微博中那样的九宫格图片，[ GitHub地址 ](https://github.com/laobie/NineGridImageView)。效果图如下所示：
 
-![](http://ac-qygvx1cc.clouddn.com/ee5906c846ad3346.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/ee5906c846ad3346.png)
 
 ### 更新日志
 
@@ -44,11 +44,11 @@ category: Android
 	
 	默认样式是网格样式：`STYLE_GRID`:
 	
-	![](http://ac-qygvx1cc.clouddn.com/9cc94e97b4fce73f.png)
+	![](https://lc-qygvx1cc.cn-n1.lcfile.com/9cc94e97b4fce73f.png)
 	
 	另外一种样式是：`STYLE_FILL`:
 	
-	![](http://ac-qygvx1cc.clouddn.com/0fa728fd90d1b227.png)
+	![](https://lc-qygvx1cc.cn-n1.lcfile.com/0fa728fd90d1b227.png)
 	
 	两者的区别见图或在Demo中体验。
 	
@@ -56,7 +56,7 @@ category: Android
 
 	`app:singleImgSize="120dp"` 或 `nineGridImageView.setSingleImgSize(int singleImgSize)`
 	
-	![](http://ac-qygvx1cc.clouddn.com/cc9ffd32722ead80.png)
+	![](https://lc-qygvx1cc.cn-n1.lcfile.com/cc9ffd32722ead80.png)
 
 ### 用法
 

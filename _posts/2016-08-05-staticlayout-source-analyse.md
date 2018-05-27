@@ -152,7 +152,7 @@ StaticLayout 中的 `generate()` 方法近 300 行，其完成了文本的段落
         ```
 
         每个值的含义如下图所示，在 baseline 之上为负值，baseline 之下为正值，leading 表示两行文本 baseline 之间的距离，这个值可以由行间距倍数和行间距增加值来调整：
-        ![](http://ac-qygvx1cc.clouddn.com/00a715d3dc637c92.png)
+        ![](https://lc-qygvx1cc.cn-n1.lcfile.com/00a715d3dc637c92.png)
 
         在接下来的字体测量中，会使用 fmCache 数组来缓存字体测量的信息，缓存 top, bottom, ascent, 和 descen 四个值，因此 fmCache 数组的大小始终是4的倍数。
 

@@ -6,7 +6,7 @@ category: Android
 前段时间公司 App 需要实现多语言切换功能，接到任务后先 Google 了下，发现搜到的方法都比较老旧，很多都莫名其妙，比如什么 API 欺骗、反射、手动转换语系，感觉不应该这么复杂地实现(也可能是当时的环境下实现确实比较麻烦)。所以花了点时间研究了下，实现了应用内切换语言，且不是那么复杂。
 
 #### 1. 实现的效果
-![](http://ac-qygvx1cc.clouddn.com/e210b5e3d4374be1.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/e210b5e3d4374be1.png)
 
 和微信类似，在设置界面打开切换语言的界面，选择语言后重启 HomeActivity，语言切换完成，下次重新打开 App ，也是用户设置的语言。
 
@@ -16,7 +16,7 @@ category: Android
 
 在不同的 value 文件夹下（例如 value 、value-en、values-zh-rTW 文件夹）添加不同语言的 `string.xml` 文件，我们的项目添加了英文、简体中文、繁体中文三种语言，如下图所示：
 
-![](http://ac-QYgvX1CC.clouddn.com/50e346171231a31d.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/50e346171231a31d.png)
 
 其中英文需要翻译，繁体如果没有专门翻译的话，可以找个简繁转换网站，直接将简体中文转成繁体中文，我用的这个网站：[在线中文简体转繁体](http://www.vifo.com.cn/fanti/)。
 

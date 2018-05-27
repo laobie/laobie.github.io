@@ -11,21 +11,21 @@ FindViewByMe 是一个自动生成 FindViewById 代码的 IDEA/Android Studio �
 - 主菜单依次选择 `File | Settings` ，打开设置对话框，选择 `Plugins`；
 - 搜索框中输入 “findviewbyme” ,点击下面的“Browse”；
 
-  ![](http://ac-qygvx1cc.clouddn.com/ed9e903a164b3de8.png)
+  ![](https://lc-qygvx1cc.cn-n1.lcfile.com/ed9e903a164b3de8.png)
   
 - 在找到的结果中点击 “Install”，然后会提示重启 AS，重启就行了。
 
-  ![](http://ac-qygvx1cc.clouddn.com/179220e48074f2e4.png)
+  ![](https://lc-qygvx1cc.cn-n1.lcfile.com/179220e48074f2e4.png)
 
 
 #### 2. 基本使用
 - 当你写完一个 layout 文件，在该文件编辑界面任意位置右键，发现菜单中有一个 `Find View By Me` 的选项；
 
-![](http://ac-qygvx1cc.clouddn.com/4c8d9c9bc1a997b3.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/4c8d9c9bc1a997b3.png)
 
 - 点击后会出现 “FindViewByMe” 的对话框，如下所示:
 
-![](http://ac-qygvx1cc.clouddn.com/fa8259e43ce35445.png)
+![](https://lc-qygvx1cc.cn-n1.lcfile.com/fa8259e43ce35445.png)
 
 - 在列表中勾选你需要生成代码的控件，下面就会出现对应的代码；
 - 点击 “Copy Code” 按钮就可以将代码复制到剪切板了，在java文件中粘贴就行了。
