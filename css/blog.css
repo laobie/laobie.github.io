@@ -5,7 +5,7 @@ body {
 
 .post-list {
     margin: 60px 15% 60px;
-    padding: 40px 6% 30px;
+    padding: 40px 6% 50px;
     background: white;
     color: black;
 }
@@ -18,39 +18,33 @@ body {
 .post-item {
     font-size: 1em;
     margin: 0px 10px;
-    padding: 20px 3% 0;
-    transition: 600ms;
-    -webkit-transition: scale(1);
-    -moz-transition: scale(1);
-    transition: scale(1);
+    padding: 20px 3% 0px;
 }
 
 .post-divider {
-    border-bottom: 1px dashed lightgray;
-    margin: 30px 0;
+    border-bottom: 1px dashed #d8d8d8;
+    margin: 20px 0 0;
 }
 
 .post-item:hover {
-    background: #eaeaea;
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -moz-transform: scale(1.02);
+    background: #eee;
 }
 
 .post-item .post-title {
-    font-size: 1.1em;
+    font-size: 1em;
     margin: 10px 0 20px;
     font-weight: 400;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
 }
 
 .post-item .post-excerpt {
     font-weight: 300;
     display: block;
-    line-height: 1.5em;
-    font-size: 0.76em;
-    margin: 15px 0;
-    letter-spacing: 0.14em;
+    color: #666;
+    line-height: 1.4em;
+    font-size: 0.68em;
+    margin: 16px 0 8px;
+    letter-spacing: 1.25px;
 }
 
 .post-item .post-excerpt p {
@@ -63,7 +57,8 @@ body {
     position: relative;
     text-align: right;
     margin-right: 10px;
-    font-size: 0.72em;
+    font-size: 0.5em;
+    color: #444;
     font-style: oblique;
 }
 
