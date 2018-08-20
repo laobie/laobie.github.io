@@ -1,15 +1,14 @@
 .post-content {
     word-wrap: break-word;
-    font-size: 0.78em;
-    line-height: 1.86;
+    font-size: 0.72em;
+    line-height: 1.68;
     font-weight: 400;
     overflow: hidden;
-    letter-spacing: 0.03em;
-    color: #363636;
+    letter-spacing: 0.036em;
     margin: 60px 15% 60px;
-    padding: 50px 6% 30px;
+    padding: 50px 6.4%;
     background: white;
-    color: black;
+    color: #4f4f4f;
 }
 
 p {
@@ -17,6 +16,12 @@ p {
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
+}
+
+strong {
+    font-size: 110%;
+    font-weight: 500;
+    color: #333;
 }
 
 .post-content img {
@@ -29,8 +34,8 @@ p {
 .post-title {
     display: block;
     font-size: 1.45em;
-    font-weight: 350;
-    letter-spacing: 0.1em;
+    font-weight: 300;
+    letter-spacing: 0.05em;
 }
 
 H2 {
@@ -44,26 +49,26 @@ H2 {
 }
 
 H3 {
-    margin: 24px 0 12px;
-    font-size: 1.6em;
-    border-left: 8px solid #3a976d;
-    padding-left: 0.8em;
+    margin: 20px 0;
+    font-size: 1.45em;
+    border-left: 5px solid #555555;
+    padding-left: 0.5em;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
-    background: #ffffff;
-    color: #333333;
-    font-weight: 900;
+    background: #f1f1f1;
+    color: #222;
+    font-weight: 500;
     line-height: 1.5;
 }
 
 H4 {
-    margin-top: 24px;
-    margin-bottom: 12px;
+    margin-left: 5px;
+    margin-top: 25px;
+    margin-bottom: 20px;
     width: 100%;
-    font: blod;
+    font-weight: 500;
     font-size: 1.25em;
-    color: #4c4c4c;
-    line-height: 120%;
+    color: #3d3d3d;
 }
 
 H5 {
@@ -82,11 +87,11 @@ li {
 a {
     text-decoration: none;
     padding: 1px;
-    color: #228fcd;
+    color: #2aa4f5;
 }
 
 a:hover {
-    color: gray;
+    color: #0890ff;
 }
 
 blockquote {
@@ -117,14 +122,23 @@ code {
     color: #e65c04;
     -webkit-font-smoothing: antialiased;
     font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console", "Courier New", monospace;
-    font-size: 85%;
+    font-size: 95%;
+    letter-spacing: 0.01em;
 }
 
 pre code {
-    font-size: 80%;
+    font-size: 90%;
+    color: #07B328;
+    line-height: 1.8;
 }
+
+pre ::selection {
+    background: whitesmoke;
+    color:black;
+}
+
 pre {
-    line-height: 1.68;
+    line-height: 1.6;
     font-size: 1em;
     overflow: auto;
     font-weight: normal;
@@ -132,6 +146,10 @@ pre {
 
 ul {
     margin-left: -5px;
+}
+
+li + li{
+    margin-top: 6px;
 }
 
 table {
