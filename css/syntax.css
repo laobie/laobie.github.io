@@ -1,6 +1,6 @@
-.highlight  { background: #2F2F2F; border-radius: 3px;padding-left: 10px;padding-right: 10px;padding-top: 1px;padding-bottom: 1px;}
+.highlight  { background: #2a2a2a; border-radius: 2px;padding-left: 15px;padding-right: 15px;padding-top: 10px;padding-bottom: 10px;}
 
-.c { color: #75715e } /* Comment */
+.c { color: #ababab } /* Comment */
 .err { color: #960050; background-color: #1e0010 } /* Error */
 .k { color: #ebcb78} /* Keyword */
 .l { color: #ae81ff } /* Literal */
