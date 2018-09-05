@@ -61,19 +61,30 @@
     color: gold;
 }
 
+@media screen and (min-width: 1800px) {
+    .header {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .header {
         margin: 30px 5% 20px;
     }
+
     .module-title {
         font-size: 2em;
     }
+
     .nav-tab-others li+li::before {
         margin: 0 10px;
     }
+
     .nav-tab-others {
         margin-left: 100px;
     }
+
     .nav-home img {
         width: 36px;
         height: 36px;

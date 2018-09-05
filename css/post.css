@@ -133,7 +133,7 @@ pre code {
 
 pre ::selection {
     background: whitesmoke;
-    color:black;
+    color: black;
 }
 
 pre {
@@ -147,7 +147,7 @@ ul {
     margin-left: -5px;
 }
 
-li + li{
+li+li {
     margin-top: 6px;
 }
 
@@ -206,10 +206,18 @@ td {
     color: white;
 }
 
+@media screen and (min-width: 1800px) {
+    .post-content {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .content-main {
         padding-bottom: 120px;
     }
+
     .post-content {
         font-size: 0.8em;
         padding: 20px 5%;
@@ -217,6 +225,7 @@ td {
         margin: 0;
         letter-spacing: 0;
     }
+
     .post-title {
         font-size: 1.05em;
         width: 96%;

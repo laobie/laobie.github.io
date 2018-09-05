@@ -1,5 +1,5 @@
 .base-info {
-    align-content: right;      
+    align-content: right;
     letter-spacing: 0.1em;
     margin: 160px 20% 40px;
 }
@@ -68,19 +68,31 @@
     color: gold;
 }
 
+@media screen and (min-width: 1800px) {
+    .base-info,
+    .divider,
+    .nav-tab {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .base-info {
         align-content: right;
         letter-spacing: 0.1em;
         margin: 80px 6% 20px;
     }
+
     .divider {
         margin: 100px 6% 10px;
     }
+
     .nav-tab {
         margin: 0 6%;
         text-align: right;
     }
+
     .nav-tab li+li::before {
         margin: 0 15px;
     }
