@@ -8,6 +8,7 @@ body {
     padding: 40px 6% 50px;
     background: white;
     color: black;
+    border-radius: 8px;
 }
 
 .post-list a {
