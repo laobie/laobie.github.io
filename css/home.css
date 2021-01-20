@@ -7,15 +7,15 @@
 .title {
     display: block;
     text-align: right;
-    font-size: 1.68em;
+    font-size: 2em;
     margin-top: 48px;
 }
 
 .bio {
     display: block;
-    font-size: 0.94em;
+    font-size: 1em;
     text-align: right;
-    margin-top: 16px;
+    margin-top: 20px;
     letter-spacing: 0.1em;
 }
 
@@ -44,6 +44,7 @@
 .nav-tab {
     margin: 0 20%;
     text-align: right;
+    font-size: 1.15em;
 }
 
 .nav-tab li {
