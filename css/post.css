@@ -1,21 +1,22 @@
 .post-content {
     word-wrap: break-word;
-    font-size: 0.72em;
-    line-height: 1.68;
+    font-size: 0.85em;
+    line-height: 1.78;
     font-weight: 400;
     overflow: hidden;
     letter-spacing: 0.036em;
     margin: 60px 15% 60px;
     padding: 50px 6.4%;
     background: white;
-    color: #4f4f4f;
+    color: #333333;
+    border-radius: 8px;
 }
 
 p {
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+    -webkit-margin-before: 1.2em;
+    -webkit-margin-after: 1.2em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
 }
 
 strong {
@@ -34,8 +35,8 @@ strong {
 .post-title {
     display: block;
     font-size: 1.45em;
-    font-weight: 300;
-    letter-spacing: 0.05em;
+    font-weight: 400;
+    letter-spacing: 0.08em;
 }
 
 H2 {
@@ -141,10 +142,7 @@ pre {
     font-size: 1em;
     overflow: auto;
     font-weight: normal;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 15px;
 }
 
 ul {

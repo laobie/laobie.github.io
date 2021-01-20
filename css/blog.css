@@ -17,8 +17,8 @@ body {
 
 .post-item {
     font-size: 1em;
-    margin: 0px 10px;
-    padding: 20px 3% 0px;
+    margin: 0 10px;
+    padding: 20px 3% 0;
 }
 
 .post-divider {
@@ -31,20 +31,20 @@ body {
 }
 
 .post-item .post-title {
-    font-size: 1em;
+    font-size: 1.05em;
     margin: 10px 0 20px;
     font-weight: 400;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
 }
 
 .post-item .post-excerpt {
     font-weight: 300;
     display: block;
-    color: #666;
-    line-height: 1.4em;
-    font-size: 0.68em;
+    color: #333333;
+    line-height: 1.8;
+    font-size: 0.8em;
     margin: 16px 0 8px;
-    letter-spacing: 1.25px;
+    letter-spacing: 0.08em;
 }
 
 .post-item .post-excerpt p {
@@ -57,7 +57,7 @@ body {
     position: relative;
     text-align: right;
     margin-right: 10px;
-    font-size: 0.5em;
+    font-size: 0.7em;
     color: #444;
     font-style: oblique;
 }

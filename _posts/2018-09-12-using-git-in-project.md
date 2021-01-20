@@ -74,10 +74,9 @@ category: Dev
 - **develop 分支**
 
   - 开发分支，包含了项目最新的功能和代码，所有开发都依赖 develop 分支进行
-
   - 小的改动可以直接在 develop 分支进行，改动较多时切出新的 feature 分支进行
-
-    **注：** 更好的做法是 develop 分支作为开发的主分支，也不允许直接提交代码。小改动也应该以 feature 分支提 merge request 合并，目的是保证每个改动都经过了强制代码 review，降低代码风险
+    
+  **注：** 更好的做法是 develop 分支作为开发的主分支，也不允许直接提交代码。小改动也应该以 feature 分支提 merge request 合并，目的是保证每个改动都经过了强制代码 review，降低代码风险。
 
 - **feature 分支**
 
@@ -107,7 +106,7 @@ category: Dev
 
 #### 2.2 分支间操作注意事项
 
-在团队开发过程中，避免不了和其他人一起协作， 同时也会遇到合并分支等一些操作，这里提交 2 个个人觉得比较好的分支操作规范。
+在团队开发过程中，避免不了和其他人一起协作，同时也会遇到合并分支等一些操作，这里提交 2 个个人觉得比较好的分支操作规范。
 
 - **同一分支 `git pull` 使用 rebase**
 
@@ -115,7 +114,7 @@ category: Dev
 
   ![](/img/postimg/git_pull_no_rebase.jpg)
 
-  看到这样的  提交线图，想从中看出一条清晰的提交线几乎是不可能的，充满了 `Merge remote-tracking branch 'origin/xxx' into xxx` 这样的提交记录，同时也将提交线弄成了交错纵横的图，没有了可读性。
+  看到这样的提交线图，想从中看出一条清晰的提交线几乎是不可能的，充满了 `Merge remote-tracking branch 'origin/xxx' into xxx` 这样的提交记录，同时也将提交线弄成了交错纵横的图，没有了可读性。
 
   这里最大的原因就是因为默认的 `git pull` 使用的是 merge 行为，当你更新代码时，如果本地存在未推送到远程的提交，就会产生一个这样的 merge 提交记录。因此在同一个分支上更新代码时推荐使用 `git pull --rebase`。
 
@@ -145,7 +144,8 @@ category: Dev
     在解释这个命令之前，先解释下 Git 中的 fast-forward：
     举例来说，开发一直在 `develop` 分支进行，此时有个新功能需要开发，新建一个 `feature/a` 分支，并在其上进行一系列开发和提交。当完成功能开发时，此时回到 `develop` 分支，此时 `develop` 分支在创建 `feature/a` 分支之后没有产生任何的 commit，那么此时的合并就叫做 fast-forward。
 
-    fast-forward 合并的结果如下图所示，这种 merge 的结果就是一条直线了，无法明确看到切出一个新的 feature 分支，并完成了一个新的功能开发，因此此时比较推荐使用 `git merge --no-ff`，得到的结果就很明确知道，新的一系列提交是完成了一个新的功能，如果需要对这个功能进行 code review，那么只需要检视叉的那条线上的提交即可。
+    fast-forward 合并的结果如下图所示，这种 merge 的结果就是一条直线了，无法明确看到切出一个新的 feature 分支，并完成了一个新的功能开发，因此此时比较推荐使用 `git merge --no-ff
+    `，得到的结果就很明确知道，新的一系列提交是完成了一个新的功能，如果需要对这个功能进行 code review，那么只需要检视叉的那条线上的提交即可。
 
     ![](/img/postimg/git_merge_diff.svg)
 
